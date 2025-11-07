@@ -1,0 +1,74 @@
+/* Estilos Mínimos para visualizar la estructura SIN usar CSS externo */
+        body { 
+            font-family: /*-apple-system, BlinkMacSystemFont,*/ "Roboto Flex", Roboto, sans-serif;
+            font-optical-sizing: auto; 
+            font-weight: 500; 
+            margin: 0; 
+            padding: 0; 
+            background-image: url(../imagenes/backgrounds/fondo.jpg); 
+            color: #333; }
+        .hero-header {
+            background-image: linear-gradient(90deg, rgb(212 0 122 / 65%), rgb(67 81 247 / 50%)), /* Capa 1: Gradiente con 50% opacidad */ url(../imagenes/horizon_team_work.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #7405cb;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        } 
+        .hero-header h1 { 
+            margin: 0; font-size: 2.5em; font-family: "Concert One", sans-serif;
+            font-weight: 400; font-style: normal;}
+        .hero-header p { 
+            font-size: 1.2em; 
+            opacity: 0.9; }
+         h2, h3, h4, h5 {
+            font-family: "Concert One", sans-serif;
+            color: #46e797;
+            font-weight: 400;
+            font-style: normal;}
+        .blog-container { 
+            display: flex; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; }
+        .main-content { 
+            flex: 3; 
+            padding-right: 20px; }
+        .sidebar { 
+            flex: 1; 
+            min-width: 250px; 
+            background-color: #fff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            align-self: flex-start; /* Evita que el sidebar se estire */ }
+        .article-card { 
+            background-color: white; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 5px solid #007bff; }
+        .article-card h2 { 
+            color: #0052D4; margin-top: 0; }
+        .article-card .category-tag { 
+            background-color: #e9ecef; color: #555; padding: 3px 8px; border-radius: 4px; font-size: 0.85em; text-decoration: none; }
+        .article-card footer { 
+            font-size: 0.9em; color: #777; margin-top: 15px; }
+        .aside-section { 
+            margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .aside-section:last-child { 
+            border-bottom: none; }
+        .aside-section h3 { 
+            color: #555; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .tag-link { 
+            display: inline-block; background-color: #e9ecef; color: #333; padding: 5px 10px; margin: 5px; border-radius: 4px; text-decoration: none; font-size: 0.9em; transition: background-color 0.2s; }
+        .tag-link:hover { 
+            background-color: #007bff; color: white; }
+        .category-list { 
+            list-style: none; padding: 0; }
+        .category-list li { 
+            margin-bottom: 10px; }
+        .category-list a { 
+            text-decoration: none; color: #007bff; font-weight: 500; }
+        .category-list a:hover { 
+            text-decoration: underline; }
+
