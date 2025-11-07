@@ -1,0 +1,424 @@
+/*
+ * =========================================
+ * VARIABLES GLOBALES
+ * =========================================
+ */
+:root {
+    --color-primary: #7a27ffef; /* Azul claro para acciones principales */
+    --color-secondary: #9370db; /* Lila medio (para el hover del footer y este botón) */
+    --color-text-dark: #1e293b; 
+    --color-text-light: #ffffff;
+    --color-bg-light: #f1f5f9;
+    --color-border: #e2e8f0;
+
+    --transition-speed: 0.3s;
+    --max-width-content: 1200px;
+}
+
+/*
+ * =========================================
+ * ESTILOS BASE Y CONTENEDOR
+ * =========================================
+ */
+body {
+    margin: 0;
+    font-family: "Roboto Flex", Roboto, sans-serif;
+    color: var(--color-text-dark);
+}
+
+.container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color var(--transition-speed) ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: #0ea5e9; /* Tono más oscuro de primary */
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: #835dc9; /* Tono más oscuro de secondary */
+}
+
+
+/*
+ * =========================================
+ * 1. PRE-HEADER (Top Bar)
+ * =========================================
+ */
+.pre-header {
+    background-color: var(--color-text-dark); /* Fondo oscuro */
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+
+.pre-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pre-header-contact span {
+    margin-right: 20px;
+}
+
+.pre-header a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.pre-header a:hover {
+    color: var(--color-primary);
+}
+
+.pre-header-social a {
+    margin-left: 15px;
+    /* (Aquí deberías usar íconos SVG o FontAwesome) */
+    font-size: 1.1rem;
+}
+
+
+/*
+ * =========================================
+ * 2. NAVEGACIÓN PRINCIPAL
+ * =========================================
+ */
+.main-nav {
+    background-color: var(--color-text-light);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky; /* Para que quede pegado al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #276969fc;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+
+.enlaces-navegacion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.elemento-nav {
+    position: relative;
+    margin-left: 30px;
+}
+
+.elemento-nav a {
+    display: block;
+    padding: 10px 0;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.elemento-nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Submenú y Transiciones */
+.submenu {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    position: absolute;
+    background-color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    
+    /* Efecto de transición para el submenú */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity var(--transition-speed) ease, 
+                visibility var(--transition-speed) ease,
+                transform var(--transition-speed) ease;
+}
+
+submenu-activador:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu a {
+    padding: 8px 15px;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.submenu li a:hover {
+    background-color: var(--color-bg-light);
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    margin-left: 20px;
+    transition: color var(--transition-speed) ease;
+}
+
+.search-btn:hover {
+    color: var(--color-primary);
+}
+
+/*
+ * =========================================
+ * ESTILOS DEL MENÚ HAMBURGUESA
+ * =========================================
+ */
+.menu-alternador { /* ANTES: .menu-toggle */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    display: none; 
+    z-index: 1001; 
+}
+
+.boton-busqueda { /* ANTES: .search-btn */
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    margin-left: 20px;
+    transition: color var(--transition-speed) ease;
+}
+
+.boton-busqueda:hover {
+    color: var(--color-primary);
+}
+
+
+/* Regla para ocultar el menú en móvil */
+@media (max-width: 768px) {
+    /* 1. Hacemos visible el botón alternador */
+    .menu-alternador {
+        display: block; 
+    }
+    
+    /* 2. Posicionamos el menú para que se muestre en vertical y se superponga */
+    .enlaces-navegacion { /* ANTES: .nav-links */
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: var(--color-text-light);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%); 
+        /* Oculto por defecto, pero con la posibilidad de deslizarse */
+    }
+    
+    /* 3. El estado que SÍ se debe mostrar */
+    .enlaces-navegacion.activo { /* ANTES: .nav-links.active */
+        display: flex;
+        transform: translateY(0); 
+    }
+    
+    /* ... el resto de estilos para móvil (elemento-nav) se mantienen ... */
+}
+
+/*
+ * =========================================
+ * 3. HERO HEADER
+ * =========================================
+ */
+.hero-header {
+    position: relative;
+    padding: 100px 0;
+    color: var(--color-text-light);
+    text-align: center;
+    overflow: hidden; /* Importante para el pseudo-elemento */
+    
+    /* 50% Gradiente de fondo (simulado con pseudo-elemento) */
+    background-image: url(''); /* Fondo base */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay para el Gradiente de 50% */
+.hero-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+background: linear-gradient(to right, 
+        rgb(192, 10, 216, 0.8), /* Color 1: Oscuro con 70% de opacidad (Inicio) */
+        rgb(72, 87, 247, 0.4) 100%); /* Color 2: Oscuro con 100% de opacidad (Final) */
+    z-index: 1;
+}  
+    
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté sobre el overlay */
+    max-width: 800px; /* Centra y limita el ancho del texto */
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+/*
+ * =========================================
+ * 4. SECCIÓN CENTRAL
+ * =========================================
+ */
+.main-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+
+/*
+ * =========================================
+ * 5. CONSULTA RÁPIDA (Formulario)
+ * =========================================
+ */
+.quick-contact {
+    background-color: var(--color-bg-light);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.quick-contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.quick-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 48%; /* Dos columnas */
+}
+
+.form-group.full-width {
+    flex-basis: 100%; /* Una sola columna para el textarea y el botón */
+}
+
+.quick-form input[type="text"],
+.quick-form input[type="email"],
+.quick-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+    font-size: 1rem;
+    transition: border-color var(--transition-speed) ease;
+}
+
+.quick-form input:focus,
+.quick-form textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/*
+ * =========================================
+ * RESPONSIVE BÁSICO
+ * =========================================
+ */
+@media (max-width: 768px) {
+    .pre-header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pre-header-contact span {
+        display: block;
+        margin: 5px 0;
+    }
+    .pre-header-social {
+        margin-top: 10px;
+    }
+    
+    .nav-content {
+        flex-wrap: wrap;
+    }
+    .enlaces-navegacion {
+        display: none; /* Ocultar menú en móvil - requiere JS para toggle */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .form-group {
+        min-width: 100%; /* Una sola columna en el formulario */
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
