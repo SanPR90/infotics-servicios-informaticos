@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
     <!-- Carga Librería Font Awesome a través de un CDN (Content Delivery Network). -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ8Wn6YJva7XqOIfcKzJ/J/p1xYk+T1pLg82+jD9iT2Q/h1x9O7uG1m2oT1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="imagenes/favicon.png" type="image/x-icon"> <!--Para incluir favicon a las pestañas-->
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="Footer_paginas/footer.css">
@@ -35,18 +35,26 @@
             <!--<div class="container nav-content">
                 <a href="index.html" class="logo">INFOTICS</a>
                 <ul class="nav-links">
-                    <li class="nav-item"><a href="/">Inicio</a></li>
+                    <li class="nav-item"><a href="index.html">Inicio</a></li>
                     <li class="nav-item has-submenu">
-                        <a href="/servicios">Servicios [Icono Flecha]</a>
+                        <a href="#">Servicios</a>
                         <ul class="submenu">
-                            <li><a href="/servicios/desarrollo-web">Desarrollo Web</a></li>
-                            <li><a href="/servicios/seguridad">Seguridad Informática</a></li>
-                            <li><a href="/servicios/soporte">Servicio Técnico</a></li>
+                            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                            <li><a href="servicios/servicio_tecnico.html">Servicio Técnico</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="/proyectos">Proyectos</a></li>
-                    <li class="nav-item"><a href="/noticias">Blog</a></li>
-                    <li class="nav-item"><a href="/contacto">Contacto</a></li>
+                    <li class="nav-item has-submenu">
+                        <a href="#">Portfolio</a>
+                        <ul class="submenu">
+                            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+                            <li><a href="portfolio/clientes.html">Clientes</a></li>
+                            <li><a href="portfolio/galeria.html">Galeria</a></li>
+                        </ul>
+                    </li>            
+    
+                    <li class="nav-item"><a href="/blog/blog.html">Blog</a></li>
+                    <li class="nav-item"><a href="/contacto/contacto.html">Contacto</a></li>
                 </ul>
                 <button class="search-btn" aria-label="Abrir Búsqueda">
                     <i class="fas fa-search" aria-hidden="true"></i>
@@ -61,30 +69,32 @@
                 
                 <ul class="enlaces-navegacion" id="menu-principal"> 
                     
-                    <li class="elemento-nav"><a href="/">Inicio</a></li>
+                    <li class="elemento-nav"><a href="index.html">Inicio</a></li>
                     
-                    <li class="elemento-nav"><a href="/quienes-somos">Quiénes somos</a></li>
+                    <li class="elemento-nav"><a href="quienes_somos/quesomos.html">Quiénes somos</a></li>
                     
                     <li class="elemento-nav submenu-activador">
                         <span class="titulo-categoria">Portfolio <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
                         <ul class="submenu">
-                            <li><a href="/portfolio/proyectos">Proyectos</a></li>
-                            <li><a href="/portfolio/clientes">Principales Clientes</a></li>
-                            <li><a href="/portfolio/galeria">Galería</a></li>
+                            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+                            <li><a href="portfolio/clientes.html">Principales Clientes</a></li>
+                            <li><a href="portfolio/galeria.html">Galería</a></li>
                         </ul>
                     </li>
                     
                     <li class="elemento-nav submenu-activador">
                         <span class="titulo-categoria">Servicios <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
                         <ul class="submenu">
-                            <li><a href="/servicios/desarrollo-web">Desarrollo Web</a></li>
-                            <li><a href="/servicios/seguridad">Seguridad Informática</a></li>
-                            <li><a href="/servicios/soporte">Servicio Técnico</a></li>
+                            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                            <li><a href="servicios/servicio_tecnico.html">Servicio Técnico</a></li>
                         </ul>
                     </li>
                     
-                    <li class="elemento-nav"><a href="/blog">Blog</a></li>
+                    <li class="elemento-nav"><a href="blog/blog.html">Blog</a></li>
                     
+                    <li class="elemento-nav"><a href="contacto/contacto.html">Contacto</a></li>
+
                     <li class="elemento-nav submenu-activador">
                         <span class="titulo-categoria">Tu cuenta <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
                         <ul class="submenu submenu-derecha"> 
@@ -93,13 +103,7 @@
                         </ul>
                     </li>
                     
-                    <li class="elemento-nav"><a href="/contacto">Contacto</a></li>
-                    
                 </ul>
-                
-                    <button class="boton-busqueda" aria-label="Abrir Búsqueda">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
             </div>
         </nav>
 
@@ -149,11 +153,11 @@
         <div class="footer-column">
             <h3>Nuestra Compañía</h3>
             <ul class="footer-links">
-                <li><a href="quienes-somos.html">Nuestra compañía</a></li>
-                <li><a href="clientes.html">Testimonios</a></li>
-                <li><a href="proyectos">Nuestros proyectos</a></li>
-                <li><a href="/noticias">Últimas Noticias</a></li>
-                <li><a href="/contacto">Contáctanos</a></li>
+                <li><a href="quienes_somos/quesomos.html">Nuestra compañía</a></li>
+                <li><a href="portfolio/clientes.html">Testimonios</a></li>
+                <li><a href="portfolio/proyectos.html">Nuestros proyectos</a></li>
+                <li><a href="blog/blog.html">Últimas Noticias</a></li>
+                <li><a href="contacto/contacto.html">Contáctanos</a></li>
             </ul>
         </div>
 
@@ -163,9 +167,9 @@
                  <img src="imagenes/miniatura_footer.jpg" width="150px" height="200px" alt="Imagen miniatura parte de Servicios" class="footer-servicios-img">
             </a>
             <ul class="footer-links">
-                <li><a href="/servicios/desarrollo-web">Desarrollo Web</a></li>
-                <li><a href="/servicios/seguridad">Seguridad Informática</a></li>
-                <li><a href="/servicios/soporte">Servicio Técnico</a></li>
+                <li><a href="servicios/desarrollo-web">Desarrollo Web</a></li>
+                <li><a href="servicios/seguridad">Seguridad Informática</a></li>
+                <li><a href="servicios/soporte">Servicio Técnico</a></li>
             </ul>
         </div>
 
@@ -207,4 +211,5 @@
 </body>
 <!--Inclusion de Archivos Javascript-->
 <script src="javascript/menu_burguer.js"></script>
+
 </html>
