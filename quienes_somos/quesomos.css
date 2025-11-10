@@ -1,0 +1,196 @@
+/* Base y Tipografía */
+:root {
+    --color-primario: #007bff; 
+    --color-secundario: #28a745; 
+    --color-texto: #333;
+    --fondo-claro: #f4f7f6;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: #fff;
+}
+
+/* 1. Cabecera Hero */
+.cabecera-hero {
+    background-image: url('https://picsum.photos/1600/600?grayscale&blur=2'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-shadow: var(--sombra);
+}
+
+.cabecera-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.contenido-hero {
+    z-index: 2;
+    padding: 20px;
+}
+
+.contenido-hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contenido-hero p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Contenedor Principal */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 2. Sección Introductoria (Texto + Imagen) */
+.seccion-introductoria {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.texto-intro, .imagen-intro {
+    flex: 1 1 45%; 
+    min-width: 300px; 
+}
+
+.texto-intro h2 {
+    color: var(--color-primario);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.imagen-intro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.imagen-intro img:hover {
+    transform: scale(1.02);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* 3. Sección del Equipo (3 Columnas con Flexbox) */
+.seccion-equipo h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.malla-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.miembro-equipo {
+    flex: 1 1 300px; 
+    max-width: 350px;
+    background-color: var(--fondo-claro);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.miembro-equipo:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.foto-miembro {
+    width: 100%;
+    height: 275px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.foto-miembro img {
+    width: 240px;
+    height: 268px;
+    object-fit: contain;
+    margin: 0.4rem;
+    opacity: 75%;
+}
+
+.info-miembro h3 {
+    color: var(--color-primario);
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.info-miembro .rol {
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.info-miembro p {
+    padding: 0 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .contenido-hero h1 {
+        font-size: 2em;
+    }
+
+    .seccion-introductoria {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .texto-intro, .imagen-intro {
+        min-width: 100%;
+    }
+
+    .miembro-equipo {
+        max-width: 100%; 
+    }
+}
