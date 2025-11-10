@@ -22,7 +22,7 @@ body {
 
 /* 1. Cabecera Hero */
 .cabecera-hero {
-    background-image: url('https://picsum.photos/1600/600?grayscale&blur=2'); 
+    background-image: url('../imagenes/backgrounds/2.jpg'); 
     background-size: cover;
     background-position: center;
     height: 400px; 
@@ -193,4 +193,5 @@ hr {
     .miembro-equipo {
         max-width: 100%; 
     }
+
 }
