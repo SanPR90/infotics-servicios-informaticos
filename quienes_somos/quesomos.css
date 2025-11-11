@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Roboto Flex", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--color-texto);
     background-color: #fff;
@@ -195,3 +195,4 @@ hr {
     }
 
 }
+
