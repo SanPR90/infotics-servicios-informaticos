@@ -2,7 +2,7 @@
         
 /* 1. Aplicamos la fuente base */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Roboto Flex", Roboto, sans-serif;
     background-color: #f4f7f6; /* Un gris muy claro para el fondo general */
 }
 
@@ -56,3 +56,4 @@ body {
     transform: scale(1.1);
     color: #0284c7; /* sky-600 */
 }
+
