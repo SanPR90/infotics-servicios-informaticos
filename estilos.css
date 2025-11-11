@@ -145,14 +145,18 @@ body {
 
 .elemento-nav a {
     display: block;
-    padding: 10px 0;
+    padding: 0.8rem;
     color: var(--color-text-dark);
     text-decoration: none;
     transition: color var(--transition-speed) ease;
+    font-size: large;
+    background: darkorchid;
+    border-radius: 25%;
+    border: 1px solid darkslategrey;
 }
 
 .elemento-nav a:hover {
-    color: var(--color-primary);
+    color: var(--color-bg-light);
 }
 
 /* Submenú y Transiciones */
@@ -423,3 +427,4 @@ background: linear-gradient(to right,
     }
 
 }
+
