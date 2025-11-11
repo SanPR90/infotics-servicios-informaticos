@@ -1,0 +1,58 @@
+/* Estilos personalizados */
+        
+/* 1. Aplicamos la fuente base */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6; /* Un gris muy claro para el fondo general */
+}
+
+/* 2. Configuración del efecto Parallax */
+/* El contenedor que tendrá la imagen de fondo fija */
+.fondo-parallax { 
+    /* Imagen de fondo  */
+    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3B&auto=format&fit=crop&w=1600&q=80');
+    
+    /* Altura mínima para que el efecto sea visible */
+    min-height: 400px; 
+    
+    /* Efecto parallax: la imagen de fondo no se mueve con el scroll */
+    background-attachment: fixed;
+    
+    /* Posicionamiento y escalado de la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Posicionamiento relativo para el overlay (capa oscura) */
+    position: relative;
+}
+
+/* 3. Overlay para el Parallax */
+/* Capa semitransparente sobre la imagen parallax para que el texto sea legible */
+.capa-parallax { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 31, 63, 0.75); /* Un azul oscuro corporativo con transparencia */
+    z-index: 1;
+}
+
+/* 4. Contenido del Parallax */
+/* El contenido de texto se posiciona sobre el overlay */
+.contenido-parallax { 
+    position: relative;
+    z-index: 2;
+}
+
+/* 5. Estilo de los iconos de RRSS */
+.icono-social { 
+    font-size: 1.5rem; /* 24px */
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #334155; /* slate-700 */
+}
+.icono-social:hover { 
+    transform: scale(1.1);
+    color: #0284c7; /* sky-600 */
+}
