@@ -278,7 +278,7 @@ submenu-activador:hover .submenu {
     overflow: hidden; /* Importante para el pseudo-elemento */
     
     /* 50% Gradiente de fondo (simulado con pseudo-elemento) */
-    background-image: url(''); /* Fondo base */
+    background-image: url('imagenes/img-header-principal.png'); /* Fondo base */
     background-size: cover;
     background-position: center;
 }
@@ -421,4 +421,5 @@ background: linear-gradient(to right,
     .hero-content h1 {
         font-size: 2rem;
     }
+
 }
