@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
     
     <!-- Enlaces archivos CSS externos para los estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="contacto.css">
     <link rel="stylesheet" href="../Footer_paginas/footer.css">
 </head>
@@ -25,6 +26,52 @@
     <!-- ===== DIVISOR 1: IMAGEN DE CABECERA ===== -->
     <!--  -->
     <header class="relative w-full h-64 md:h-96">
+        <nav class="main-nav">
+            <div class="container nav-content">
+                    <a href="index.html" class="logo">INFOTICS</a>
+                    
+                        <button class="menu-alternador" aria-expanded="false" aria-controls="menu-principal">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    
+                    <ul class="enlaces-navegacion" id="menu-principal"> 
+                        
+                        <li class="elemento-nav"><a href="index.html">Inicio</a></li>
+                        
+                        <li class="elemento-nav"><a href="quienes_somos/objetivos-y-equipos-de-trabajo">Quiénes somos</a></li>
+                        
+                        <li class="elemento-nav submenu-activador">
+                            <span class="titulo-categoria">Portfolio </span>
+                            <ul class="submenu">
+                                <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+                                <li><a href="portfolio/clientes.html">Principales Clientes</a></li>
+                                <li><a href="portfolio/galeria.html">Galería</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="elemento-nav submenu-activador">
+                            <span class="titulo-categoria">Servicios </span>
+                            <ul class="submenu">
+                                <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                                <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                                <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="elemento-nav"><a href="blog/noticias-tics.html">Blog</a></li>
+                        
+                        <li class="elemento-nav"><a href="contacto/consulta-personalizada">Contacto</a></li>
+
+                        <li class="elemento-nav submenu-activador">
+                            <span class="titulo-categoria">Tu cuenta <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
+                            <ul class="submenu submenu-derecha"> 
+                                <li><a href="/cuenta/registro">Registro</a></li>
+                                <li><a href="/cuenta/inicio-sesion">Inicio Sesión</a></li>
+                            </ul>
+                        </li>      
+                    </ul>
+            </div>
+        </nav>
         <!-- Imagen de fondo -->
         <img 
             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3B&auto=format&fit=crop&w=1600&h=400&q=80" 
@@ -297,6 +344,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
