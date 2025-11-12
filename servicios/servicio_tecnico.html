@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamento Servicio Técnico - INFOTICS &reg;</title>
+    <title>Servicios Informáticos - Soporte Técnico</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-        <h1>Pagina en desarrollo - Servicio Tecnico</h1>
+    <div class="contenedor-pagina">
+        
+        <aside class="barra-lateral">
+            
+            <h2 class="titulo-principal">Servicios Informáticos</h2>
+
+            <div class="seccion-lateral seccion-menu">
+                <nav>
+                    <ul>
+                        <li class="activo">
+                            <a href="desarrollo_web.html">
+                                <div class="contenedor-imagen">
+                                    <img src="ruta_imagen_web.png" alt="Icono Desarrollo Web" width="85" height="85">
+                                </div>
+                                <span class="texto-servicio">Desarrollo Web</span>
+                                <i class="fas fa-code"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="seguridad_informatic.html">
+                                <div class="contenedor-imagen">
+                                    <img src="ruta_imagen_ciberseguridad.png" alt="Icono Ciberseguridad" width="85" height="85">
+                                </div>
+                                <span class="texto-servicio">Ciberseguridad</span>
+                                <i class="fas fa-shield-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="servicio-tecnico.html">
+                                <div class="contenedor-imagen">
+                                    <img src="ruta_imagen_servicio_tecnico.png" alt="Icono Servicio Técnico" width="85" height="85">
+                                </div>
+                                <span class="texto-servicio">Soporte Técnico</span>
+                                <i class="fas fa-tools"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="seccion-lateral seccion-pdf">
+                <h3>Recursos Clave (PDF)</h3>
+                <div class="enlaces-pdf">
+                    <a href="URL_HTML_PDF" download><i class="fab fa-html5 fa-2x"></i><span>HTML Guía</span></a>
+                    <a href="URL_CSS_PDF" download><i class="fab fa-css3-alt fa-2x"></i><span>CSS Ref.</span></a>
+                    <a href="URL_JS_PDF" download><i class="fab fa-js-square fa-2x"></i><span>JS Docs</span></a>
+                </div>
+            </div>
+
+            <div class="seccion-lateral caja-contacto">
+                <i class="fas fa-headset fa-3x"></i>
+                <h4>Contacto Directo</h4>
+                <p><i class="fas fa-envelope"></i> info@tuweb.com</p>
+                <p><i class="fas fa-phone"></i> +34 123 45 67 89</p>
+                <a href="../contacto/consulta-personalizada.html" class="btn-contacto">Solicitar Presupuesto</a>
+            </div>
+
+        </aside>
+
+        <main class="contenido-principal">
+            
+            <section class="seccion-principal seccion-introduccion">
+                <h1>Servicio de Soporte Técnico</h1>
+                <p>Contamos con una serie de profesionales informaticos especializados en soluciones a poblemas tanto hardware como software. </p>
+            </section>
+
+            <section class="seccion-principal seccion-procedimientos">
+                <h2>Nuestro Proceso Profesional</h2>
+                <div class="contenido-procedimiento">
+                    <img src="proceso_desarrollo.jpg" alt="Flujo de trabajo de desarrollo web" class="imagen-procedimiento">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> **Análisis y Planificación:** Definición de requisitos.</li>
+                        <li><i class="fas fa-check-circle"></i> **Diseño y Prototipado:** Mockups y UX/UI.</li>
+                        <li><i class="fas fa-check-circle"></i> **Desarrollo:** Codificación ágil y Git.</li>
+                        <li><i class="fas fa-check-circle"></i> **QA y Pruebas:** *Testing* funcional y de seguridad.</li>
+                        <li><i class="fas fa-check-circle"></i> **Despliegue:** Puesta en producción.</li>
+                        <li><i class="fas fa-check-circle"></i> **Mantenimiento:** Monitorización y soporte.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="seccion-principal seccion-dafo">
+                <h2>Análisis DAFO</h2>
+                <div class="rejilla-dafo">
+                    <div class="caja-dafo fortalezas" tabindex="0"><h3>Fortalezas</h3><p>Adaptabilidad, escalabilidad y amplio mercado.</p></div>
+                    <div class="caja-dafo oportunidades" tabindex="0"><h3>Oportunidades</h3><p>IA/ML, Web3 y PWA (Progressive Web Apps).</p></div>
+                    <div class="caja-dafo debilidades" tabindex="0"><h3>Debilidades</h3><p>Dependencia de terceros y curva de aprendizaje constante.</p></div>
+                    <div class="caja-dafo amenazas" tabindex="0"><h3>Amenazas</h3><p>Ataques de seguridad y fuerte competencia.</p></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
 </html>
