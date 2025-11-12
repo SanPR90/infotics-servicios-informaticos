@@ -24,6 +24,7 @@ body {
     margin: 0;
     font-family: "Roboto Flex", Roboto, sans-serif;
     color: var(--color-text-dark);
+    background: url(imagenes/backgrounds/1.jpg);
 }
 
 .container {
@@ -51,7 +52,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #0ea5e9; /* Tono más oscuro de primary */
+    background-color: #276969fc; /* Tono más oscuro de primary */
 }
 
 .btn-secondary {
@@ -331,6 +332,7 @@ background: linear-gradient(to right,
     padding-bottom: 60px;
     line-height: 1.7;
     font-size: 1.05rem;
+    color: var(--color-bg-light);
 }
 
 .main-content h2 {
@@ -427,4 +429,5 @@ background: linear-gradient(to right,
     }
 
 }
+
 
