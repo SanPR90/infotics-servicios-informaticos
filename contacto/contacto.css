@@ -3,7 +3,7 @@
 /* 1. Aplicamos la fuente base */
 body {
     font-family: "Roboto Flex", Roboto, sans-serif;
-    background-color: #f4f7f6; /* Un gris muy claro para el fondo general */
+    background: url(../imagenes/backgrounds/1.jpg);
 }
 
 /* 2. Configuración del efecto Parallax */
@@ -56,4 +56,5 @@ body {
     transform: scale(1.1);
     color: #0284c7; /* sky-600 */
 }
+
 
