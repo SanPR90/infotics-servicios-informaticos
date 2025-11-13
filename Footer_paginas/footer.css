@@ -101,57 +101,6 @@
     padding-left: 10px; /* Efecto de desplazamiento */
     background-color: var(--color-footer-hover-bg);
 }
-
-/* 1. Estilos Base para el Enlace */
-.back-link {
-    /* Define el enlace como un bloque flexible para alinear el icono y el texto */
-    display: inline-flex;
-    align-items: center;
-    
-    /* Tipografía y color */
-    color: #007bff; /* Color azul primario para accesibilidad y modernidad */
-    font-size: 1rem;
-    font-weight: 500; /* Ligeramente más grueso que el normal */
-    text-decoration: none; /* Elimina el subrayado por defecto */
-    
-    /* Espaciado y forma */
-    padding: 0.5rem 1rem;
-    border-radius: 8px; /* Bordes redondeados sutiles */
-    
-    /* Transición suave para todos los efectos */
-    transition: all 0.3s ease;
-}
-
-/* 2. Pseudo-elemento para el Icono de Retroceso */
-.back-link::before {
-    content: '←'; /* Flecha izquierda como un icono moderno */
-    /* content: '&#x2190;'; Si prefieres usar entidades HTML */
-    margin-right: 8px;
-    font-size: 1.2rem;
-    line-height: 1; /* Asegura que la flecha esté bien alineada */
-}
-
-/* 3. Accesibilidad y Dinamismo (Efecto Hover/Focus) */
-.back-link:hover,
-.back-link:focus {
-    /* Estado de interacción */
-    color: #0056b3; /* Un azul más oscuro al pasar el ratón */
-    background-color: #e9f0ff; /* Fondo muy sutil para resaltarlo */
-    
-    /* Efecto de 'Levantamiento' (sombra sutil) */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    
-    /* Escala sutil para un efecto dinámico apropiado */
-    transform: translateY(-1px);
-}
-
-/* 4. Estado Activo (Al hacer clic) */
-.back-link:active {
-    /* Efecto de 'Presión' */
-    transform: translateY(0);
-    box-shadow: none;
-}
-
 .footer-servicios {
     display: block;
     width: 200px;
@@ -319,4 +268,5 @@
     }
 
 }
+
 
