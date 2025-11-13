@@ -8,6 +8,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+        <header>
+        <nav class="main-nav">
+            <div class="container nav-content">
+                    <a href="/" class="logo">INFOTICS</a>
+                    
+                        <button class="menu-alternador" aria-expanded="false" aria-controls="menu-principal">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    
+                    <ul class="enlaces-navegacion" id="menu-principal"> 
+                        
+                        <li class="elemento-nav"><a href="index.html">Inicio</a></li>
+                        
+                        <li class="elemento-nav"><a href="quienes_somos/objetivos-y-equipos-de-trabajo">Quiénes somos</a></li>
+                        
+                        <li class="elemento-nav submenu-activador">
+                            <span class="titulo-categoria">Portfolio </span>
+                            <ul class="submenu">
+                                <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+                                <li><a href="portfolio/clientes.html">Principales Clientes</a></li>
+                                <li><a href="portfolio/galeria.html">Galería</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="elemento-nav submenu-activador">
+                            <span class="titulo-categoria">Servicios </span>
+                            <ul class="submenu">
+                                <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                                <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                                <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="elemento-nav"><a href="blog/noticias-tics.html">Blog</a></li>
+                        
+                        <li class="elemento-nav"><a href="contacto/consulta-personalizada">Contacto</a></li>
+
+                        <li class="elemento-nav submenu-activador">
+                            <span class="titulo-categoria">Tu cuenta <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
+                            <ul class="submenu submenu-derecha"> 
+                                <li><a href="/cuenta/registro">Registro</a></li>
+                                <li><a href="/cuenta/inicio-sesion">Inicio Sesión</a></li>
+                            </ul>
+                        </li>      
+                    </ul>
+            </div>
+        </nav>
+    </header>  
     <div class="contenedor-pagina">
         
         <aside class="barra-lateral">
@@ -66,7 +114,7 @@
             </div>
 
         </aside>
-
+    </div>
         <main class="contenido-principal">
             
             <section class="seccion-principal seccion-introduccion">
@@ -98,8 +146,67 @@
                     <div class="caja-dafo amenazas" tabindex="0"><h3>Amenazas</h3><p>Ataques de seguridad y fuerte competencia.</p></div>
                 </div>
             </section>
-
         </main>
-    </div>
+                 <footer class="site-footer">
+            <div class="footer-container">
+                
+                <div class="footer-column">
+                    <h3>Nuestra Compañía</h3>
+                    <ul class="footer-links">
+                        <li><a href="../quienes_somos/onjetivos-y-equipos-de-trabajo.html">Departamentos</a></li>
+                        <li><a href="../portfolio/testimonios.html">Testimonios</a></li>
+                        <li><a href="../portfolio//proyectos.html">Nuestros proyectos</a></li>
+                        <li><a href="../blog/noticias-tics.html">Últimas Noticias</a></li>
+                        <li><a href="../contacto/consulta-personalizada">Contáctanos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <a href="/noticias" class="footer-servicios" aria-label="Ver el último artículo del blog">
+                        <img src="[URL_DE_TU_IMAGEN_DESTACADA]" alt="Imagen miniatura parte de Servicios" class="footer-servicios-img">
+                    </a>
+                    <ul class="footer-links">
+                        <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                        <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                        <li><a href="../servicios/servicio_tecnico.html">Servicio Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto Directo</h3>
+                    <div class="contact-department">
+                        <strong>Desarrollo Web</strong>
+                        <p>
+                            <a href="mailto:web@infotics.es">dweb@infotics.es</a><br>
+                            <a href="tel:+34900000001">+34 900 100 001</a>
+                        </p>
+                    </div>
+                    <div class="contact-department">
+                        <strong>Seguridad Informática</strong>
+                        <p>
+                            <a href="mailto:seguridad@infotics.es">seguridad@infotics.es</a><br>
+                            <a href="tel:+34900000002">+34 900 100 002</a>
+                        </p>
+                    </div>
+                    <div class="contact-department">
+                        <strong>Servicio Técnico</strong>
+                        <p>
+                            <a href="mailto:soporte@infotics.es">soporte@infotics.es</a><br>
+                            <a href="tel:+34900000003">+34 900 100 003</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 INFOTICS - Servicios Informáticos. Todos los derechos reservados.</p>
+                <ul class="footer-legal-links">
+                    <li><a href="../terminos-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="../politica-privacidad.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </footer>    
 </body>
 </html>
