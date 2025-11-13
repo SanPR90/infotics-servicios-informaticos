@@ -91,54 +91,69 @@
         .category-list a:hover { 
             text-decoration: underline; }
 
-/* 1. Estilos Base para el Enlace */
-.back-link {
-    /* Define el enlace como un bloque flexible para alinear el icono y el texto */
-    display: inline-flex;
-    align-items: center;
-    
-    /* Tipografía y color */
-    color: #007bff; /* Color azul primario para accesibilidad y modernidad */
-    font-size: 1rem;
-    font-weight: 500; /* Ligeramente más grueso que el normal */
-    text-decoration: none; /* Elimina el subrayado por defecto */
-    
-    /* Espaciado y forma */
-    padding: 0.5rem 1rem;
-    border-radius: 8px; /* Bordes redondeados sutiles */
-    
-    /* Transición suave para todos los efectos */
-    transition: all 0.3s ease;
-}
-
-/* 2. Pseudo-elemento para el Icono de Retroceso */
-.back-link::before {
-    content: '←'; /* Flecha izquierda como un icono moderno */
-    /* content: '&#x2190;'; Si prefieres usar entidades HTML */
-    margin-right: 8px;
-    font-size: 1.2rem;
-    line-height: 1; /* Asegura que la flecha esté bien alineada */
-}
-
-/* 3. Accesibilidad y Dinamismo (Efecto Hover/Focus) */
-.back-link:hover,
-.back-link:focus {
-    /* Estado de interacción */
-    color: #0056b3; /* Un azul más oscuro al pasar el ratón */
-    background-color: #e9f0ff; /* Fondo muy sutil para resaltarlo */
-    
-    /* Efecto de 'Levantamiento' (sombra sutil) */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    
-    /* Escala sutil para un efecto dinámico apropiado */
-    transform: translateY(-1px);
-}
-
-/* 4. Estado Activo (Al hacer clic) */
-.back-link:active {
-    /* Efecto de 'Presión' */
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-
+        /* 1. Estilos Base para el Enlace (Estado Normal) */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            
+            /* TAMAÑO INICIAL MÁS GRANDE */
+            font-size: 1.1rem; /* Aumentamos el tamaño base */
+            font-weight: 700; /* Lo hacemos negrita por defecto para mayor impacto */
+            
+            color: #5becff; /* Color oscuro para mayor contraste */
+            text-decoration: none;
+            
+            padding: 0.5rem 1rem;
+            border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+            background-color: transparent;
+            
+            /* BARRA HORIZONTAL (Contraste) */
+            border-bottom: 3px solid #007bff; /* Barra azul distintiva en la parte inferior */
+            
+            transition: all 0.3s ease; 
+        
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 2. Pseudo-elemento para el Icono de Retroceso */
+        .back-link::before {
+            content: '←';
+            margin-right: 8px;
+            font-size: 1.3rem; /* Lo hacemos más grande para que coincida con el texto */
+            line-height: 1;
+            transition: margin-right 0.3s ease;
+        }
+        
+        /* 3. Accesibilidad y Dinamismo (Efecto Hover/Focus) */
+        .back-link:hover,
+        .back-link:focus {
+            /* Estado de interacción */
+            color: #0056b3;
+            background-color: #e9f0ff;
+            
+            /* EFECTO CONTRASTANTE: Ocultamos la barra de abajo y creamos el desplazamiento */
+            border-bottom-color: transparent; /* Oculta la barra de contraste */
+        
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+            transform: translateY(-3px); 
+        
+            /* Mantenemos el tamaño de fuente para evitar un doble cambio */
+            font-size: 1.1rem; 
+            font-weight: 700;
+        }
+        
+        /* Para el desplazamiento del icono */
+        .back-link:hover::before,
+        .back-link:focus::before {
+            margin-right: 12px;
+        }
+        
+        /* 4. Estado Activo (Al hacer clic) */
+        .back-link:active {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        
+        
