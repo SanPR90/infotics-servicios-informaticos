@@ -348,14 +348,18 @@ background: linear-gradient(to right,
  * =========================================
  */
 .quick-contact {
-    background-color: var(--color-bg-light);
+    background: url(imagenes/fondo_formulario.jpg);
     padding: 50px 0;
     text-align: center;
+    background-repeat: space;
 }
 
 .quick-contact h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 30px;
+    color: #0ef3cb;
+    text-align: end;
+    font-weight: normal;
 }
 
 .quick-form {
@@ -429,5 +433,6 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
