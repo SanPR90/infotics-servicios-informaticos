@@ -27,6 +27,36 @@ body {
     background: url(imagenes/backgrounds/1.jpg);
 }
 
+ /*PRELOADER: Imagen que aparece mientras recarga la web y sus paginas*/
+ .preloader{ 
+	position:fixed; 
+	left:0px; 
+	top:0px; 
+	width:100%; 
+	height:100%; 
+	z-index:999999; 
+	background-color:#ffffff; 
+	background-position:center center; 
+	background-repeat:no-repeat; 
+	background-image:url(imgsOvideos/logotipo.png);
+}
+
+.preloader img {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 2. Regla para ocultar (cuando el JS añade la clase 'loaded') */
+.preloader.loaded {
+    opacity: 0; /* Lo hace completamente transparente */
+    visibility: hidden; /* Lo esconde y lo saca del flujo */
+    transition: opacity 1s ease, visibility 0s 1s; /* El '0s 0.5s' asegura que se oculte *después* de la transición */
+}
+
 .container {
     max-width: var(--max-width-content);
     margin: 0 auto;
@@ -433,6 +463,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
