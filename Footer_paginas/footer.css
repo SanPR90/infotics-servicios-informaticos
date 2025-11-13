@@ -10,7 +10,7 @@
     --color-footer-bg: #1e293b;         /* Fondo oscuro (Ej: Azul oscuro) */
     --color-footer-text: #cbd5e1;       /* Texto principal (Ej: Gris claro) */
     --color-footer-links: #ffffff;      /* Enlaces (Ej: Blanco) */
-    --color-footer-headings: #7a27ffef;   /* Cabeceras (Ej: Blanco) */
+    --color-footer-headings: #46e797;   /* Cabeceras (Ej: Azul claro) */
     --color-footer-hover: #38bdf8;      /* Color al pasar el ratón (Ej: Azul brillante) */
     --color-footer-border: #334155;     /* Color del borde para la barra inferior */
     --color-footer-hover-bg: rgba(147, 112, 219, 0.5);
@@ -52,6 +52,7 @@
     flex: 1; /* Permite que las columnas crezcan */
     min-width: 250px; /* Ancho mínimo antes de que se "rompa" la línea */
     text-align: center; 
+    font-size: 1.1rem;
 }
 
 /*
@@ -63,10 +64,10 @@
 /* Cabeceras de columnas */
 .footer-column h3 {
     color: var(--color-footer-headings);
-    font-size: 1.5rem; /* 1.2 veces el tamaño base */
+    font-size: 1.7rem;
     margin-bottom: 1.2rem;
-    font-weight: 600;
-    border-bottom: 2px solid var(--color-footer-border);
+    font-weight: 500;
+    border-bottom: 2px solid #4b77b7;
     padding-bottom: 0.6rem;
     letter-spacing: 0.1rem;
 } 
@@ -144,7 +145,7 @@
     padding: 4px 8px;
     border-radius: 5px;
     transition: color var(--transition-speed) ease, 
-                background-color var(--transition-speed) ease;
+     background-color var(--transition-speed) ease;
 }
 
 .contact-department a[href^="mailto:"]:hover {
@@ -169,7 +170,7 @@
 }
 
 .contact-department strong {
-    color: #6394acf1;
+    color: #4baedff1;
     font-size: larger;
     font-weight: 575;
     display: block; /* Para que ocupe su línea */
@@ -195,15 +196,13 @@
 .footer-bottom {
     border-top: 1px solid var(--color-footer-border);
     padding-top: 30px;
-    margin-top: 30px;
-    
+    margin-top: 30px;  
     /* Flexbox para alinear copyright y enlaces */
     display: flex;
     flex-wrap: wrap; /* Para móviles */
     justify-content: space-between;
-    align-items: center;
-    
-    font-size: 0.9rem;
+    align-items: center;  
+    font-size: 1.1rem;
     color: var(--color-footer-text);
     max-width: 1200px;
     margin-left: auto;
@@ -268,4 +267,5 @@
     .footer-legal-links li {
         margin: 0 10px; /* Centra los enlaces legales */
     }
+
 }
