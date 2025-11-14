@@ -5,7 +5,7 @@
  */
 :root {
     --color-primary: #7a27ffef; /* Azul claro para acciones principales */
-    --color-secondary: #9370db; /* Lila medio (para el hover del footer y este botón) */
+    --color-secondary: #171930; /* Lila medio (para el hover del footer y este botón) */
     --color-text-dark: #1e293b; 
     --color-text-light: #ffffff;
     --color-bg-light: #f1f5f9;
@@ -76,12 +76,12 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-text-light);
 }
 
 .btn-primary:hover {
-    background-color: #171930; /* Tono más oscuro de primary */
+    background-color: var(--color-primary); /* Tono más oscuro de primary */
 }
 
 .btn-secondary {
@@ -567,5 +567,6 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
