@@ -363,7 +363,7 @@ body {
 }
 
 .imagen-intro img {
-    width: 100%;
+    width: 75%;
     height: auto;
     border-radius: 10px;
     box-shadow: var(--sombra);
@@ -470,6 +470,7 @@ hr {
     }
 
 }
+
 
 
 
