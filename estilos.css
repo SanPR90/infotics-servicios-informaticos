@@ -489,6 +489,9 @@ background: linear-gradient(to right,
     color: #0ef3cb;
     text-align: end;
     font-weight: normal;
+    background: indigo;
+    width: fit-content;
+    margin-left: auto;
 }
 
 .quick-form {
