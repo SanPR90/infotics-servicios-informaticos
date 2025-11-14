@@ -81,7 +81,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #276969fc; /* Tono más oscuro de primary */
+    background-color: #171930; /* Tono más oscuro de primary */
 }
 
 .btn-secondary {
@@ -567,4 +567,5 @@ background: linear-gradient(to right,
     }
 
 }
+
 
