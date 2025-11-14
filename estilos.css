@@ -486,12 +486,14 @@ background: linear-gradient(to right,
 .quick-contact h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #0ef3cb;
+    color: #f0f5f4;
     text-align: end;
     font-weight: normal;
-    background: indigo;
+    background: #1b2036a8;
     width: fit-content;
     margin-left: auto;
+    border-radius: 6px;
+    padding: 0.4rem;
 }
 
 .quick-form {
