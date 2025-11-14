@@ -401,6 +401,7 @@ hr {
     max-width: 350px;
     background-color: var(--fondo-claro);
     border-radius: 10px;
+	border: 1px solid darkgray;
     overflow: hidden;
     box-shadow: var(--sombra);
     text-align: center;
@@ -422,10 +423,12 @@ hr {
 
 .foto-miembro img {
     width: 240px;
-    height: 268px;
-    object-fit: contain;
+    height: 265px;
     margin: 0.4rem;
-    opacity: 75%;
+    opacity: 76%;
+    border: 1px solid #b5c107b8;
+    border-radius: .5rem;
+    margin-top: 2.2rem;
 }
 
 .info-miembro h3 {
@@ -467,5 +470,6 @@ hr {
     }
 
 }
+
 
 
