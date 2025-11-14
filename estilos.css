@@ -10,7 +10,6 @@
     --color-text-light: #ffffff;
     --color-bg-light: #f1f5f9;
     --color-border: #e2e8f0;
-
     --transition-speed: 0.3s;
     --max-width-content: 1200px;
 }
@@ -179,7 +178,8 @@ body {
   display: flex;
   align-items: center;
   padding: 0.8em 2em;
-  font-family: 'Segoe UI', 'Montserrat', Arial, sans-serif;
+  font-family: "Roboto Flex", Roboto, sans-serif;
+  font-size: 1.2rem;
   justify-content: space-between;
 }
 
@@ -231,7 +231,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 2em;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -562,3 +562,4 @@ background: linear-gradient(to right,
     }
 
 }
+
