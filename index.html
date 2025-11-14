@@ -32,87 +32,53 @@
                 </a>
             </div>
         </div>
-        <nav class="main-nav">
-            <!--<div class="container nav-content">
-                <a href="index.html" class="logo">INFOTICS</a>
-                <ul class="nav-links">
-                    <li class="nav-item"><a href="index.html">Inicio</a></li>
-                    <li class="nav-item has-submenu">
-                        <a href="#">Servicios</a>
-                        <ul class="submenu">
-                            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
-                            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
-                            <li><a href="servicios/servicio_tecnico.html">Servicio Técnico</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#">Portfolio</a>
-                        <ul class="submenu">
-                            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
-                            <li><a href="portfolio/clientes.html">Clientes</a></li>
-                            <li><a href="portfolio/galeria.html">Galeria</a></li>
-                        </ul>
-                    </li>            
-    
-                    <li class="nav-item"><a href="/blog/noticias-tics.html">Blog</a></li>
-                    <li class="nav-item"><a href="/contacto/consulta-personalizada">Contacto</a></li>
-                </ul>
-                <button class="search-btn" aria-label="Abrir Búsqueda">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </button>
-            </div>-->
-            <div class="container nav-content">
-                <a href="/" class="logo">INFOTICS</a>
-                
-                    <button class="menu-alternador" aria-expanded="false" aria-controls="menu-principal">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                
-                <ul class="enlaces-navegacion" id="menu-principal"> 
-                    
-                    <li class="elemento-nav"><a href="index.html">Inicio</a></li>
-                    
-                    <li class="elemento-nav"><a href="quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
-                    
-                    <li class="elemento-nav submenu-activador">
-                        <span class="titulo-categoria">Portfolio </span>
-                        <ul class="submenu">
-                            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
-                            <li><a href="portfolio/clientes.html">Principales Clientes</a></li>
-                            <li><a href="portfolio/galeria.html">Galería</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="elemento-nav submenu-activador">
-                        <span class="titulo-categoria">Servicios </span>
-                        <ul class="submenu">
-                            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
-                            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
-                            <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="elemento-nav"><a href="blog/noticias-tics.html">Blog</a></li>
-                    
-                    <li class="elemento-nav"><a href="contacto/consulta-personalizada.html">Contacto</a></li>
+    <nav class="techo-menu" aria-label="Menú principal">
+        <a href="index.html" class="logo" aria-label="Inicio">InfoTics</a>
+        
+        <div class="logo-placeholder">
+        </div>
+        
+        <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
+        <span class="burger"></span>
+        <span class="sr-only">Abrir menú</span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+        
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+        
+        <li class="has-submenu">
+            <a href="portfolio/proyectos.html">Portfolio</a>
+            <ul class="submenu">
+            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+            <li><a href="portfolio/clientes.html">Clientes</a></li>
+            <li><a href="portfolio/galeria.html">Galería</a></li>
+            </ul>
+        </li>
+        
+        <li class="has-submenu">
+            <a href="servicios/desarrollo_web.html">Servicios</a>
+            <ul class="submenu">
+            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+            <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="blog/noticias-tics.html">Blog</a></li>
+        <li><a href="contacto/consulta-personalizada.html">Contacto</a></li>
+        
+        <li class="has-submenu">
+            <a href="/cuenta/inicio-sesion">Cuenta</a>
+            <ul class="submenu submenu-derecha">
+                <li><a href="/cuenta/registro">Registro</a></li>
+                <li><a href="/cuenta/inicio-sesion">Inicio Sesión</a></li>
+            </ul>
+        </li>
+        </ul>
+  </nav>
 
-                    <li class="elemento-nav submenu-activador">
-                        <span class="titulo-categoria">Tu cuenta <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
-                        <ul class="submenu submenu-derecha"> 
-                            <li><a href="/cuenta/registro">Registro</a></li>
-                            <li><a href="/cuenta/inicio-sesion">Inicio Sesión</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </div>
-        </nav>
-
-    <button class="boton-busqueda" aria-label="Abrir Búsqueda">
-        <i class="fas fa-search" aria-hidden="true"></i>
-    </button>
-</div>
-    </header>
+</header>
 
     <section class="hero-header">
         <div class="container hero-content">
@@ -122,14 +88,14 @@
         </div>
     </section>
 
-    <main class="main-content container">
+<main class="main-content container">
         <article>
             <h2>Acerca de INFOTICS: Tu Partner Tecnológico</h2>
             <p>En INFOTICS, entendemos que la tecnología es el motor de tu crecimiento. Desde 2020, hemos brindado soluciones robustas y escalables, enfocadas en optimizar procesos y proteger activos digitales. Nuestro equipo senior se especializa en crear experiencias web fluidas, blindar infraestructuras contra amenazas y garantizar la continuidad operativa de tu hardware.</p>
             <p>Nuestra misión es simple: Ofrecer un **servicio informático integral** que te permita enfocarte en tu *core business*, sabiendo que tu tecnología está en manos expertas.
             </p>
         </article>
-    </main>
+</main>
 
     <section class="quick-contact">
         <div class="container">
@@ -211,7 +177,6 @@
 </footer>
 </body>
 <!--Inclusion de Archivos Javascript-->
-<script src="javascript/menu_burguer.js"></script>
 <script src="javascript/check_preloader.js"></script>
 </html>
 
