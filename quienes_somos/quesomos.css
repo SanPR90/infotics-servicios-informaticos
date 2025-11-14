@@ -1,6 +1,6 @@
 /* Base y Tipografía */
 :root {
-    --color-primario: #740480f0; 
+    --color-primario: #1e293b; 
     --color-secundario: #28a745; 
     --color-texto: #333;
     --fondo-claro: #f4f7f6;
@@ -473,6 +473,7 @@ hr {
     }
 
 }
+
 
 
 
