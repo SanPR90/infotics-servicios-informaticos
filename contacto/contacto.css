@@ -26,7 +26,7 @@ body {
 	background-color:#ffffff; 
 	background-position:center center; 
 	background-repeat:no-repeat; 
-	background-image:url(../imgsOvideos/logotipo.png);
+	background-image:url(../imagenes/logotipo.png);
 }
 
 .preloader img {
@@ -323,5 +323,6 @@ body {
     transform: scale(1.1);
     color: #0284c7; /* sky-600 */
 }
+
 
 
