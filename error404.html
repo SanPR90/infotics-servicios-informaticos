@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Página no encontrada</title>
+    
+    <!-- Importación de fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- VARIABLES CSS --- */
+        :root {
+            --color-primary: #7a27ffef;
+            --color-secondary: #171930;
+            --color-text-dark: #1e293b;
+            --color-text-light: #ffffff;
+            --color-bg-light: #f1f5f9;
+            --color-border: #e2e8f0;
+        }
+
+        /* --- RESET BÁSICO --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto Flex", Roboto, sans-serif;
+            background-color: var(--color-secondary);
+            color: var(--color-text-dark);
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; 
+            position: relative;
+        }
+
+        /* --- FONDO --- */
+        .background-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-image {
+            width: 90%;
+            height: 60%;
+            object-fit: contain;
+            object-position: top;
+            opacity: 0.9;
+            filter: grayscale(30%) contrast(120%) brightness(0.8); /* Un poco más oscuro para que resalte el neón */
+        }
+
+        /* --- CONTENEDOR PRINCIPAL (La tarjeta) --- */
+        .content-container {
+            text-align: center;
+            padding: 3.5rem;
+            max-width: 600px;
+            width: 90%;
+            background:  rgb(209 194 251 / 45%); /* Un poco más opaco para contrastar con el brillo externo */
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(8px);           
+            border: 2px solid rgba(122, 39, 255, 0.3); /* Borde sutil que también brillará */
+            border-radius: 50%;           
+            animation: slideUp 0.8s ease-out forwards, 
+                       neonPulse 3s ease-in-out infinite;  
+            transform-style: preserve-3d;
+            will-change: transform, box-shadow, border-color;
+        }
+
+        /* --- TIPOGRAFÍA --- */
+        .error-code {
+            font-family: "Concert One", sans-serif;
+            font-size: 6rem;
+            line-height: 1;
+            color: #2d056bef;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+            /* Sombra de texto fija para legibilidad */
+            text-shadow: 3px 3px 0px #a744b3;
+        }
+
+        .error-subheader {
+            font-family: "Concert One", sans-serif;
+            font-size: 2rem;
+            color: var(--color-secondary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .error-subheader::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-primary);
+            margin: 0.5rem auto 0;
+            border-radius: 10px;
+        }
+
+        .error-message {
+            font-size: 1.125rem;
+            color: var(--color-text-dark);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* --- BOTÓN --- */
+        .btn-home {
+            display: inline-block;
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            font-family: "Roboto Flex", Roboto, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            transition: all 0.2s ease;
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 4px 15px rgba(122, 39, 255, 0.3);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-home:hover {
+            background-color: #1e293b;
+            color: var(--color-text-light);
+            box-shadow: 0 0 20px rgba(122, 39, 255, 0.6); /* Brillo extra al hover */
+            transform: scale(1.05);
+        }
+
+        .btn-home:active {
+            transform: scale(0.98);
+        }
+
+        /* --- KEYFRAMES --- */
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* NUEVA ANIMACIÓN NEÓN + ZOOM */
+        @keyframes neonPulse {
+            0% {
+                transform: scale(1);
+                /* Estado "Apagado/Tenue": Sombra suave */
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-color: rgba(122, 39, 255, 0.3);
+            }
+            50% {
+                transform: scale(1.05); /* Zoom más notorio (5% más grande) */
+                
+                /* Estado "Encendido/Neón":
+                   1. Sombra interna blanca (glow núcleo)
+                   2. Sombra externa color primario intensa
+                   3. Sombra externa muy difusa para ambiente
+                */
+                box-shadow: 
+                    0 0 20px rgba(122, 39, 255, 0.4),       /* Halo cercano */
+                    0 0 50px rgba(122, 39, 255, 0.6),       /* Halo medio */
+                    0 0 100px rgba(122, 39, 255, 0.4);      /* Halo lejano */
+                
+                border-color: rgba(122, 39, 255, 0.8); /* El borde se ilumina */
+            }
+            100% {
+                transform: scale(1);
+                /* Vuelta a apagado */
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-color: rgba(122, 39, 255, 0.3);
+            }
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .error-code { font-size: 4.5rem; }
+            .error-subheader { font-size: 1.5rem; }
+            .content-container { padding: 2rem; width: 90%; }
+            
+            /* En móvil reducimos un poco el zoom para que no se salga de pantalla */
+            @keyframes neonPulse {
+                0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+                50% { 
+                    transform: scale(1.03); 
+                    box-shadow: 0 0 30px rgba(122, 39, 255, 0.5);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-wrapper">
+        <img src="imagenes/img-error-404.png" alt="Fondo abstracto tecnológico" class="background-image">
+    </div>
+
+    <main class="content-container">
+        <h1 class="error-code">ERROR 404</h1>
+        <h2 class="error-subheader">- Página no encontrada</h2>
+        <p class="error-message">La página que busca no se encuentra disponible.</p>
+        
+        <a href="index.html" class="btn-home">Volver al Inicio</a>
+    </main>
+
+</body>
+</html>
