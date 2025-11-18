@@ -26,6 +26,9 @@ body {
     background: url(imagenes/backgrounds/1.jpg);
 }
 
+h1, h2, h3 {
+	font-family: "Concert One", sans-serif;}
+
  /*PRELOADER: Imagen que aparece mientras recarga la web y sus paginas*/
  .preloader{ 
 	position:fixed; 
@@ -443,6 +446,7 @@ background: linear-gradient(to right,
     font-size: 2.8rem;
     margin-bottom: 15px;
     font-weight: 800;
+	font-family: "Concert One", sans-serif;
 }
 
 .hero-content p {
@@ -468,6 +472,7 @@ background: linear-gradient(to right,
     font-size: 2rem;
     color: var(--color-primary);
     margin-bottom: 20px;
+	font-family: "Concert One", sans-serif;
 }
 
 
@@ -567,6 +572,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
