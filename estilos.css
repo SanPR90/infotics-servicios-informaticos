@@ -586,6 +586,328 @@ background: linear-gradient(to right,
 
 /*
  * =========================================
+ * 4.2 SECCIÓN CENTRAL PARA SERVICIOS
+ * =========================================
+ */
+
+.contenedor-pagina {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 33.33%;
+    background-color: var(--accent-color); 
+    
+    /* Centrado y Espaciado Mejorado */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    padding: 40px 20px;
+    gap: 40px; 
+    
+    border-right: 2px solid var(--primary-color);
+}
+
+.contenido-principal {
+    width: 66.67%;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.seccion-principal {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* --- 2. BARRA LATERAL (DIVISORES) --- */
+
+.titulo-principal {
+    color: var(--text-white);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.seccion-lateral {
+    width: 100%;
+}
+
+/* --- 3. MENÚ VERTICAL DINÁMICO (Con Imagen y Línea a la Derecha) --- */
+
+.seccion-menu h3 {
+    margin-bottom: 15px;
+}
+
+.seccion-menu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.seccion-menu nav ul li {
+    margin-bottom: 15px;
+    position: relative; 
+    width: 100%;
+}
+
+.seccion-menu nav ul li a {
+    /* Flexbox para la estructura: Imagen | Texto | Icono */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    
+    padding: 10px 15px; 
+    text-decoration: none;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 6px;
+    
+    /* Propiedad solicitada: margin-right: 1rem */
+    margin-right: 1rem; 
+
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    height: calc(var(--menu-img-size) + 20px); 
+    text-align: left; 
+}
+
+/* Contenedor de Imagen (85x85) */
+.contenedor-imagen {
+    width: var(--menu-img-size);
+    min-width: var(--menu-img-size);
+    height: var(--menu-img-size);
+    border-radius: 50%;
+    border: 1px solid var(--text-light);
+    background-color: var(--secondary-color); /* Fondo del placeholder */
+    margin-right: 15px; 
+    overflow: hidden; 
+}
+
+.contenedor-imagen img {
+    /* Aseguramos que la imagen ocupe el espacio sin distorsión */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo del texto del servicio (Evita desbordamiento) */
+.texto-servicio {
+    flex-grow: 1; 
+    white-space: normal; 
+    padding-right: 10px; 
+    font-size: 1.1em;
+}
+
+.seccion-menu nav ul li a i {
+    font-size: 1.5em;
+    color: var(--text-white);
+    min-width: 25px; 
+}
+
+/* Recuadro Moderno al pasar el ratón */
+.seccion-menu nav ul li:hover a {
+    background-color: rgba(93, 63, 211, 0.2); 
+    border-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+.seccion-menu nav ul li.activo a {
+    background-color: var(--primary-color); 
+    border-color: var(--primary-color);
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+/* Línea Dinámica a la DERECHA (::after) - RE-IMPLEMENTACIÓN */
+.seccion-menu nav ul li a::after {
+    content: '';
+    position: absolute;
+    /* Colocación a la derecha, respetando el margin-right: 1rem; */
+    top: 15%; 
+    right: 1rem; /* Alineado con el margen derecho del 'a' */
+    width: 4px; 
+    height: 70%; 
+    
+    background-color: var(--primary-color);
+    transform: scaleY(0); 
+    transform-origin: top; 
+    transition: transform 0.3s ease-out;
+}
+
+.seccion-menu nav ul li:hover a::after {
+    transform: scaleY(1); 
+    background-color: var(--text-white); /* Color de la línea al hacer hover */
+}
+
+
+/* --- 4. ENLACES PDF Y CONTACTO --- */
+
+.enlaces-pdf {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.enlaces-pdf a {
+    color: var(--text-white);
+    transition: color 0.3s;
+}
+
+.enlaces-pdf a:hover {
+    color: var(--primary-color);
+}
+
+.caja-contacto {
+    background-color: var(--secondary-color);
+    border: 2px dashed var(--text-white);
+    box-shadow: var(--shadow-dark);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: auto; 
+    text-align: center;
+}
+
+.caja-contacto i, .caja-contacto h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.btn-contacto {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #4B31A8;
+}
+
+/* --- 5. CONTENIDO PRINCIPAL --- */
+
+.contenido-procedimiento {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.imagen-procedimiento {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-dark);
+}
+
+.contenido-procedimiento ul {
+    list-style: none;
+}
+
+.contenido-procedimiento ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--accent-color);
+}
+
+.contenido-procedimiento ul li i {
+    color: #00FF00;
+    margin-right: 10px;
+}
+
+/* --- 6. ANÁLISIS DAFO (GRID 2x2 y EFECTOS) --- */
+.rejilla-dafo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.caja-dafo {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; 
+    min-height: 150px;
+    cursor: default;
+}
+
+.caja-dafo:hover,
+.caja-dafo:focus {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(93, 63, 211, 0.7);
+    outline: none; 
+}
+
+/* Colores DAFO */
+.fortalezas { 
+    background-color: #1A344F; 
+    border-left: 5px solid #00FF00;
+}
+.oportunidades { 
+    background-color: #2F2F4F; 
+    border-left: 5px solid #FFFF00;
+}
+.debilidades { 
+    background-color: #4F1A34; 
+    border-left: 5px solid #FF0000;
+}
+.amenazas { 
+    background-color: #4F4A1A; 
+    border-left: 5px solid #FFA500;
+}
+
+.caja-dafo h3 {
+    color: var(--text-white);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* --- 7. RESPONSIVENESS (Media Queries) --- */
+
+@media (max-width: 992px) {
+    
+    .contenedor-pagina {
+        flex-direction: column; 
+    }
+
+    .barra-lateral, .contenido-principal {
+        width: 100%; 
+        padding: 20px;
+    }
+    
+    .barra-lateral {
+        order: -1;
+    }
+
+    .rejilla-dafo {
+        grid-template-columns: 1fr; 
+    }
+
+    .contenido-procedimiento {
+        flex-direction: column; 
+    }
+
+    .imagen-procedimiento {
+        max-width: 80%;
+    }
+    
+    /* En móvil, eliminamos el margen derecho y la línea dinámica para ahorrar espacio */
+    .seccion-menu nav ul li a {
+        margin-right: 0;
+    }
+    .seccion-menu nav ul li a::after {
+        content: none;
+    }
+}
+
+/*
+ * =========================================
  * 5. CONSULTA RÁPIDA (Formulario)
  * =========================================
  */
@@ -930,6 +1252,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
