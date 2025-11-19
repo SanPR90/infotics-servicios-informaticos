@@ -175,6 +175,21 @@ h1, h2, h3 {
   color: #44ffd1;
   letter-spacing: 2px;
   transition: color 0.2s;
+  display: flex;           /* Elimina espacios extra debajo de la imagen */
+  align-items: center;     /* Centra verticalmente si hay texto al lado */
+  padding: 0;              /* Resetea padding si lo hubiera */
+  gap: 10px; 	
+}
+.techo-menu .logo img {
+    height: 50px;            /* ALTURA FIJA BASE: Controla el tamaño por altura */
+    width: auto;             /* Mantiene la proporción original (aspect ratio) */
+    object-fit: contain;     /* Asegura que la imagen no se deforme */
+    max-width: 180px;        /* Límite de ancho para logos muy apaisados */
+    transition: transform 0.3s ease; /* Suavidad para efectos hover */
+}
+.techo-menu .logo:hover img {
+    transform: scale(1.05);  /* Pequeño zoom elegante al pasar el ratón */
+    filter: brightness(1.1); /* Ligero brillo */
 }
 .techo-menu .logo:hover {
   color: #91e3ff;
@@ -915,6 +930,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
