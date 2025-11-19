@@ -912,7 +912,7 @@ background: linear-gradient(to right,
  * =========================================
  */
 
-.hero-header-blog {
+		.hero-header-blog {
             background-image: linear-gradient(90deg, rgb(212 0 122 / 65%), rgb(67 81 247 / 50%)), /* Capa 1: Gradiente con 50% opacidad */ url(../imagenes/horizon_team_work.jpg);
             background-size: cover;
             background-position: center;
@@ -929,7 +929,7 @@ background: linear-gradient(to right,
         .hero-header-blog p { 
             font-size: 1.2em; 
             opacity: 0.9; }
-         hero-header-blog :is(h2, h3, h4, h5) { 
+         .hero-header-blog :is(h2, h3, h4, h5) { 
             font-family: "Concert One", sans-serif;
             color: #46e797;
             font-weight: 400;
@@ -1406,6 +1406,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
