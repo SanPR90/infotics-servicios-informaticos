@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Clientes - INFOTICS</title>
+    
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+      <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="loader-spinner"></div>
+    </div>
+<body>
+    <!-- CABECERA (Copiada de tu index.html y modificada) -->
+    <header class="pre-header">
+        <div class="container pre-header-content">
+            <div class="pre-header-contact">
+                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> C/ Desarrollo Web, 123, Madrid</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:info@infotics.es">info@infotics.es</a></span>
+            </div>
+            <div class="pre-header-social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="#" aria-label="X / Twitter"><i class="fab fa-square-x-twitter" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="techo-menu" aria-label="Menú principal">
+        <a href="index.html" class="logo" aria-label="Inicio">InfoTics</a>
+        
+        <div class="logo-placeholder"></div>
+        
+        <!-- Botón hamburguesa (visual) -->
+        <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
+            <span class="burger"></span>
+            <span class="sr-only">Abrir menú</span>
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+            
+            <li class="has-submenu">
+                <a href="portfolio/proyectos.html">Portfolio</a>
+                <ul class="submenu">
+                    <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+                    <li><a href="portfolio/clientes.html">Clientes</a></li>
+                    <li><a href="portfolio/galeria.html">Galería</a></li>
+                </ul>
+            </li>
+            
+            <li class="has-submenu">
+                <a href="servicios/desarrollo_web.html">Servicios</a>
+                <ul class="submenu">
+                    <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                    <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                    <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="blog/noticias-tics.html">Blog</a></li>
+            <li><a href="contacto/consulta-personalizada.html">Contacto</a></li>
+            
+            <!-- CAMBIO SOLICITADO: Reemplazo del dropdown "Cuenta" por botón directo -->
+            <li>
+                <a href="#" class="btn-area-clientes">Área de Clientes</a>
+            </li>
+        </ul>
+    </nav>
+  <main>
+  <div class="contenedor-auth">
+        <div class="tarjeta-auth">
+            
+            <!-- CABECERA DEL FORMULARIO -->
+            <div class="cabecera-auth">
+                <h2 id="tituloFormulario">Bienvenido</h2>
+                <p id="subtituloFormulario">Accede a tu panel de control</p>
+            </div>
+
+            <!-- ALERTAS -->
+            <div style="padding: 0 30px; margin-top: 20px;">
+                <div id="cajaAlerta" class="alerta"></div>
+            </div>
+
+            <!-- FORMULARIO INICIO SESIÓN -->
+            <div id="seccionInicioSesion" class="caja-formulario">
+                <form id="formularioLogin" onsubmit="manejarInicioSesion(event)">
+                    <div class="grupo-input">
+                        <label for="correoAcceso">Correo Electrónico</label>
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="correoAcceso" placeholder="ejemplo@empresa.com" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="claveAcceso">Contraseña</label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="claveAcceso" placeholder="••••••••" required>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:0.9rem;">
+                        <label style="display:flex; align-items:center; cursor:pointer;">
+                            <input type="checkbox" style="margin-right:8px;"> Recordarme
+                        </label>
+                        <a href="#" style="color:var(--color-primary); text-decoration:none;">¿Olvidaste la contraseña?</a>
+                    </div>
+                    <button type="submit" class="btn-enviar" id="btnInicioSesion">
+                        INICIAR SESIÓN
+                    </button>
+                </form>
+
+                <div class="cambiar-auth">
+                    ¿No tienes cuenta? <a onclick="alternarFormularios('registro')">Regístrate aquí</a>
+                </div>
+            </div>
+
+            <!-- FORMULARIO REGISTRO -->
+            <div id="seccionRegistro" class="caja-formulario oculto">
+                <form id="formularioRegistro" onsubmit="manejarRegistro(event)">
+                    <div class="grupo-input">
+                        <label for="nombreRegistro">Nombre Completo</label>
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="nombreRegistro" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="correoRegistro">Correo Electrónico</label>
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="correoRegistro" placeholder="ejemplo@empresa.com" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="claveRegistro">Contraseña</label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="claveRegistro" placeholder="Crea una contraseña" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="confirmarClaveRegistro">Confirmar Contraseña</label>
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmarClaveRegistro" placeholder="Repite la contraseña" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar" id="btnRegistro">
+                        CREAR CUENTA
+                    </button>
+                </form>
+
+                <div class="cambiar-auth">
+                    ¿Ya tienes cuenta? <a onclick="alternarFormularios('login')">Inicia sesión aquí</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+<footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 INFOTICS - Servicios Informáticos. Todos los derechos reservados.</p>
+        </div>
+</footer>  
+</html>
