@@ -151,7 +151,52 @@ p, li, a, label {
 
 /*
  * =========================================
- * NAVEGACIÓN PRINCIPAL Y MENU HAMBURGUESA
+ * 1. PRE-HEADER
+ * =========================================
+ */
+.pre-header {
+    background-color: #171930; /* Un color oscuro para la barra superior */
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.pre-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pre-header-contact span {
+    margin-right: 20px;
+}
+
+.pre-header-contact a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pre-header-contact a:hover {
+    color: #44ffd1;
+}
+
+.pre-header-social a {
+    color: #cbd5e1;
+    margin-left: 15px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pre-header-social a:hover {
+    color: #44ffd1;
+}
+
+
+/*
+ * =========================================
+ * 2. NAVEGACIÓN PRINCIPAL Y MENU HAMBURGUESA
  * =========================================
  */
 
@@ -173,8 +218,6 @@ p, li, a, label {
   text-decoration: none;
   padding: 5px 0;
   transition: transform 0.3s ease;
-  margin-left: 1rem;
-  margin-right: 1.6rem;
 }
 
 .techo-menu .logo img {
@@ -225,10 +268,9 @@ p, li, a, label {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  list-style: none;
+  list-style: none; /* Correcto */
   margin: 0;
   padding: 0;
-  z-index: 999;
   justify-content: space-evenly;
   flex: 1;
 }
@@ -288,9 +330,9 @@ p, li, a, label {
 
 /* SUBMENÚS (ESCRITORIO) */
 .submenu {
-    list-style: none;
+    list-style: none; /* ✅ CORRECCIÓN: Añadido list-style: none */
     position: absolute;
-    top: 95%;
+    top: 95%; /* CORRECCIÓN: Fix para evitar parpadeo */
     left: 0;
     background-color: #141e30;
     min-width: 220px;
@@ -324,10 +366,11 @@ p, li, a, label {
     box-shadow: none;
 }
 
-/* =========================================
-   MEDIA QUERIES (TABLETS Y MÓVILES)
-   =========================================
-*/
+/*
+ * =========================================
+ * MEDIA QUERIES (TABLETS Y MÓVILES)
+ * =========================================
+ */
 @media (max-width: 992px) {
     .techo-menu {
         padding: 0.5em 1.5em;
@@ -357,6 +400,7 @@ p, li, a, label {
         border-top: 1px solid rgba(255,255,255,0.1);
         max-height: calc(100vh - 80px);
         overflow-y: auto;
+        z-index: 999; /* ✅ CORRECCIÓN: Añadido z-index para clickabilidad */
     }
 
     .nav-links.open {
@@ -374,11 +418,11 @@ p, li, a, label {
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* Aumentamos ligeramente la tipografía en móviles para legibilidad */
+    /* Tipografía móvil */
     .nav-links li a {
         display: block;
         padding: 12px 20px;
-        font-size: 1rem;  /* mejora lectura en pantallas táctiles */
+        font-size: 0.95rem; /* Ajuste para que no quede tan grande en móvil */
         border-radius: 0;
         width: 100%;
         box-sizing: border-box;
@@ -396,8 +440,7 @@ p, li, a, label {
         background: rgba(68, 255, 209, 0.05);
     }
 
-    /* SUBMENÚS: en móvil se muestran siempre dentro del listado (no colapsados)
-       Esto evita el 'parpadeo' al pasar/interactuar */
+    /* SUBMENÚS: en móvil se muestran estáticos (no colapsados) */
     .submenu {
         position: static;
         opacity: 1;
@@ -412,7 +455,7 @@ p, li, a, label {
 
     .submenu li a {
         padding: 10px 20px 10px 35px;
-        font-size: 0.95rem; /* aumentado desde 0.85rem para accesibilidad */
+        font-size: 0.85rem; /* Ajuste para sub-items en móvil */
         color: #94a3b8;
     }
 
@@ -426,17 +469,25 @@ p, li, a, label {
     }
 }
 
-/* HERO */
+/*
+ * =========================================
+ * 3. HERO HEADER
+ * =========================================
+ */
 .hero-header {
     position: relative;
-    padding: 100px 0;
+    /* ✅ RESTAURACIÓN: Padding más grande */
+    padding: 120px 0; 
     color: var(--color-text-light);
     text-align: center;
     overflow: hidden;
-    background-image: url('imagenes/img-header-principal.png');
+    
+    background-image: url('imagenes/img-header-principal.png'); 
     background-size: cover;
     background-position: center;
 }
+
+/* Overlay para el Gradiente de 50% */
 .hero-header::before {
     content: '';
     position: absolute;
@@ -444,24 +495,41 @@ p, li, a, label {
     left: 0;
     right: 0;
     bottom: 0;
+    /* ✅ RESTAURACIÓN: Gradiente completo */
     background: linear-gradient(to right, 
-        rgb(192 10 216 / 80%), 
-        rgb(72 87 247 / 40%));
+        rgb(192, 10, 216, 0.8), 
+        rgb(72, 87, 247, 0.4) 100%);
     z-index: 1;
+}  
+    
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    /* ✅ RESTAURACIÓN: Max-width para un contenido más amplio */
+    max-width: 900px; 
+    margin: 0 auto;
 }
-.hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
 
 .hero-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
+    /* ✅ RESTAURACIÓN: Fuente más grande */
+    font-size: 3.5rem;
+    margin-bottom: 25px;
     font-weight: 800;
-}
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+	font-family: "Concert One", sans-serif;
 }
 
-/* MAIN CONTENT */
+.hero-content p {
+    /* ✅ RESTAURACIÓN: Fuente más grande */
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/*
+ * =========================================
+ * 4. MAIN CONTENT
+ * =========================================
+ */
 .main-content {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -477,7 +545,77 @@ p, li, a, label {
     font-family: "Concert One", sans-serif;
 }
 
-/* Auth card, forms, etc. (unchanged visual styles, minor readability tweaks) */
+/*
+ * =========================================
+ * 5. CONSULTA RÁPIDA (Formulario)
+ * =========================================
+ */
+.quick-contact {
+    /* ✅ RESTAURACIÓN: Fondo oscuro, más grande */
+    background-image: linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)), 
+                      url(imagenes/fondo_formulario.jpg);
+    padding: 80px 0; /* AUMENTADO el padding para hacer la sección más alta */
+    text-align: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.quick-contact h2 {
+    /* ✅ RESTAURACIÓN: Ajustes de visualización */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--color-footer-headings); 
+    text-align: center; 
+    font-weight: normal;
+    background: transparent; 
+    width: 100%;
+    margin-left: auto;
+    border-radius: 0;
+    padding: 0;
+}
+
+.quick-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px; /* Más ancho */
+    margin: 0 auto;
+    gap: 25px; /* Más espacio entre campos */
+}
+
+.form-group {
+    flex: 1;
+    min-width: 48%; 
+}
+
+.form-group.full-width {
+    flex-basis: 100%;
+}
+
+.quick-form input[type="text"],
+.quick-form input[type="email"],
+.quick-form textarea {
+    width: 100%;
+    padding: 15px; /* Más padding para campos más grandes */
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 1.1rem; /* Letra más grande */
+    transition: border-color var(--transition-speed) ease;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente/blanco */
+}
+
+.quick-form input:focus,
+.quick-form textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(122, 39, 255, 0.2);
+}
+
+/*
+ * =========================================
+ * 6. ESTILOS DE AUTENTICACIÓN (LOGIN/REGISTRO)
+ * =========================================
+ */
 .contenedor-auth {
     flex: 1;
     display: flex;
@@ -512,9 +650,6 @@ p, li, a, label {
 .grupo-input input { width: 100%; padding: 12px 12px 12px 40px; border: 1px solid var(--color-border); border-radius: 5px; box-sizing: border-box; font-size: 1rem; }
 .grupo-input input:focus { border-color: var(--color-primary); outline: none; box-shadow: 0 0 0 3px rgba(122, 39, 255, 0.1); }
 
-.btn-area-clientes { color: #44ffd1 !important; border: 1px solid #44ffd1; font-weight: bold; }
-.btn-area-clientes:hover { background-color: #44ffd1 !important; color: #141e30 !important; box-shadow: 0 0 10px #44ffd1; }
-
 .btn-enviar { width: 100%; padding: 14px; background-color: var(--color-primary); color: white; border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-family: "Concert One", sans-serif; letter-spacing: 1px; }
 .btn-enviar:hover { background-color: #5f1ac9; }
 .btn-enviar:disabled { background-color: #ccc; cursor: not-allowed; }
@@ -525,21 +660,12 @@ p, li, a, label {
 
 .oculto { display: none; }
 
-/* Footer */
-footer { background-color: var(--color-secondary); color: white; text-align: center; padding: 15px; font-size: 0.8rem; z-index: 2; }
 
-/* Responsive tweaks */
-@media (max-width: 576px) {
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-content p { font-size: 1rem; }
-    .main-content h2 { font-size: 1.6rem; }
-    .nav-links li a { font-size: 1rem; padding: 10px 16px; }
-}
-
-/* Rest of the CSS left unchanged (footer styles, other components) */
-/* ... (omitted in preview for brevity but preserved in file) */
-
-/* Footer styles (kept from original file) */
+/*
+ * =========================================
+ * 7. FOOTER
+ * =========================================
+ */
 .site-footer {
     background-color: var(--color-footer-bg);
     color: var(--color-footer-text);
@@ -572,17 +698,38 @@ footer { background-color: var(--color-secondary); color: white; text-align: cen
 .footer-legal-links a { color: var(--color-footer-text); text-decoration: none; transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease; padding: 4px 8px; border-radius: 5px; }
 .footer-legal-links a:hover { color: var(--color-footer-hover); text-decoration: underline; background-color: var(--color-footer-hover-bg); }
 
+/*
+ * =========================================
+ * 8. MEDIA QUERIES FINALES
+ * =========================================
+ */
 @media (max-width: 768px) {
+    /* Pre-header */
     .pre-header-content { flex-direction: column; text-align: center; }
     .pre-header-contact span { display: block; margin: 5px 0; }
     .pre-header-social { margin-top: 10px; }
-    .nav-content { flex-wrap: wrap; }
-    .enlaces-navegacion { display: none; width: 100%; flex-direction: column; }
+    
+    /* Hero */
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content p { font-size: 1rem; }
+    
+    /* Main Content */
+    .main-content h2 { font-size: 1.6rem; }
+    
+    /* Quick Contact Form */
     .form-group { min-width: 100%; }
-    .hero-content h1 { font-size: 2rem; }
+    .quick-contact h2 { font-size: 2rem; }
+    
+    /* Footer */
     .footer-container { flex-direction: column; gap: 30px; }
     .footer-column { min-width: 100%; }
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-legal-links { margin-top: 15px; }
     .footer-legal-links li { margin: 0 10px; }
+}
+
+@media (max-width: 576px) {
+    /* Hero */
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content p { font-size: 0.9rem; }
 }
