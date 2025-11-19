@@ -6,19 +6,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
-    <!-- Carga Librería Font Awesome a través de un CDN (Content Delivery Network). -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="imagenes/favicon.png" type="image/x-icon"> <!--Para incluir favicon a las pestañas-->
+    <link rel="icon" href="imagenes/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
     <title>Página de Inicio - INFOTICS &reg;</title>
 </head>
 <body>
-    <div class="preloader"></div>  
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+    <div class="preloader" aria-hidden="true"></div>  
+
     <header class="pre-header">
         <div class="container pre-header-content">
             <div class="pre-header-contact">
                 <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>C. de la Zarza, 4, 13003 Ciudad Real</span>
-                <span>[Icono Email] <a href="mailto:info@infotics.es">info@infotics.es</a></span>
+                <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@infotics.es">info@infotics.es</a></span>
             </div>
             <div class="pre-header-social">
                 <a href="#" aria-label="LinkedIn">
@@ -31,60 +34,61 @@
                 </a>
             </div>
         </div>
-    <nav class="techo-menu" aria-label="Menú principal">
-        <a href="index.html" class="logo" aria-label="Inicio">InfoTics<img src="imagenes/logotipo.png" height="150px" alt="Imagen Logotipo"></a>
-             
-        <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
-        <span class="burger"></span>
-        <span class="sr-only">Abrir menú</span>
-        </button>
-        <ul id="nav-links" class="nav-links">
-        
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
-        
-        <li class="has-submenu">
-            <a href="portfolio/proyectos.html">Portfolio</a>
-            <ul class="submenu">
-            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
-            <li><a href="portfolio/clientes.html">Clientes</a></li>
-            <li><a href="portfolio/galeria.html">Galería</a></li>
-            </ul>
-        </li>
-        
-        <li class="has-submenu">
-            <a href="servicios/desarrollo_web.html">Servicios</a>
-            <ul class="submenu">
-            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
-            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
-            <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="blog/noticias-tics.html">Blog</a></li>
-            
-        <li><a href="contacto/consulta-personalizada.html">Contacto</a></li>  
-            
-        <li><a href="area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
-            
-        </ul>
-  </nav>
-</header>
+    </header>
 
-    <section class="hero-header">
+    <nav role="navigation" class="techo-menu" aria-label="Menú principal">
+        <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0;">
+            <a href="index.html" class="logo" aria-label="Inicio">
+                <img src="imagenes/logotipo.png" height="150px" alt="Imagen Logotipo">
+            </a>
+
+            <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-haspopup="true" aria-label="Alternar menú">
+                <span class="burger" aria-hidden="true"></span>
+                <span class="sr-only">Abrir menú</span>
+            </button>
+
+            <ul id="nav-links" class="nav-links" data-open="false">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+
+                <li class="has-submenu">
+                    <a href="portfolio/proyectos.html">Portfolio</a>
+                    <ul class="submenu">
+                        <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+                        <li><a href="portfolio/clientes.html">Clientes</a></li>
+                        <li><a href="portfolio/galeria.html">Galería</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="servicios/desarrollo_web.html">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                        <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                        <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="blog/noticias-tics.html">Blog</a></li>
+                <li><a href="contacto/consulta-personalizada.html">Contacto</a></li>  
+                <li><a href="area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-header" role="region" aria-labelledby="hero-title">
         <div class="container hero-content">
-            <h1>Soluciones Informáticas que Impulsan tu Negocio</h1>
+            <h1 id="hero-title">Soluciones Informáticas que Impulsan tu Negocio</h1>
             <p>Especialistas en Desarrollo Web, Ciberseguridad y Soporte Técnico integral para empresas.</p>
             <a href="contacto/consulta-personalizada.html" class="btn btn-primary">Solicita tu Auditoría Gratuita</a>
         </div>
     </section>
 
-<main class="main-content container">
+<main id="main-content" class="main-content container" role="main" tabindex="-1">
         <article>
             <h2>Acerca de INFOTICS: Tu Partner Tecnológico</h2>
             <p>En INFOTICS, entendemos que la tecnología es el motor de tu crecimiento. Desde 2020, hemos brindado soluciones robustas y escalables, enfocadas en optimizar procesos y proteger activos digitales. Nuestro equipo senior se especializa en crear experiencias web fluidas, blindar infraestructuras contra amenazas y garantizar la continuidad operativa de tu hardware.</p>
-            <p>Nuestra misión es simple: Ofrecer un **servicio informático integral** que te permita enfocarte en tu *core business*, sabiendo que tu tecnología está en manos expertas.
-            </p>
+            <p>Nuestra misión es simple: Ofrecer un <strong>servicio informático integral</strong> que te permita enfocarte en tu <em>core business</em>, sabiendo que tu tecnología está en manos expertas.</p>
         </article>
 </main>
 
@@ -105,9 +109,9 @@
             </form>
         </div>
     </section>
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
     <div class="footer-container">
-        
+
         <div class="footer-column">
             <h3>Nuestra Compañía</h3>
             <ul class="footer-links">
@@ -166,21 +170,8 @@
         </ul>
     </div>
 </footer>
+
+<script src="check_preloader.js" defer></script>
+<script src="menu_burguer.js" defer></script>   
 </body>
-<!--Inclusion de Archivos Javascript-->
-<script src="javascript/check_preloader.js"></script>
-<script src="javascript/menu_burguer.js"></script>   
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
