@@ -607,7 +607,8 @@ background: linear-gradient(to right,
     background: url(imagenes/fondo_formulario.jpg);
     padding: 50px 0;
     text-align: center;
-    background-repeat: round;
+    background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .quick-contact h2 {
@@ -943,6 +944,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
