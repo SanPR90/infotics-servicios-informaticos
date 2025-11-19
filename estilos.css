@@ -35,10 +35,11 @@ body {
     font-family: "Roboto Flex", Roboto, sans-serif;
     color: var(--color-text-dark);
     background: url(imagenes/backgrounds/1.jpg);
+	line-height: 1.5;
 }
 
 h1, h2, h3 {
-	font-family: "Concert One", sans-serif;}
+	font-family: "Concert One", sans-serif; color: var(--color-text-light); letter-spacing: 2px;}
 
  /*PRELOADER: Imagen que aparece mientras recarga la web y sus paginas*/
  .preloader{ 
@@ -154,37 +155,7 @@ h1, h2, h3 {
  */
 
 /* Bloque de CSS moderno para el menú. Incluye transiciones, colores tecnológicos y adaptabilidad */
-/* Inclúyelo en TODOS los archivos CSS */
 
- /*PRELOADER: Imagen que aparece mientras recarga la web y sus paginas*/
- .preloader{ 
-	position:fixed; 
-	left:0px; 
-	top:0px; 
-	width:100%; 
-	height:100%; 
-	z-index:999999; 
-	background-color:#ffffff; 
-	background-position:center center; 
-	background-repeat:no-repeat; 
-	background-image:url(../imgsOvideos/logotipo.png);
-}
-
-.preloader img {
-    animation: spin 1s linear infinite;
-}
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* 2. Regla para ocultar (cuando el JS añade la clase 'loaded') */
-.preloader.loaded {
-    opacity: 0; /* Lo hace completamente transparente */
-    visibility: hidden; /* Lo esconde y lo saca del flujo */
-    transition: opacity 1s ease, visibility 0s 1s; 
-}
 
 .techo-menu {
   background: linear-gradient(90deg, #141e30 0%, #243b55 100%);
@@ -944,6 +915,7 @@ background: linear-gradient(to right,
     }
 
 }
+
 
 
 
