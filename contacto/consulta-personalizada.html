@@ -18,75 +18,67 @@
     
     <!-- Enlaces archivos CSS externos para los estilos personalizados -->
     <link rel="stylesheet" href="contacto.css">
-    <link rel="stylesheet" href="../Footer_paginas/footer.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<body class="text-gray-800">
-
+<body>
+    <div class="preloader"></div>  
     <!-- ===== DIVISOR 1: IMAGEN DE CABECERA ===== -->
-    <!--  -->
-    <header class="relative w-full h-64 md:h-96">
-        <nav class="main-nav">
-            <div class="container nav-content">
-                    <a href="index.html" class="logo">INFOTICS</a>
-                    
-                        <button class="menu-alternador" aria-expanded="false" aria-controls="menu-principal">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                    
-                    <ul class="enlaces-navegacion" id="menu-principal"> 
-                        
-                        <li class="elemento-nav"><a href="../index.html">Inicio</a></li>
-                        
-                        <li class="elemento-nav"><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
-                        
-                        <li class="elemento-nav submenu-activador">
-                            <span class="titulo-categoria">Portfolio </span>
-                            <ul class="submenu">
-                                <li><a href="../portfolio/proyectos.html">Proyectos</a></li>
-                                <li><a href="../portfolio/clientes.html">Principales Clientes</a></li>
-                                <li><a href="../portfolio/galeria.html">Galería</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li class="elemento-nav submenu-activador">
-                            <span class="titulo-categoria">Servicios </span>
-                            <ul class="submenu">
-                                <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
-                                <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
-                                <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
-                            </ul>
-                        </li>
-                        
-                        <li class="elemento-nav"><a href="../blog/noticias-tics.html">Blog</a></li>
-                        
-                        <li class="elemento-nav"><a href="consulta-personalizada.html">Contacto</a></li>
-
-                        <li class="elemento-nav submenu-activador">
-                            <span class="titulo-categoria">Tu cuenta <i class="fas fa-chevron-down flecha-submenu" aria-hidden="true"></i></span>
-                            <ul class="submenu submenu-derecha"> 
-                                <li><a href="../cuenta/registro.html">Registro</a></li>
-                                <li><a href="../cuenta/inicio-sesion.html">Inicio Sesión</a></li>
-                            </ul>
-                        </li>      
-                    </ul>
+     <header class="pre-header">
+        <div class="container pre-header-content">
+            <div class="pre-header-contact">
+                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>C. de la Zarza, 4, 13003 Ciudad Real</span>
+                <span>[Icono Email] <a href="mailto:info@infotics.es">info@infotics.es</a></span>
             </div>
-        </nav>
-        <!-- Imagen de fondo -->
-        <img 
-            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3B&auto=format&fit=crop&w=1600&h=400&q=80" 
-            alt="Oficina de INFOTICS" 
-            class="w-full h-full object-cover"
-        >
-        <!-- Overlay oscuro para contraste del título -->
-        <div class="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
-        
-        <!-- Título centrado -->
-        <div class="absolute inset-0 flex items-center justify-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">
-                INFOTICS
-            </h1>
+            <div class="pre-header-social">
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="#" aria-label="X / Twitter">
+                    <i class="fab fa-square-x-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-    </header>
+    <nav class="techo-menu" aria-label="Menú principal">
+        <a href="index.html" class="logo" aria-label="Inicio">InfoTics<img src="imagenes/logotipo.png" height="150px" alt="Imagen Logotipo"></a>
+             
+        <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
+        <span class="burger"></span>
+        <span class="sr-only">Abrir menú</span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+        
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+        
+        <li class="has-submenu">
+            <a href="portfolio/proyectos.html">Portfolio</a>
+            <ul class="submenu">
+            <li><a href="portfolio/proyectos.html">Proyectos</a></li>
+            <li><a href="portfolio/clientes.html">Clientes</a></li>
+            <li><a href="portfolio/galeria.html">Galería</a></li>
+            </ul>
+        </li>
+        
+        <li class="has-submenu">
+            <a href="servicios/desarrollo_web.html">Servicios</a>
+            <ul class="submenu">
+            <li><a href="servicios/desarrollo_web.html">Desarrollo Web</a></li>
+            <li><a href="servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+            <li><a href="servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="blog/noticias-tics.html">Blog</a></li>
+            
+        <li><a href="contacto/consulta-personalizada.html">Contacto</a></li>  
+            
+        <li><a href="area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
+            
+        </ul>
+  </nav>
+</header>
 
     <!-- Contenedor principal para centrar el contenido -->
     <main class="container mx-auto px-4 py-12">
@@ -107,15 +99,15 @@
                 <div class="mt-6 text-left max-w-2xl text-gray-200 space-y-2">
                     <p>
                         <i class="fas fa-fw fa-code mr-2"></i>
-                        Contacta con <strong><a href="#desarrollo" class="hover:underline">Desarrollo Web</a></strong> para nuevas páginas, e-commerce o funcionalidades.
+                        Contacta con <strong><a href="../servicios/desarrollo_web.html" class="hover:underline">Desarrollo Web</a></strong> para nuevas páginas, e-commerce o funcionalidades.
                     </p>
                     <p>
                         <i class="fas fa-fw fa-shield-alt mr-2"></i>
-                        Contacta con <strong><a href="#ciberseguridad" class="hover:underline">Ciberseguridad</a></strong> para auditorías, protección de datos o incidentes de seguridad.
+                        Contacta con <strong><a href="../servicios/seguridad_informatic.html" class="hover:underline">Ciberseguridad</a></strong> para auditorías, protección de datos o incidentes de seguridad.
                     </p>
                     <p>
                         <i class="fas fa-fw fa-headset mr-2"></i>
-                        Contacta con <strong><a href="#soporte" class="hover:underline">Soporte Técnico</a></strong> si tienes problemas con tu equipo, software o redes.
+                        Contacta con <strong><a href="../servicios/servicio_tecnico.html" class="hover:underline">Soporte Técnico</a></strong> si tienes problemas con tu equipo, software o redes.
                     </p>
                 </div>
             </div>
@@ -296,7 +288,7 @@
 
             <div class="footer-column">
                 <h3>Servicios</h3>
-                <a href="/noticias" class="footer-servicios" aria-label="Ver el último artículo del blog">
+                <a href="../blog/noticias-tics.html" class="footer-servicios" aria-label="Ver el último artículo del blog">
                     <img src="../imagenes/miniatura_footer.jpg" alt="Imagen miniatura parte de Servicios" class="footer-servicios-img">
                 </a>
                 <ul class="footer-links">
@@ -342,7 +334,8 @@
         </div>
     </footer>
 </body>
-<script src="../javascript/check_preloader.js"></script>    
+<script src="../javascript/check_preloader.js"></script>  
+<script src="../javascript/menu_burguer.js"></script>    
 </html>
 
 
