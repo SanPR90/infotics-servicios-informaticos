@@ -28,16 +28,16 @@
     --transition-speed: 0.3s;
     --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
-    --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra fuerte para servicios */
+    --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.4);
     
-    /* Footer */
+    /* Footer (Paleta Mejorada) */
     --color-footer-bg: #1e293b;
     --color-footer-text: #cbd5e1;
     --color-footer-links: #ffffff;
     --color-footer-headings: #46e797;
     --color-footer-hover: #38bdf8;
     --color-footer-border: #334155;
-    --color-footer-hover-bg: rgba(147, 112, 219, 0.5);
+    --color-footer-hover-bg: rgba(147, 112, 219, 0.25); /* Fondo sutil al hover */
     
     /* Tipografía */
     --font-family-base: "Roboto Flex", Roboto, sans-serif;
@@ -66,7 +66,6 @@ body {
     margin: 0;
     font-family: var(--font-family-base);
     color: var(--color-text-dark);
-    /* Fondo global base */
     background: url(imagenes/backgrounds/1.jpg) no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
@@ -86,7 +85,6 @@ h1, h2, h3, h4, h5 {
 p, li, a, label { color: var(--color-text-dark); }
 hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(0,0,0,0.2), transparent); margin: 40px 0; }
 
-/* Contenedor General */
 .container, .contenedor-principal {
     max-width: var(--max-width-content);
     margin: 0 auto;
@@ -201,7 +199,6 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
  * 4. HERO HEADERS
  * =========================================
  */
-/* Header Principal Home */
 .hero-header {
     position: relative; padding: 120px 0; text-align: center; overflow: hidden;
     background-image: url('imagenes/img-header-principal.png'); background-size: cover; background-position: center;
@@ -245,35 +242,27 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
  * 5. SECCIONES ESPECÍFICAS & BLOG
  * =========================================
  */
-
-/* --- ESTRUCTURA BLOG --- */
 .blog-container { 
     display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 40px; 
     background-color: var(--color-bg-light);
 }
 .main-content { flex: 3; }
 
-/* Sidebar del Blog */
 .sidebar { 
-    flex: 1; min-width: 250px; 
-    background-color: #5c1e83cf; 
-    padding: 20px; border-radius: 8px; 
-    box-shadow: var(--shadow-card); align-self: flex-start; 
+    flex: 1; min-width: 250px; background-color: #5c1e83cf; 
+    padding: 20px; border-radius: 8px; box-shadow: var(--shadow-card); align-self: flex-start; 
 }
 
-/* Tarjetas de Artículos */
 .article-card { 
     background-color: var(--color-bg-white); padding: 25px; margin-bottom: 25px; 
-    border-radius: 8px; box-shadow: var(--shadow-card); 
-    border-left: 5px solid var(--color-primary); 
+    border-radius: 8px; box-shadow: var(--shadow-card); border-left: 5px solid var(--color-primary); 
 }
 .article-card h2 { color: var(--color-primary); margin-top: 0; }
 .article-card footer { font-size: 0.9em; color: #777; margin-top: 15px; }
 
 .article-card .category-tag { 
     background-color: var(--color-bg-light); color: #555; padding: 3px 8px; 
-    border-radius: 4px; font-size: 0.85em; text-decoration: none; 
-    border: 1px solid var(--color-border);
+    border-radius: 4px; font-size: 0.85em; text-decoration: none; border: 1px solid var(--color-border);
 }
 
 .aside-section { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #cbd5e1; }
@@ -321,7 +310,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 
 /*
  * =========================================
- * 6. COMPONENTES GENERALES (Botones, Forms, Links)
+ * 6. COMPONENTES GENERALES
  * =========================================
  */
 .btn {
@@ -329,23 +318,19 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
     font-weight: bold; text-align: center; transition: background-color var(--transition-speed) ease; border: none; cursor: pointer;
 }
 .btn-primary, .boton-leer-mas { 
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
+    background-color: var(--color-primary); color: var(--color-text-light);
     display: inline-block; padding: 10px 15px; border: none; border-radius: 4px;
     cursor: pointer; text-decoration: none; font-size: 16px; margin-top: 10px;
     transition: background-color 0.3s; text-align: center; font-family: var(--font-family-base);
 }
 .btn-primary:hover, .boton-leer-mas:hover { background-color: #5f1ac9; }
 
-/* Link de Retroceso Animado */
+/* Retroceso Animado */
 .back-link {
-    display: inline-flex; align-items: center;
-    font-size: 1.1rem; font-weight: 700;
-    color: var(--color-accent); 
-    text-decoration: none; padding: 0.5rem 1rem;
+    display: inline-flex; align-items: center; font-size: 1.1rem; font-weight: 700;
+    color: var(--color-accent); text-decoration: none; padding: 0.5rem 1rem;
     border-radius: 8px 8px 0 0; background-color: transparent;
-    border-bottom: 3px solid var(--color-primary);
-    transition: all 0.3s ease; position: relative; z-index: 1;
+    border-bottom: 3px solid var(--color-primary); transition: all 0.3s ease; position: relative; z-index: 1;
 }
 .back-link::before {
     content: '←'; margin-right: 8px; font-size: 1.3rem; line-height: 1; transition: margin-right 0.3s ease;
@@ -357,7 +342,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 }
 .back-link:hover::before, .back-link:focus::before { margin-right: 12px; }
 
-/* Formulario Consulta Rápida */
+/* Formularios General */
 .quick-contact {
     background-image: linear-gradient(rgb(39 50 68 / 85%), rgb(41 10 70 / 85%)), url(imagenes/fondo_formulario.jpg);
     padding: 80px 0; text-align: center; background-repeat: no-repeat; background-size: cover;
@@ -367,7 +352,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 .form-group { flex: 1; min-width: 48%; }
 .form-group.full-width { flex-basis: 100%; }
 
-/* Inputs Generales */
+/* Inputs */
 input[type="text"], input[type="email"], textarea, .quick-form input, .quick-form textarea {
     width: 100%; padding: 15px; border: 1px solid var(--color-border); border-radius: 5px;
     font-size: 1.1rem; background-color: rgba(255, 255, 255, 0.95); color: #000;
@@ -422,32 +407,84 @@ input:focus, textarea:focus {
 
 /*
  * =========================================
- * 8. FOOTER
+ * 8. FOOTER (MEJORADO)
  * =========================================
  */
 .site-footer {
     background-color: var(--color-footer-bg); color: var(--color-footer-text);
-    padding: 60px 5%; line-height: 1.6;
+    padding: 60px 5%; line-height: 1.6; font-family: var(--font-family-base);
 }
-.footer-container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 40px; }
-.footer-column { flex: 1; min-width: 250px; text-align: center; }
-.footer-column h3 { color: var(--color-footer-headings); border-bottom: 2px solid #4b77b7; padding-bottom: 0.6rem; display: inline-block; }
-.footer-links { list-style: none; padding: 0; }
-.footer-links a, .contact-department a, .footer-legal-links a {
-    color: var(--color-footer-links); text-decoration: none; transition: color 0.3s;
+.footer-container { 
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; 
+    max-width: 1200px; margin: 0 auto; padding-bottom: 40px; 
 }
-.footer-links a:hover, .contact-department a:hover, .footer-legal-links a:hover {
-    color: var(--color-footer-hover); text-decoration: underline;
+.footer-column { flex: 1; min-width: 250px; text-align: center; font-size: 1.1rem; }
+
+/* Cabeceras */
+.footer-column h3 { 
+    color: var(--color-footer-headings); font-size: 1.7rem; margin-bottom: 1.2rem; font-weight: 500;
+    border-bottom: 2px solid #4b77b7; padding-bottom: 0.6rem; letter-spacing: 0.1rem; display: inline-block;
 }
-.footer-servicios-img { width: 100%; height: 230px; object-fit: cover; border-radius: 5px; opacity: 0.9; }
-.footer-servicios:hover .footer-servicios-img { opacity: 1; }
-.footer-bottom { border-top: 1px solid var(--color-footer-border); padding-top: 30px; margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; }
-.footer-legal-links { display: flex; list-style: none; gap: 20px; }
+
+/* Lista Enlaces con Hover Mejorado */
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a {
+    color: var(--color-footer-links); text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 4px 8px; border-radius: 5px; display: inline-block; margin: 2px 0;
+}
+.footer-links a:hover {
+    color: var(--color-footer-hover); padding-left: 10px; /* Desplazamiento dinámico */
+    background-color: var(--color-footer-hover-bg); /* Fondo lila translúcido */
+}
+
+/* Imagen Servicios */
+.footer-servicios {
+    display: block; width: 200px; margin: 0 auto; border: 2px solid var(--color-footer-border);
+    border-radius: 5px; overflow: hidden; line-height: 0; padding: 0 !important; background-color: transparent !important;
+}
+.footer-servicios-img { width: 100%; height: 230px; object-fit: cover; transition: opacity 0.3s ease; }
+.footer-servicios:hover .footer-servicios-img { opacity: 0.85; }
+
+/* Contacto */
+.contact-department { margin-bottom: 20px; }
+.contact-department strong {
+    color: #4baedff1; font-size: larger; font-weight: 575; display: block; margin-bottom: 5px; letter-spacing: 1px;
+}
+.contact-department p { margin: 0; font-size: 0.95rem; }
+.contact-department a {
+    color: var(--color-footer-links); text-decoration: none; transition: color 0.3s ease; display: inline-block; margin: 2px 0;
+}
+/* Hover para Emails (con fondo) */
+.contact-department a[href^="mailto:"] { padding: 4px 8px; border-radius: 5px; transition: all 0.3s ease; }
+.contact-department a[href^="mailto:"]:hover {
+    color: var(--color-footer-hover); background-color: var(--color-footer-hover-bg); text-decoration: underline;
+}
+/* Hover para Teléfonos (sin fondo) */
+.contact-department a[href^="tel:"]:hover { color: var(--color-footer-hover); text-decoration: none; }
+
+/* Bottom Bar */
+.footer-bottom { 
+    border-top: 1px solid var(--color-footer-border); padding-top: 30px; margin-top: 30px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    font-size: 1.1rem; color: var(--color-footer-text); max-width: 1200px; margin-left: auto; margin-right: auto;
+}
+.footer-bottom p { margin: 0 0 10px 0; }
+.footer-legal-links { display: flex; list-style: none; padding: 0; margin: 0; }
+.footer-legal-links li { margin-left: 20px; }
+.footer-legal-links a {
+    color: var(--color-footer-text); text-decoration: none;
+    transition: all 0.3s ease; padding: 4px 8px; border-radius: 5px;
+}
+.footer-legal-links a:hover {
+    color: var(--color-footer-hover); text-decoration: underline; background-color: var(--color-footer-hover-bg);
+}
 
 /*
- * =====================================
- * 9. ESTILOS PÁGINA CONTACTO
- * ======================================
+ * =========================================
+ * 9. ESTILOS PÁGINA CONTACTO (Sin Tailwind)
+ * =========================================
  */
 .fondo-parallax { 
     background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3B&auto=format&fit=crop&w=1600&q=80');
@@ -511,11 +548,11 @@ input:focus, textarea:focus {
 /* Layout Principal 1/3 - 2/3 */
 .contenedor-pagina { display: flex; min-height: 100vh; background-color: var(--service-bg-dark); color: var(--service-text); }
 .barra-lateral {
-    width: 33.33%; background-color: var(--color-accent-secondary);
+    width: 33.33%; background-color: var(--service-bg-sidebar);
     display: flex; flex-direction: column; align-items: center; text-align: center;
     padding: 40px 20px; gap: 40px; border-right: 2px solid var(--service-primary);
 }
-.contenido-principal { width: 66.67%; padding: 40px; overflow-y: auto; background: var(--service-primary) }
+.contenido-principal { width: 66.67%; padding: 40px; overflow-y: auto; }
 
 /* Headers Servicios - FORZANDO TIPOGRAFÍA CONCERT ONE */
 .titulo-principal {
@@ -643,18 +680,25 @@ input:focus, textarea:focus {
     .blog-container { flex-direction: column; gap: 0; }
     .blog-container .main-content { padding-right: 0; }
     .sidebar { width: 100%; margin-top: 30px; }
+    
+    /* Footer Móvil */
+    .footer-container { flex-direction: column; gap: 30px; }
+    .footer-column { min-width: 100%; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-legal-links { margin-top: 15px; }
+    .footer-legal-links li { margin: 0 10px; }
 }
 @media (max-width: 768px) {
     .hero-content h1, .contenido-hero h1 { font-size: 2.2rem; }
     .seccion-introductoria { flex-direction: column; }
     .texto-intro, .imagen-intro { min-width: 100%; }
-    .footer-container { flex-direction: column; }
     .form-group, .contact-form-grid { grid-template-columns: 1fr; } 
     .contact-links { text-align: center; }
 }
 @media (max-width: 576px) {
     .hero-content h1 { font-size: 2rem; }
 }
+
 /* * =========================================
  * 13. CLASES DE UTILIDAD Y ESTADOS JS (SEGURIDAD)
  * =========================================
