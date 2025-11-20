@@ -30,14 +30,14 @@
     --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
     --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.4);
     
-    /* Footer (Paleta Mejorada) */
+    /* Footer */
     --color-footer-bg: #1e293b;
     --color-footer-text: #cbd5e1;
     --color-footer-links: #ffffff;
     --color-footer-headings: #46e797;
     --color-footer-hover: #38bdf8;
     --color-footer-border: #334155;
-    --color-footer-hover-bg: rgba(147, 112, 219, 0.25); /* Fondo sutil al hover */
+    --color-footer-hover-bg: rgba(147, 112, 219, 0.25);
     
     /* Tipografía */
     --font-family-base: "Roboto Flex", Roboto, sans-serif;
@@ -388,185 +388,93 @@ input:focus, textarea:focus {
 
 /*
  * =========================================
- * 6.5. ESTILOS DE AUTENTICACIÓN (Login/Registro)
+ * 7. PORTFOLIO & EXTRAS (CLIENTES, PROYECTOS, GALERÍA)
  * =========================================
  */
-.contenedor-auth {
-    display: flex;
-    justify-content: center;
+
+/* --- CLIENTES (LOGOS) --- */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px;
     align-items: center;
-    padding: 60px 20px;
-    min-height: 80vh; /* Asegura que ocupe buena parte de la pantalla */
-    background-image: url('https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    justify-items: center;
+    margin: 40px 0;
 }
-
-/* Overlay oscuro para mejorar legibilidad */
-.contenedor-auth::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to right, rgba(30, 41, 59, 0.9), rgba(122, 39, 255, 0.4));
-    z-index: 1;
+.client-logo {
+    color: #94a3b8; /* Gris apagado por defecto */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
-
-.tarjeta-auth {
-    position: relative;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-    width: 100%;
-    max-width: 450px;
-    overflow: hidden; /* Para que la cabecera no se salga del borde redondeado */
-}
-
-.cabecera-auth {
-    background-color: var(--color-secondary);
-    padding: 25px;
-    text-align: center;
-    color: white;
-}
-
-.cabecera-auth h2 {
-    margin: 0;
-    color: var(--color-accent);
-    font-size: 1.8rem;
-    font-weight: 500;
-    font-family: var(--font-family-heading);
-}
-
-.cabecera-auth p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    color: #cbd5e1;
-}
-
-.caja-formulario {
-    padding: 30px;
-}
-
-.grupo-input {
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.grupo-input label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: var(--color-text-dark);
-}
-
-/* Iconos dentro de los inputs */
-.grupo-input i {
-    position: absolute;
-    left: 12px;
-    top: 42px; /* Ajuste visual según altura del input */
-    color: #94a3b8;
-}
-
-.grupo-input input {
-    width: 100%;
-    padding: 12px 12px 12px 40px; /* Espacio a la izquierda para el icono */
-    border: 1px solid var(--color-border);
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.grupo-input input:focus {
-    border-color: var(--color-primary);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(122, 39, 255, 0.1);
-}
-
-/* Botón de enviar específico del formulario */
-.btn-enviar {
-    width: 100%;
-    padding: 14px;
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: var(--font-family-heading);
-    letter-spacing: 1px;
-    margin-top: 10px;
-}
-
-.btn-enviar:hover {
-    background-color: #5f1ac9; /* Un tono más oscuro de primary */
-}
-
-.cambiar-auth {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    font-size: 0.95rem;
-}
-
-.cambiar-auth a {
+.client-logo:hover {
     color: var(--color-primary);
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
+    transform: scale(1.1);
 }
 
-.cambiar-auth a:hover {
-    text-decoration: underline;
+/* --- PROYECTOS (CARDS) --- */
+.projects-grid { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; 
 }
-
-/* Alertas (Éxito/Error) */
-.alerta {
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    text-align: center;
-    display: none; /* Oculto por defecto */
+.project-card { 
+    background: white; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-card); 
+    border: 1px solid var(--color-border); transition: transform 0.3s ease; 
 }
-.alerta.error {
-    background-color: #fee2e2;
-    color: #dc2626;
-    border: 1px solid #fecaca;
-    display: block;
-}
-.alerta.exito {
-    background-color: #dcfce7;
-    color: #16a34a;
-    border: 1px solid #bbf7d0;
-    display: block;
-}
-
-/*
- * =========================================
- * 7. PORTFOLIO & EXTRAS
- * =========================================
- */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
-.project-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-card); border: 1px solid var(--color-border); transition: transform 0.3s ease; }
 .project-card:hover { transform: translateY(-5px); }
-.project-image img { width: 100%; height: 200px; object-fit: cover; }
+.project-image img { width: 100%; height: 200px; object-fit: cover; display: block; }
 .project-info { padding: 20px; }
+.project-tags { margin-top: 10px; }
+.project-tags span {
+    background-color: var(--color-bg-light); padding: 3px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 5px; border: 1px solid var(--color-border);
+}
 
+/* --- GALERÍA (MASONRY SIMPLE) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.gallery-item .overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white; opacity: 0; transition: opacity 0.3s;
+}
+.gallery-item:hover .overlay { opacity: 1; }
+
+/* --- TESTIMONIOS --- */
 .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.testimonial-card { background: #fff; padding: 30px; border-radius: 10px; border-left: 5px solid var(--color-accent); box-shadow: var(--shadow-card); }
+.testimonial-card { 
+    background: #fff; padding: 30px; border-radius: 10px; 
+    border-left: 5px solid var(--color-accent); box-shadow: var(--shadow-card); 
+}
 .quote-icon { color: var(--color-primary); font-size: 1.5rem; margin-bottom: 15px; }
+.author strong { display: block; color: var(--color-secondary); }
+.author span { font-size: 0.9rem; color: #64748b; }
 
-.faq-item { background: #fff; margin-bottom: 10px; border: 1px solid var(--color-border); border-radius: 5px; }
-.faq-item summary { padding: 15px 20px; cursor: pointer; background-color: var(--color-bg-light); font-weight: bold; display: flex; justify-content: space-between; }
-.faq-item p { padding: 20px; color: var(--color-text-dark); }
+/* --- FAQS (ACORDEÓN) --- */
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item { 
+    background: #fff; margin-bottom: 10px; border: 1px solid var(--color-border); border-radius: 5px; overflow: hidden;
+}
+.faq-item summary { 
+    padding: 15px 20px; cursor: pointer; background-color: var(--color-bg-light); 
+    font-weight: bold; display: flex; justify-content: space-between; 
+}
+.faq-item p { padding: 20px; color: var(--color-text-dark); border-top: 1px solid var(--color-border); }
+
 
 /*
  * =========================================
