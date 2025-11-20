@@ -651,7 +651,7 @@ p, li, a, label {
     width: 100%; max-width: 450px; overflow: hidden;
 }
 .cabecera-auth { background-color: var(--color-secondary); padding: 25px; text-align: center; color: white; }
-.cabecera-auth h2 { margin: 0; color: #44ffd1; font-size: 1.8rem; }
+.cabecera-auth h2 { margin: 0; color: #44ffd1; font-size: 1.8rem; font-weight: 500;}
 .cabecera-auth p { margin: 5px 0 0; font-size: 0.9rem; opacity: 0.8; }
 
 .caja-formulario { padding: 30px; }
