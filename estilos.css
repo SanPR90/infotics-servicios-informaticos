@@ -708,6 +708,46 @@ input:focus, textarea:focus {
 .debilidades { background-color: #4F1A34; border-left: 5px solid #FF0000; }
 .amenazas { background-color: #4F4A1A; border-left: 5px solid #FFA500; }
 
+/*
+ * =========================================
+ * 12. ESTILOS PÁGINA INICIO (HOME) - ACCESIBILIDAD
+ * =========================================
+ */
+#main-content article {
+    color: var(--color-text-light); /* Texto blanco */
+    background-color: rgba(23, 25, 48, 0.9); /* Fondo oscuro semitransparente */
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+}
+
+#main-content h2 {
+    color: var(--color-accent); /* Título en Turquesa para resaltar */
+    font-family: var(--font-family-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#main-content p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+#main-content strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+#main-content em {
+    color: var(--color-accent);
+    font-style: normal;
+    font-weight: 600;
+}
 
 /*
  * =========================================
