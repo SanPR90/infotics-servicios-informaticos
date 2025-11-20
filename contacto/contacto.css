@@ -294,6 +294,10 @@ body {
     position: relative;
 }
 
+fas fa-fw fa-code mr-2 {
+    color: antiquewhite;
+}
+
 /* 4. Overlay para el Parallax */
 /* Capa semitransparente sobre la imagen parallax para que el texto sea legible */
 .capa-parallax { 
