@@ -516,24 +516,21 @@ p, li, a, label {
 .hero-content {
     position: relative;
     z-index: 2; 
-    /* ✅ RESTAURACIÓN: Max-width para un contenido más amplio */
     max-width: 900px; 
     margin: 0 auto;
 }
 
 .hero-content h1 {
-    /* ✅ RESTAURACIÓN: Fuente más grande */
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 25px;
-    font-weight: 800;
+    font-weight: 700;
 	font-family: "Concert One", sans-serif;
 }
 
 .hero-content p {
-    /* ✅ RESTAURACIÓN: Fuente más grande */
     font-size: 1.5rem;
     margin-bottom: 40px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /*
