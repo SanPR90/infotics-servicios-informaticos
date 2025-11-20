@@ -79,6 +79,8 @@ h1, h2, h3 {
     margin: 0 0 0.5rem 0;
 }
 
+
+
 /* Ensure hero headings remain white for contrast on dark hero */
 .hero-header h1,
 .hero-header h2,
@@ -484,6 +486,17 @@ p, li, a, label {
     background-size: cover;
     background-position: center;
 }
+.hero-header-blog {
+    background-image: linear-gradient(90deg, rgb(212 0 122 / 65%), rgb(67 81 247 / 50%)), /* Capa 1: Gradiente con 50% opacidad */ url(../imagenes/horizon_team_work.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #7405cb;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    } 
 
 /* Overlay para el Gradiente de 50% */
 .hero-header::before {
