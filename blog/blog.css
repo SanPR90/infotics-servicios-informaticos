@@ -142,7 +142,41 @@
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+    
+/* =========================================
+ * MEDIA QUERIES ESPECÍFICAS PARA EL BLOG 
+ * =========================================
+ */
+
+/* TABLETS Y MÓVILES (Menos de 992px) */
+@media (max-width: 992px) {
+    
+    /* Cambia el contenedor del blog a una sola columna vertical */
+    .blog-container {
+        flex-direction: column; 
+    }
+
+    /* Elimina el padding derecho que separaba el contenido del sidebar */
+    .blog-container .main-content {
+        padding-right: 0;
+    }
+
+    /* Ajusta el sidebar para que ocupe todo el ancho y tenga margen superior */
+    .sidebar {
+        width: 100%;
+        box-sizing: border-box; 
+        margin-top: 30px;
+    }
+}
+
+/* MÓVILES PEQUEÑOS (Menos de 768px) */
+@media (max-width: 768px) {
+    
+    /* Reduce el tamaño del título del Hero del blog */
+    .hero-header-blog h1 { 
+        font-size: 2rem; 
+    }
+}    
         
         
 
