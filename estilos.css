@@ -148,7 +148,8 @@ p, li, a, label {
 }
 
 .btn-secondary:hover {
-    background-color: #835dc9;
+    background-color: #3200a5;
+    color: var(--color-bg-light);
 }
 
 /*
