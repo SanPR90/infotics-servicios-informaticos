@@ -655,3 +655,42 @@ input:focus, textarea:focus {
 @media (max-width: 576px) {
     .hero-content h1 { font-size: 2rem; }
 }
+/* * =========================================
+ * 13. CLASES DE UTILIDAD Y ESTADOS JS (SEGURIDAD)
+ * =========================================
+ */
+
+/* Clase utilitaria para ocultar elementos vía JS (estaba en tu original) */
+.oculto { 
+    display: none !important; 
+}
+
+/* Estilos para FAQs interactivos (detalles abiertos/cerrados) */
+/* Si tu JS o el HTML nativo usa <details open>, esto recupera los iconos + / - */
+.faq-item summary {
+    list-style: none; /* Oculta el triángulo por defecto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none; /* Chrome/Safari */
+}
+.faq-item summary::after {
+    content: '+';
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after {
+    content: '-';
+    transform: rotate(180deg); /* Opcional: rotación */
+}
+
+/* Estados genéricos comunes en JS (por si acaso) */
+.is-active, .active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
