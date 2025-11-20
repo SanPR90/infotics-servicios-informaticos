@@ -31,7 +31,6 @@ h1, h2, h3, h4 {
     color: var(--text-white);
     font-weight: 400; /* Menos grosor */
     letter-spacing: 2px; /* Espaciado entre letras */
-    text-transform: uppercase;
 }
 
 p, ul, a, span, li {
