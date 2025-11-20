@@ -743,3 +743,213 @@ p, li, a, label {
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 0.9rem; }
 }
+
+/* * =======================================
+ * ESTILOS PARA PÁGINAS DE PORTFOLIO
+ * =========================================
+ */
+
+/* --- PROYECTOS (Cards) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-border);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.project-cat {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.project-tags {
+    margin: 15px 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    background: var(--color-bg-light);
+    color: var(--color-text-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: 1px solid #cbd5e1;
+}
+
+/* --- GALERÍA (Masonry Grid Simple) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* --- CLIENTES --- */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin: 40px 0;
+}
+
+.client-logo {
+    color: #94a3b8; /* Gris apagado por defecto */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.client-logo:hover {
+    color: var(--color-primary); /* Color corporativo al hover */
+    transform: scale(1.1);
+}
+
+/* Testimonios */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #44ffd1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.quote-icon {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-card .author strong {
+    display: block;
+    color: var(--color-secondary);
+}
+.testimonial-card .author span {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* FAQs (Acordeón Nativo) */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.faq-item {
+    background: #fff;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--color-bg-light);
+    list-style: none; /* Ocultar triángulo por defecto en algunos navegadores */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Icono personalizado para el acordeón */
+.faq-item summary::after {
+    content: '+';
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+}
+
+.faq-item p {
+    padding: 20px;
+    margin: 0;
+    border-top: 1px solid var(--color-border);
+}
