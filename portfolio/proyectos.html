@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="icon" href="../imagenes/favicon.png" type="image/x-icon">
+    <title>Nuestros Proyectos - INFOTICS  &reg;</title>
+</head>
+<body>
+    <header class="pre-header">
+        <div class="container pre-header-content">
+            <div class="pre-header-contact">
+                <span><i class="fas fa-map-marker-alt"></i>C. de la Zarza, 4, 13003 Ciudad Real</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:info@infotics.es">info@infotics.es</a></span>
+            </div>
+            <div class="pre-header-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-square-x-twitter"></i></a>
+            </div>
+        </div>
+        <nav class="techo-menu">
+            <a href="../index.html" class="logo">
+                <img src="../imagenes/logotipo.png" alt="INFOTICS Logo">
+            </a>
+            <button class="menu-toggle"><span class="burger"></span></button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+                <li class="has-submenu">
+                    <a href="proyectos.html">Portfolio</a>
+                    <ul class="submenu">
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="../servicios/desarrollo_web.html">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                        <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                        <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                    </ul>
+                </li>
+                <li><a href="../blog/noticias-tics.html">Blog</a></li>
+                <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>  
+                <li><a href="../area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-header" style="padding: 80px 0;">
+        <div class="container hero-content">
+            <h1>Casos de Éxito</h1>
+            <p>Descubre cómo hemos transformado negocios a través de la tecnología.</p>
+        </div>
+    </section>
+
+    <main class="main-content container">
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://placehold.co/600x400/141e30/44ffd1?text=E-Commerce" alt="Proyecto E-commerce">
+                </div>
+                <div class="project-info">
+                    <h3>Plataforma E-Commerce B2B</h3>
+                    <span class="project-cat">Desarrollo Web</span>
+                    <p>Desarrollo de tienda online mayorista con integración ERP en tiempo real.</p>
+                    <div class="project-tags">
+                        <span>React</span><span>NodeJS</span><span>MySQL</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://placehold.co/600x400/141e30/44ffd1?text=Ciberseguridad" alt="Auditoría Seguridad">
+                </div>
+                <div class="project-info">
+                    <h3>Blindaje Corporativo</h3>
+                    <span class="project-cat">Seguridad Informática</span>
+                    <p>Implementación de firewalls perimetrales y protocolos Zero Trust para banca.</p>
+                    <div class="project-tags">
+                        <span>Fortinet</span><span>Cisco</span><span>ISO 27001</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="https://placehold.co/600x400/141e30/44ffd1?text=Soporte" alt="Migración Cloud">
+                </div>
+                <div class="project-info">
+                    <h3>Migración a la Nube</h3>
+                    <span class="project-cat">Soporte Técnico</span>
+                    <p>Virtualización de servidores físicos y migración segura a AWS.</p>
+                    <div class="project-tags">
+                        <span>AWS</span><span>Linux</span><span>Docker</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-bottom" style="width: 100%; text-align: center;">
+                <p>&copy; 2025 INFOTICS. <a href="../index.html" style="color:var(--color-footer-headings)">Volver al inicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/check_preloader.js"></script>
+    <script src="../javascript/menu_burguer.js"></script> 
+</body>
+</html>
