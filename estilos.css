@@ -865,8 +865,8 @@ input:focus, textarea:focus {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffc107; /* Amarillo para resaltar */
-    color: #000000;            /* Texto negro para contraste */
+    background-color: #ffd700;/* Amarillo para resaltar */
+    color: var(--color-text-dark);            /* Texto negro para contraste */
     text-align: center;
     padding: 8px 0;
     font-weight: bold;
