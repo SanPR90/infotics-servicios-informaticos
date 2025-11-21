@@ -644,6 +644,10 @@ input:focus, textarea:focus {
 .contact-form-full { margin-bottom: 1.5rem; }
 
 .departments-section { margin: 4rem 0; }
+.departments-section h2 {
+    color: var(--color-text-light); 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); 
+}
 .departments-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
 }
