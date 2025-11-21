@@ -128,6 +128,18 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 .pre-header-contact a, .pre-header-social a {
     text-decoration: none; transition: color 0.3s;
 }
+/* En la Sección 3 del CSS */
+
+.pre-header-social a {
+    margin-left: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+/* CAMBIO: Hover en "azul fosforito" (igual que el menú) */
+.pre-header-social a:hover {
+    color: var(--color-accent); 
+}
 .pre-header-contact a:hover, .pre-header-social a:hover { color: var(--color-accent); }
 .pre-header-social a { margin-left: 15px; font-size: 1.1rem; }
 
@@ -576,14 +588,21 @@ input:focus, textarea:focus {
 .footer-bottom p { margin: 0 0 10px 0; }
 .footer-legal-links { display: flex; list-style: none; padding: 0; margin: 0; }
 .footer-legal-links li { margin-left: 20px; }
+/* En la Sección 8 del CSS (Footer Bottom) */
+
 .footer-legal-links a {
-    color: var(--color-footer-text); text-decoration: none;
-    transition: all 0.3s ease; padding: 4px 8px; border-radius: 5px;
-}
-.footer-legal-links a:hover {
-    color: var(--color-footer-hover); text-decoration: underline; background-color: var(--color-footer-hover-bg);
+    color: #ffffff; /* CAMBIO: Forzado a blanco puro */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 5px;
 }
 
+.footer-legal-links a:hover {
+    color: var(--color-footer-hover); /* Azul al pasar el ratón */
+    text-decoration: underline;
+    background-color: var(--color-footer-hover-bg);
+}
 /*
  * =========================================
  * 9. ESTILOS PÁGINA CONTACTO (Sin Tailwind)
