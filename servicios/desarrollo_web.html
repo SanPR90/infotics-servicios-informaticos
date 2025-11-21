@@ -30,11 +30,11 @@
     <div class="site-disclaimer">
         Este es un sitio web de prácticas - No es un sitio web oficial
     </div>
-    <header class="pre-header">
+<header class="pre-header">
         <div class="container pre-header-content">
             <div class="pre-header-contact">
                 <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>C. de la Zarza, 4, 13003 Ciudad Real</span>
-                <span>[Icono Email] <a href="mailto:info@infotics.es">info@infotics.es</a></span>
+                <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@infotics.es">info@infotics.es</a></span>
             </div>
             <div class="pre-header-social">
                 <a href="#" aria-label="LinkedIn">
@@ -47,46 +47,48 @@
                 </a>
             </div>
         </div>
-    <nav class="techo-menu" aria-label="Menú principal">
-        <a href="../area-clientes.html" class="logo" aria-label="Inicio"><img src="../imagenes/logotipo.png" width="150px" height="150px" alt="Imagen Logotipo"></a>
-        
-        
-        <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
-        <span class="burger"></span>
-        <span class="sr-only">Abrir menú</span>
-        </button>
-        <ul id="nav-links" class="nav-links">
-        
-        <li><a href="/infotics-servicios-informaticos/">Inicio</a></li>
-        <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
-        
-        <li class="has-submenu">
-            <a href="#">Portfolio</a>
-            <ul class="submenu">
-            <li><a href="../portfolio/proyectos.html">Proyectos</a></li>
-            <li><a href="../portfolio/clientes.html">Clientes</a></li>
-            <li><a href="../portfolio/galeria.html">Galería</a></li>
-            </ul>
-        </li>
-        
-        <li class="has-submenu">
-            <a href="#">Servicios</a>
-            <ul class="submenu">
-            <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
-            <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
-            <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="../blog/noticias-tics.html">Blog</a></li>
-            
-        <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>  
-            
-        <li><a href="../area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
-            
-        </ul>
-  </nav>
 </header>
+
+    <nav role="navigation" class="techo-menu" aria-label="Menú principal">
+        <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0;">
+            
+            <a href="../area-clientes.html" class="logo" aria-label="Inicio">
+                <img src="../imagenes/logotipo.png" height="150px" alt="Imagen Logotipo">
+            </a>
+
+            <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-haspopup="true" aria-label="Alternar menú">
+                <span class="burger" aria-hidden="true"></span>
+                <span class="sr-only">Abrir menú</span>
+            </button>
+
+            <ul id="nav-links" class="nav-links" data-open="false">
+                <li><a href="/infotics-servicios-informaticos/">Inicio</a></li>
+                <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+
+                <li class="has-submenu active">
+                    <a href="#">Portfolio</a>
+                    <ul class="submenu">
+                        <li><a href="proyectos.html" class="active">Proyectos</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </li>
+
+                <li class="has-submenu">
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                        <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                        <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../blog/noticias-tics.html">Blog</a></li>
+                <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>  
+                <li><a href="../area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="contenedor-pagina">
         
         <aside class="barra-lateral">
