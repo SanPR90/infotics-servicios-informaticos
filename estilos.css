@@ -769,7 +769,7 @@ input:focus, textarea:focus {
  * 12. ESTILOS PÁGINA INICIO (HOME) - ACCESIBILIDAD
  * =========================================
  */
-#main-content article {
+#main-contenido article {
     color: var(--color-text-light); /* Texto blanco */
     background-color: rgba(23, 25, 48, 0.9); /* Fondo oscuro semitransparente */
     padding: 3rem;
@@ -779,7 +779,7 @@ input:focus, textarea:focus {
     border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
 }
 
-#main-content h2 {
+#main-contenido h2 {
     color: var(--color-accent); /* Título en Turquesa para resaltar */
     font-family: var(--font-family-heading);
     font-size: 2.5rem;
@@ -787,19 +787,19 @@ input:focus, textarea:focus {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-#main-content p {
+#main-contenido p {
     color: var(--color-text-light);
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
-#main-content strong {
+#main-contenido strong {
     color: #fff;
     font-weight: 700;
 }
 
-#main-content em {
+#main-contenido em {
     color: var(--color-accent);
     font-style: normal;
     font-weight: 600;
