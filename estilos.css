@@ -1030,7 +1030,7 @@ input:focus, textarea:focus {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffd700;/* Amarillo para resaltar */
+    background-color: #ffdd26d1;
     color: var(--color-text-dark);            /* Texto negro para contraste */
     text-align: center;
     padding: 8px 0;
