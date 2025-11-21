@@ -854,3 +854,36 @@ input:focus, textarea:focus {
     visibility: visible;
     opacity: 1;
 }
+
+/*
+ * =========================================
+ * 14. BARRA DE AVISO (DISCLAIMER)
+ * =========================================
+ */
+.site-disclaimer {
+    position: fixed;       /* Se queda fija al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffc107; /* Amarillo para resaltar */
+    color: #000000;            /* Texto negro para contraste */
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 1000000;          /* Por encima de TODO (incluso el preloader) */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-family: sans-serif;   /* Fuente legible genérica */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*
+ * AJUSTE CRÍTICO:
+ * Empujamos todo el cuerpo de la página hacia abajo
+ * para que la barra fija no tape el menú.
+ * Si cambias el tamaño de letra de la barra, ajusta estos 38px.
+ */
+body {
+    padding-top: 38px; 
+}
