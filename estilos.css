@@ -775,6 +775,109 @@ input:focus, textarea:focus {
 .debilidades { background-color: #4F1A34; border-left: 5px solid #FF0000; }
 .amenazas { background-color: #4F4A1A; border-left: 5px solid #FFA500; }
 
+/* * =======================================================
+ * 11.1 MEJORA ACCESIBILIDAD SERVICIOS (DAFO Y SIDEBAR)
+ * =========================================================
+ */
+
+/* 1. Sidebar más elegante y legible */
+.barra-lateral {
+    /* Fondo oscuro profundo con ligera transparencia */
+    background-color: rgba(15, 23, 42, 0.95); 
+    border-right: 1px solid rgba(68, 255, 209, 0.1); /* Borde sutil turquesa */
+    box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+}
+
+.titulo-principal {
+    color: var(--color-accent); /* Título en Turquesa */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enlaces del menú lateral: Mejor contraste */
+.seccion-menu nav ul li a {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2e8f0; /* Blanco hueso para mejor lectura */
+}
+
+.seccion-menu nav ul li:hover a {
+    background-color: rgba(68, 255, 209, 0.1); /* Fondo turquesa muy suave al hover */
+    border-color: var(--color-accent);
+    color: #ffffff;
+}
+
+/* 2. Rediseño de Cajas DAFO (Unificadas y Accesibles) */
+.caja-dafo {
+    /* Fondo unificado oscuro (Gris azulado muy oscuro) */
+    background-color: rgba(30, 41, 59, 0.6); 
+    backdrop-filter: blur(5px); /* Efecto moderno */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil general */
+    color: #f1f5f9; /* Texto casi blanco */
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.caja-dafo h3 {
+    font-family: var(--font-family-heading);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.caja-dafo p {
+    color: #cbd5e1; /* Gris claro muy legible */
+    font-weight: 400;
+}
+
+/* 3. Acentos de Color Semánticos (Solo en el borde izquierdo) */
+
+/* Fortalezas: Verde Neón */
+.fortalezas { 
+    border-left: 5px solid #2ecc71; 
+}
+.fortalezas h3 { color: #2ecc71; }
+
+/* Oportunidades: Azul Cian (Turquesa corporativo) */
+.oportunidades { 
+    border-left: 5px solid #44ffd1; 
+}
+.oportunidades h3 { color: #44ffd1; }
+
+/* Debilidades: Naranja/Rojo Suave */
+.debilidades { 
+    border-left: 5px solid #ff6b6b; 
+}
+.debilidades h3 { color: #ff6b6b; }
+
+/* Amenazas: Amarillo Ámbar */
+.amenazas { 
+    border-left: 5px solid #fca5a5; /* O un amarillo #f1c40f */
+    border-left: 5px solid #fbbf24;
+}
+.amenazas h3 { color: #fbbf24; }
+
+/* Efecto Hover en las tarjetas DAFO */
+.caja-dafo:hover {
+    transform: translateY(-5px);
+    background-color: rgba(30, 41, 59, 0.9); /* Se vuelve más sólida al pasar el ratón */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Corrección de textos generales de la sección */
+.seccion-introduccion p, 
+.seccion-procedimientos li {
+    color: #e2e8f0; /* Texto claro asegurado */
+    font-size: 1.05rem;
+}
+
+.seccion-procedimientos li b {
+    color: var(--color-accent); /* Negritas en turquesa */
+}
+
 /*
  * =========================================
  * 12. ESTILOS PÁGINA INICIO (HOME) - ACCESIBILIDAD
