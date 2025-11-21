@@ -436,7 +436,9 @@ input:focus, textarea:focus {
  * =========================================
  */
 
+
 /* --- CLIENTES (LOGOS) --- */
+
 .logos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -452,6 +454,11 @@ input:focus, textarea:focus {
 .client-logo:hover {
     color: var(--color-primary);
     transform: scale(1.1);
+}
+
+.clients-section h2, .testimonials-section h2, .faq-section h2 {
+    color: var(--color-text-light);
+    text-shadow: 0 2px 4 px rgba(0, 0, 0, 0.5);
 }
 
 /* --- PROYECTOS (CARDS) --- */
