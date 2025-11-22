@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../estilos.css"> 
+    <link rel="stylesheet" href="../../estilos.css"> 
 </head>
 <body>
 
@@ -25,9 +25,41 @@
 
             <article class="article-card" id="articulo-5">
                 <header>
-                    <h2>IA en el Helpdesk: De Reactivo a Proactivo con AIOps</h2>
+                    <h1>IA en el Helpdesk: De Reactivo a Proactivo con AIOps</h1>
                 </header>
-                <p>El servicio técnico ya no es solo reactivo. Las nuevas plataformas de AIOps (IA para Operaciones de TI) monitorizan sistemas en tiempo real, detectan anomalías y resuelven problemas *antes* de que el usuario note la caída. Así es como la IA reduce el tiempo de inactividad de tu empresa.</p>
+                    <h2>1. El Síndrome del "Bombero Digital"</h2>
+                    <p>Cualquier profesional que haya trabajado en Helpdesk o SysAdmin conoce la sensación: llegar el lunes por la mañana y encontrar la bandeja de entrada inundada. Servidores caídos, usuarios que no pueden loguearse, aplicaciones lentas.</p>
+                    <p>El modelo tradicional de soporte es puramente reactivo:</p>
+                    <ul>
+                        <ol>Algo se rompe.</ol>
+                        <ol>El usuario se queja (crea un ticket).</ol>
+                        <ol>El técnico investiga y repara.</ol>
+                    </ul>
+                    <p>Este ciclo es insostenible en 2024. La complejidad de las arquitecturas modernas (microservicios, nubes híbridas) genera tal cantidad de datos y alertas que es imposible para un ser humano correlacionar todo a tiempo. Aquí es donde entra AIOps (Artificial Intelligence for IT Operations).</p>
+                    <hr>
+                    <h2>2. ¿Qué es AIOps?</h2>
+                    <p>AIOps es la aplicación de Big Data y Machine Learning a los datos operativos de tu empresa. Imagina un cerebro central que ingiere terabytes de logs, métricas de rendimiento y tickets históricos en tiempo real para detectar patrones que el ojo humano no ve. No se trata de responder "¿Cómo cambio mi contraseña?", sino de detectar "¿Por qué la base de datos tiene latencia cada martes a las 10:00?".</p>
+                    <hr>
+                    <h2>3. De Reactivo a Predictivo: La Magia de la Anticipación</h2>
+                    <p>La promesa de AIOps es cambiar el tiempo verbal del soporte técnico: del pasado ("se rompió") al futuro ("se va a romper").</p>
+                    <ul>
+                        <li><b>Detección de Anomalías</b>:Las herramientas de monitorización clásicas usan umbrales estáticos (ej: "avísame si la CPU pasa del 90%"). AIOps aprende el comportamiento normal de tu sistema. Si la CPU suele estar al 20% y de repente sube al 60% sin razón aparente, AIOps lanza una alerta preventiva, aunque no hayas cruzado el umbral de "peligro".</li>
+                        <li><b>Predicción de Capacidad</b>: Analizando tendencias históricas, la IA puede avisarte: "Al ritmo actual de crecimiento, el disco duro del servidor de logs se llenará en 4 días y 6 horas". Esto permite al técnico ampliar el disco antes de que el servicio se caiga.</li>
+                    </ul>
+                    <hr>
+                    <h2>4. Funcionalidades imprescindibles</h2>
+                    <br>
+                    <h3>Automated Root Cause Analysis (RCA)</h3>
+                    <p>Cuando un servicio web se cae, suele desencadenar una tormenta de 500 alertas simultáneas (red, base de datos, frontend, balanceador). En el modelo tradicional, el equipo pierde horas buscando la aguja en el pajar ("War Room"). Con AIOps, el sistema correlaciona esos eventos y te dice: "Ignora las 49 alertas secundarias. El problema origen es un cambio de configuración en el switch central realizado hace 10 minutos".</p>
+                    <ul>
+                        <li><b>El punto fuerte</b>: Su capacidad de predicción es asombrosa. No solo completa líneas, sino bloques enteros de lógica, pruebas unitarias y documentación. Con la introducción de Copilot Chat, ahora puedes preguntarle directamente: "¿Cómo puedo optimizar esta consulta SQL?" o "Explícame qué hace este código legacy" sin salir del editor.</li>
+                        <li><b>Para quién es</b>: Desarrolladores que viven en el ecosistema VS Code o Visual Studio y buscan la máxima productividad creativa.</li>
+                        <li><b>Especial cuidado</b>: Al ser un modelo entrenado con código público, ocasionalmente puede sugerir código que se asemeja a software con licencia. Aunque tiene filtros, el usuario debe ser diligente.</li>
+                    </ul>
+                    <h3>Self-Healing (Auto-reparación)</h3>
+                    <p>Llevamos la proactividad al extremo. Si AIOps detecta un proceso bloqueado conocido ("memory leak" en un servicio Java, por ejemplo), puede disparar automáticamente un script preaprobado para reiniciar ese servicio específico. Resultado: El problema se resuelve antes de que el usuario final note la caída, y el ticket se crea y cierra automáticamente solo para registro.</p>
+
+                    <p>La adopción de AIOps no busca reemplazar al equipo de Helpdesk o SysAdmin, sino aumentar sus capacidades. En un entorno donde la infraestructura es código y los servicios son efímeros, depender exclusivamente de la vigilancia humana es una batalla perdida. Pasar de reactivo a proactivo no es solo una mejora técnica; es la diferencia entre un departamento de IT que es visto como un "coste" y uno que es visto como un socio estratégico que garantiza la continuidad del negocio.</p>
                 <footer>
                     <span>Categoría: <a href="catg-soporte.html" class="category-tag">Servicio Técnico</a></span>
                 </footer>
@@ -35,9 +67,39 @@
 
             <article class="article-card" id="articulo-6">
                 <header>
-                    <h2>La "Ley de Derecho a Reparar": ¿Cómo Afecta a tu Empresa?</h2>
+                    <h1>La "Ley de Derecho a Reparar": ¿Cómo Afecta a tu Empresa?</h1>
                 </header>
-                <p>Las nuevas normativas europeas y estadounidenses sobre el "Derecho a Reparar" están cambiando el panorama del hardware. Analizamos cómo esto impacta la vida útil de tus servidores, portátiles y dispositivos móviles, y la importancia de contar con un servicio técnico certificado para gestionar garantías y reparaciones.</p>
+                    <h2>1. Cambio de Paradigma en la Economía IT</h2>
+                    <p>Durante años, el modelo de consumo tecnológico empresarial fue lineal: Comprar -> Usar 3 años -> Desechar -> Repetir. Los contratos de soporte oficial solían ser draconianos, obligando a renovar hardware perfectamente funcional porque el fabricante dejaba de suministrar una pieza trivial.</p>
+                    <p>Con la aprobación de las nuevas directivas (especialmente fuertes en la Unión Europea y crecientes en EE.UU.), entramos en la era de la Economía Circular Tecnológica. Para un Director de IT o una empresa de Soporte Técnico, esto ya no es solo una cuestión ecológica; es una cuestión de soberanía operativa y ahorro de costes.</p>
+                    <hr>
+                    <h2>2. ¿Qué exige exactamente la Ley?</h2>
+                    <p>No se trata solo de poder abrir la carcasa. La legislación obliga a los fabricantes (OEMs) a tres puntos clave que afectan a tu empresa:</p>
+                    <ul>
+                        <li><b>Acceso a Repuestos</b>: Los fabricantes deben poner piezas clave (baterías, pantallas, discos, placas) a disposición de reparadores profesionales y usuarios finales durante un periodo prolongado (hasta 10 años en algunos casos) tras la retirada del producto del mercado.</li>
+                        <li><b>Documentación Técnica</b>: Se acabó el secretismo. Los esquemas de reparación y manuales de servicio deben ser públicos o accesibles. Esto es oro puro para los servicios técnicos independientes.</li>
+                        <li><b>Diseño Reparable</b>: Los dispositivos deben diseñarse para ser desmontados con herramientas comunes. Menos pegamento industrial, más tornillos estándar.</li>
+                    </ul>
+                    <hr>
+                <h2>4. La Batalla del Software y la Obsolescencia</h2>
+                <p>Aquí entra el ángulo de <strong>Desarrollo Web y Software</strong>. La ley también ataca la obsolescencia vía software (el famoso <em>software locking</em>).</p>
+                <ul>
+                    <li><strong>Bloqueo de Piezas:</strong> Se prohíbe (o se limita severamente) la práctica de usar software para impedir que una pieza de repuesto de un tercero funcione (ej: que una pantalla no original deshabilite la biometría).</li>
+                    <li><strong>Actualizaciones de Seguridad:</strong> Los fabricantes deben garantizar actualizaciones de seguridad durante más tiempo, desligadas de las actualizaciones de funcionalidades. Esto es vital para la <strong>Ciberseguridad</strong>: no tendrás que tirar un servidor o un router funcional solo porque el fabricante dejó de parchear vulnerabilidades críticas.
+                    </li>
+                </ul>
+                <hr>
+                <h2>5. El Reverso de la Moneda: Seguridad y Riesgos</h2>
+                <p>Para los profesionales de la Ciberseguridad, el Derecho a Reparar introduce un nuevo vector de riesgo que debe gestionarse con una arquitectura <a href="#enlace-a-tu-articulo-zero-trust">Zero Trust</a>.</p>
+                <p>Si cualquiera puede abrir y modificar el hardware de la empresa:</p>
+                <ul>
+                    <li><strong>Supply Chain Attacks:</strong> ¿Es esa pieza de repuesto comprada en un marketplace barato fiable? ¿O trae un chip malicioso incrustado?</li>
+                    <li><strong>Integridad Física:</strong> En entornos de alta seguridad (como bancos o centros de datos), permitir reparaciones por terceros no certificados rompe la cadena de confianza.</li>
+                </ul>
+
+                <p>La Ley de Derecho a Reparar es una <strong>victoria para el sector del Servicio Técnico profesional</strong>. Valida y potencia el modelo de negocio de las empresas de mantenimiento, consultoras de IT y talleres especializados, que ahora competirán en igualdad de condiciones con los gigantes tecnológicos.</p>
+                <p>Para tu empresa, la pregunta es: <b>¿Seguirás pagando la prima de renovación automática, o aprovecharás la legislación para optimizar tu infraestructura y reducir tu huella de carbono?</b></p>
+                <p class="alert-box"><strong>La Respuesta:</strong> Las políticas de seguridad deben actualizarse. Validar la procedencia de los componentes de hardware será tan importante como validar las librerías de software en tu código.</p>
                 <footer>
                     <span>Categoría: <a href="catg-soporte.html" class="category-tag">Servicio Técnico</a></span>
                 </footer>
