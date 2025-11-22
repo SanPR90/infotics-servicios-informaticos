@@ -350,7 +350,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 /* Retroceso Animado */
 .back-link {
     display: inline-flex; align-items: center; font-size: 1.1rem; font-weight: 700;
-    color: var(--color-accent); text-decoration: none; padding: 0.5rem 1rem;
+    color: var(--color-text-dark); text-decoration: none; padding: 0.5rem 1rem;
     border-radius: 8px 8px 0 0; background-color: transparent;
     border-bottom: 3px solid var(--color-primary); transition: all 0.3s ease; position: relative; z-index: 1;
 }
