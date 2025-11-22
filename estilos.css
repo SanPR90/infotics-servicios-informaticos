@@ -740,18 +740,120 @@ input:focus, textarea:focus {
 .enlaces-pdf { display: flex; justify-content: space-around; text-align: center; padding: 10px 0; }
 .enlaces-pdf a { color: var(--color-text-light); transition: color 0.3s; }
 .enlaces-pdf a:hover { color: var(--service-primary); }
-.caja-contacto {
-    background-color: var(--service-bg-dark); border: 2px dashed var(--color-text-light);
-    box-shadow: var(--shadow-dark); padding: 20px; border-radius: 8px; margin-top: auto; text-align: center;
-}
-.caja-contacto i, .caja-contacto h4 { color: var(--service-primary); margin-bottom: 10px; }
-.btn-contacto {
-    display: inline-block; background-color: var(--service-primary); color: var(--color-text-light);
-    padding: 10px 20px; margin-top: 15px; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;
-}
-.btn-contacto:hover { background-color: #4B31A8; }
 
-/* Contenido Principal Procedimientos */
+/* ==============================================
+   DISEÑO CAJA LATERAL (HTML INTACTO)
+   ============================================== */
+
+/* 1. El Contenedor Principal */
+.caja-contacto {
+    /* Usamos tus variables de color oscuro */
+    background-color: var(--service-bg-dark);
+    color: var(--color-text-light);
+    
+    /* Eliminamos el dashed y ponemos un borde superior sólido (Acento) */
+    border: none;
+    border-top: 4px solid var(--service-primary);
+    
+    /* Sombra y Espaciado */
+    box-shadow: var(--shadow-dark);
+    padding: 30px 20px;
+    border-radius: 8px;
+    
+    /* Alineación */
+    text-align: center;
+    position: relative; /* Para contexto de posicionamiento */
+    overflow: hidden;
+}
+
+/* 2. El Icono Gigante Superior (el fa-3x) */
+.caja-contacto > i {
+    color: var(--service-primary);
+    margin-bottom: 20px;
+    /* Le damos un brillo sutil */
+    filter: drop-shadow(0 0 5px rgba(var(--service-primary), 0.4)); 
+    display: inline-block;
+}
+
+/* 3. El Título (H4) */
+.caja-contacto h4 {
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* Línea sutil debajo del título */
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 4. Los Párrafos de datos (Email y Teléfono) 
+   TRUCO: Los convertimos en "botones" o filas visuales */
+.caja-contacto p {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde muy sutil */
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    
+    /* Flexbox para alinear el icono pequeño y el texto perfectamente */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrados horizontalmente */
+    gap: 10px; /* Espacio entre el icono y el texto */
+    
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por encima del email o teléfono */
+.caja-contacto p:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--service-primary); /* El borde se ilumina con tu color */
+    transform: translateX(5px); /* Pequeño desplazamiento a la derecha */
+    cursor: default;
+}
+
+/* 5. Los Iconos pequeños dentro de los párrafos */
+.caja-contacto p i {
+    color: var(--service-primary);
+    font-size: 1rem;
+}
+
+/* 6. El Botón de acción (Solicitar Presupuesto) */
+.btn-contacto {
+    display: block; /* Ocupa todo el ancho */
+    width: 100%;
+    box-sizing: border-box; /* Evita que el padding rompa el ancho */
+    
+    background-color: var(--service-primary);
+    color: var(--color-text-light);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    
+    padding: 15px 20px;
+    margin-top: 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    
+    /* Sombra suave para darle volumen */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto Hover del Botón */
+.btn-contacto:hover {
+    background-color: #fff; /* Se vuelve blanco (o un color contraste) */
+    color: var(--service-primary); /* Texto toma el color primario */
+    transform: translateY(-2px); /* Se eleva un poco */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ==============================================
+   Contenido Principal Procedimientos 
+   ============================================== */
+
 .contenido-procedimiento { display: flex; gap: 30px; align-items: center; }
 .imagen-procedimiento { max-width: 40%; height: auto; border-radius: 8px; box-shadow: var(--shadow-dark); }
 .contenido-procedimiento ul { list-style: none; }
