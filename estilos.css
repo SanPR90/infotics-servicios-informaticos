@@ -490,6 +490,8 @@ input:focus, textarea:focus {
     background-color: var(--color-bg-light); padding: 3px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 5px; border: 1px solid var(--color-border);
 }
 
+.detalle-proyecto p { color: aliceblue; font-size: large; line-height: 1.5;}
+
 /* --- GALERÍA (MASONRY SIMPLE) --- */
 .gallery-grid {
     display: grid;
