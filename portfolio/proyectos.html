@@ -3,58 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,500&display=swap" rel="stylesheet">
+    <title>Nuestros Proyectos - INFOTICS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <link rel="stylesheet" href="../estilos.css">
     <link rel="icon" href="../imagenes/favicon.png" type="image/x-icon">
-        <!-- Google tag (gtag.js) -->
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-51JJSSVN4C"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-51JJSSVN4C');
     </script>
-    
-    <title>Nuestros Proyectos - INFOTICS &reg; Servicios Informáticos</title>
 </head>
 <body>
-<header class="pre-header">
+    <div class="site-disclaimer">
+        Este es un sitio web de prácticas - No es un sitio web oficial
+    </div>
+
+    <div class="preloader"></div>  
+
+    <header class="pre-header">
         <div class="container pre-header-content">
             <div class="pre-header-contact">
-                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i>C. de la Zarza, 4, 13003 Ciudad Real</span>
-                <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@infotics.es">info@infotics.es</a></span>
+                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> C. de la Zarza, 4, 13003 Ciudad Real</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:info@infotics.es">info@infotics.es</a></span>
             </div>
             <div class="pre-header-social">
-                <a href="#" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                <a href="#" aria-label="X / Twitter">
-                    <i class="fab fa-square-x-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#" aria-label="Facebook">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                </a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="X / Twitter"><i class="fab fa-square-x-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
-</header>
+    </header>
 
     <nav class="techo-menu" aria-label="Menú principal">
         <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0;">
-            
             <a href="../area-clientes.html" class="logo" aria-label="Inicio">
-                <img src="../imagenes/logotipo.png" height="150" alt="Imagen Logotipo">
+                <img src="../imagenes/logotipo.png" height="150px" alt="Imagen Logotipo">
             </a>
-
-            <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-haspopup="true" aria-label="Alternar menú">
-                <span class="burger" aria-hidden="true"></span>
-                <span class="sr-only">Abrir menú</span>
+            <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
+                <span class="burger"></span><span class="sr-only">Abrir menú</span>
             </button>
-
-            <ul id="nav-links" class="nav-links" data-open="false">
+            <ul id="nav-links" class="nav-links">
                 <li><a href="/infotics-servicios-informaticos/">Inicio</a></li>
                 <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
-
                 <li class="has-submenu active">
                     <a href="#">Portfolio</a>
                     <ul class="submenu">
@@ -63,7 +59,6 @@
                         <li><a href="galeria.html">Galería</a></li>
                     </ul>
                 </li>
-
                 <li class="has-submenu">
                     <a href="#">Servicios</a>
                     <ul class="submenu">
@@ -72,9 +67,8 @@
                         <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
                     </ul>
                 </li>
-
                 <li><a href="../blog/noticias-tics.html">Blog</a></li>
-                <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>  
+                <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>
                 <li><a href="../area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
             </ul>
         </div>
@@ -87,117 +81,101 @@
         </div>
     </section>
 
-    <main class="main-content container">
-        <div class="projects-grid">
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="https://placehold.co/600x400/141e30/44ffd1?text=E-Commerce" alt="Proyecto E-commerce">
-                </div>
-                <div class="project-info">
-                    <h3>Plataforma E-Commerce B2B</h3>
-                    <span class="project-cat">Desarrollo Web</span>
-                    <p>Desarrollo de tienda online mayorista con integración ERP en tiempo real.</p>
-                    <div class="project-tags">
-                        <span>React</span><span>NodeJS</span><span>MySQL</span>
+    <main class="container main-content">
+        
+        <section class="projects-section">
+            <div class="projects-grid">
+                
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="../imagenes/proyecto-ecommerce.jpg" alt="Interfaz de tienda online B2B" loading="lazy">
                     </div>
-                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                </div>
-            </article>
+                    <div class="project-info">
+                        <span class="project-cat">Desarrollo Web</span>
+                        <h3>Plataforma E-Commerce B2B</h3>
+                        <p>Desarrollo de tienda online mayorista con integración ERP en tiempo real y gestión de stock automatizada.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>NodeJS</span><span>MySQL</span>
+                        </div>
+                        <a href="detalle_proyecto_ecommerce.html" class="btn btn-primary" style="margin-top:15px; width:100%;">Ver Detalles</a>
+                    </div>
+                </article>
 
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="https://placehold.co/600x400/141e30/44ffd1?text=Ciberseguridad" alt="Auditoría Seguridad">
-                </div>
-                <div class="project-info">
-                    <h3>Blindaje Corporativo</h3>
-                    <span class="project-cat">Seguridad Informática</span>
-                    <p>Implementación de firewalls perimetrales y protocolos Zero Trust para banca.</p>
-                    <div class="project-tags">
-                        <span>Fortinet</span><span>Cisco</span><span>ISO 27001</span>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="../imagenes/proyecto-seguridad.jpg" alt="Centro de operaciones de seguridad" loading="lazy">
                     </div>
-                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                </div>
-            </article>
+                    <div class="project-info">
+                        <span class="project-cat">Seguridad Informática</span>
+                        <h3>Blindaje Corporativo Banca</h3>
+                        <p>Implementación de firewalls perimetrales de nueva generación y protocolos Zero Trust para sector bancario.</p>
+                        <div class="project-tags">
+                            <span>Fortinet</span><span>Cisco</span><span>ISO 27001</span>
+                        </div>
+                        <a href="detalle_proyecto_auditoria.html" class="btn btn-primary" style="margin-top:15px; width:100%;">Ver Detalles</a>
+                    </div>
+                </article>
 
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="https://placehold.co/600x400/141e30/44ffd1?text=Soporte" alt="Migración Cloud">
-                </div>
-                <div class="project-info">
-                    <h3>Migración a la Nube</h3>
-                    <span class="project-cat">Soporte Técnico</span>
-                    <p>Virtualización de servidores físicos y migración segura a AWS.</p>
-                    <div class="project-tags">
-                        <span>AWS</span><span>Linux</span><span>Docker</span>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="../imagenes/proyecto-cloud.jpg" alt="Servidores en la nube" loading="lazy">
                     </div>
-                    <a href="#" class="btn btn-secondary">Ver Detalles</a>
-                </div>
-            </article>
-        </div>
+                    <div class="project-info">
+                        <span class="project-cat">Soporte Técnico</span>
+                        <h3>Migración a la Nube AWS</h3>
+                        <p>Virtualización completa de servidores físicos heredados y migración segura a infraestructura AWS escalable.</p>
+                        <div class="project-tags">
+                            <span>AWS</span><span>Linux</span><span>Docker</span>
+                        </div>
+                        <a href="detalle_proyecto_migracion.html" class="btn btn-primary" style="margin-top:15px; width:100%;">Ver Detalles</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
-<footer class="site-footer">
-    <div class="footer-container">
-
-        <div class="footer-column">
-            <h3>Nuestra Compañía</h3>
-            <ul class="footer-links">
-                <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Departamentos</a></li>
-                <li><a href="../portfolio/clientes.html">Testimonios</a></li>
-                <li><a href="../blog/noticias-tics.html">Últimas Noticias</a></li>
-                <li><a href="../contacto/consulta-personalizada.html">Contáctanos</a></li>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Nuestra Compañía</h3>
+                <ul class="footer-links">
+                    <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Departamentos</a></li>
+                    <li><a href="clientes.html">Testimonios</a></li>
+                    <li><a href="../blog/noticias-tics.html">Últimas Noticias</a></li>
+                    <li><a href="../contacto/consulta-personalizada.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <a href="../blog/noticias-tics.html" class="footer-servicios">
+                    <img src="../imagenes/miniatura_footer.jpg" alt="Blog" class="footer-servicios-img">
+                </a>
+                <ul class="footer-links">
+                    <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                    <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                    <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto Directo</h3>
+                <div class="contact-department">
+                    <strong>Soporte General</strong>
+                    <p><a href="mailto:info@infotics.es">info@infotics.es</a><br><a href="tel:+34900100001">+34 900 100 001</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 INFOTICS.</p>
+            <ul class="footer-legal-links">
+                <li>Términos y Condiciones</li>
+                <li>Política de Privacidad</li>
             </ul>
         </div>
+    </footer>
 
-        <div class="footer-column">
-            <h3>Servicios</h3>
-            <a href="blog/noticias-tics.html" class="footer-servicios" aria-label="Ver el último artículo del blog">
-                 <img src="../imagenes/miniatura_footer.jpg" width="150" height="200" alt="Imagen miniatura parte de Servicios" class="footer-servicios-img">
-            </a>
-            <ul class="footer-links">
-                <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
-                <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
-                <li><a href="../servicios/servicio_tecnico.html">Servicio Técnico</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-column">
-            <h3>Contacto Directo</h3>
-            <div class="contact-department">
-                <strong>Desarrollo Web</strong>
-                <p>
-                    <a href="mailto:web@infotics.es">dweb@infotics.es</a><br>
-                    <a href="tel:+34900000001">+34 900 100 001</a>
-                </p>
-            </div>
-            <div class="contact-department">
-                <strong>Seguridad Informática</strong>
-                <p>
-                    <a href="mailto:seguridad@infotics.es">seguridad@infotics.es</a><br>
-                    <a href="tel:+34900000002">+34 900 100 002</a>
-                </p>
-            </div>
-            <div class="contact-department">
-                <strong>Servicio Técnico</strong>
-                <p>
-                    <a href="mailto:soporte@infotics.es">soporte@infotics.es</a><br>
-                    <a href="tel:+34900000003">+34 900 100 003</a>
-                </p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2025 INFOTICS - Servicios Informáticos. Todos los derechos reservados.</p>
-        <ul class="footer-legal-links">
-            <li>Términos y Condiciones</li>
-            <li>Política de Privacidad</li>
-        </ul>
-    </div>
-</footer>
-    <!--Inclusion de los archivos de javascript-->
     <script src="../javascript/check_preloader.js"></script>
-    <script src="../javascript/menu_burguer.js"></script> 
+    <script src="../javascript/menu_burguer.js"></script>
 </body>
 </html>
