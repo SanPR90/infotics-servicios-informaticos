@@ -767,7 +767,7 @@ input:focus, textarea:focus {
 .seccion-menu nav ul li:hover a::after { transform: scaleY(1); background-color: var(--color-text-light); }
 
 /* PDF y Contacto Sidebar */
-.enlaces-pdf { display: flex; justify-content: space-around; text-align: center; padding: 10px 0; }
+.enlaces-pdf { display: flex; justify-content: space-around; text-align: center; padding: 10px 0; gap:1rem; }
 .enlaces-pdf a { color: var(--color-text-light); transition: color 0.3s; }
 .enlaces-pdf a:hover { color: var(--service-primary); }
 
@@ -826,6 +826,7 @@ input:focus, textarea:focus {
     border-radius: 6px;
     margin-bottom: 10px;
     font-size: 0.95rem;
+    color: #fff;
     
     /* Flexbox para alinear el icono pequeño y el texto perfectamente */
     display: flex;
