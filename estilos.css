@@ -382,6 +382,10 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
     font-weight: 600;
 }
 
+article.detalle-proyecto ul li { 
+    color: aliceblue;
+}
+
 /* Formularios General */
 .quick-contact {
     background-image: linear-gradient(rgb(39 50 68 / 85%), rgb(41 10 70 / 85%)), url(imagenes/fondo_formulario.jpg);
