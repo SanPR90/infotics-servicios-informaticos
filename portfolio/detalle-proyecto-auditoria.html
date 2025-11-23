@@ -3,31 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Ciberseguridad Banca - INFOTICS</title>
-    <link rel="stylesheet" href="../estilos.css">
+    
+    <!-- SEO -->
+    <title>Caso de Éxito: Auditoría y Blindaje Banca | INFOTICS</title>
+    <meta name="description" content="Implementación de arquitectura Zero Trust y firewalls perimetrales para entidad financiera. Caso de éxito en ciberseguridad y cumplimiento ISO 27001.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" href="../imagenes/favicon.png">
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="icon" href="../imagenes/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <main class="container main-content" style="margin-top: 100px;">
+    <div class="site-disclaimer">Este es un sitio web de prácticas - No es un sitio web oficial</div>
+
+    <!-- HEADER -->
+    <header class="pre-header">
+        <div class="container pre-header-content">
+            <div class="pre-header-contact">
+                <span><i class="fas fa-map-marker-alt"></i> C. de la Zarza, 4, 13003 Ciudad Real</span>
+                <span><i class="fas fa-envelope"></i> info@infotics.es</span>
+            </div>
+            <div class="pre-header-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="techo-menu">
+        <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0;">
+            <a href="../area-clientes.html" class="logo"><img src="../imagenes/logotipo.png" height="150px" alt="INFOTICS"></a>
+            <button class="menu-toggle"><span class="burger"></span></button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="/infotics-servicios-informaticos/">Inicio</a></li>
+                <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+                <li class="has-submenu active"><a href="#">Portfolio</a>
+                    <ul class="submenu">
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                        <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                        <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                    </ul>
+                </li>
+                <li><a href="../blog/noticias-tics.html">Blog</a></li>
+                <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>
+                <li><a href="../area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container main-content" style="margin-top: 40px;">
         <a href="proyectos.html" class="back-link">Volver a Proyectos</a>
         
-        <article style="margin-top: 20px;">
-            <h1>Blindaje Corporativo Sector Banca</h1>
-            <img src="../imagenes/proyecto-seguridad.jpg" alt="Detalle Seguridad" style="width:100%; height:400px; object-fit:cover; border-radius:10px; margin: 20px 0;">
+        <article class="detalle-proyecto">
+            <header>
+                <h1>Blindaje Corporativo Sector Banca</h1>
+                <p style="font-size: 1.2rem; color: #44ffd1;">Sector: Finanzas y Banca</p>
+            </header>
+
+            <img src="../imagenes/proyecto-seguridad.jpg" alt="Centro de operaciones de seguridad monitorizando redes" class="img-detalle-destacada">
             
-            <h2>El Desafío</h2>
-            <p>La entidad financiera requería actualizar su infraestructura perimetral para cumplir con las nuevas normativas ISO 27001 y protegerse contra ataques DDoS persistentes.</p>
+            <section>
+                <h2>El Desafío</h2>
+                <p>Una entidad financiera regional enfrentaba un aumento del 300% en intentos de ciberataques tipo DDoS y Phishing dirigido. Además, necesitaban adecuar su infraestructura urgentemente para la renovación de la certificación <strong>ISO 27001</strong>.</p>
+            </section>
             
-            <h2>La Solución</h2>
-            <p>Implementamos una arquitectura <strong>Zero Trust</strong>. Desplegamos firewalls de nueva generación (NGFW) de Fortinet y configuramos segmentación de red avanzada para aislar activos críticos.</p>
+            <section>
+                <h2>La Solución: Zero Trust</h2>
+                <p>Implementamos un cambio de paradigma hacia una arquitectura de <strong>Confianza Cero (Zero Trust)</strong>. Ya no se confía en nadie, ni siquiera dentro de la red.</p>
+                <h3>Acciones Realizadas:</h3>
+                <ul>
+                    <li>Despliegue de Firewalls de Nueva Generación (NGFW) Fortinet en alta disponibilidad.</li>
+                    <li>Implementación de autenticación multifactor (MFA) para todos los accesos internos.</li>
+                    <li>Segmentación de red (VLANs) para aislar los datos críticos de los terminales de empleados.</li>
+                    <li>Instalación de un sistema SIEM para la monitorización de eventos en tiempo real.</li>
+                </ul>
+            </section>
             
-            <h3>Tecnologías Usadas</h3>
-            <p>Fortinet Security Fabric, Cisco Identity Services Engine (ISE), SIEM para monitorización 24/7.</p>
+            <section>
+                <h2>Impacto en Seguridad</h2>
+                <p>La auditoría posterior a la implementación arrojó **cero vulnerabilidades críticas**. La entidad superó la certificación ISO sin no conformidades y ha neutralizado el 100% de los intentos de intrusión en los últimos 12 meses.</p>
+            </section>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="../contacto/consulta-personalizada.html" class="btn btn-primary">Solicitar Auditoría de Seguridad</a>
+            </div>
         </article>
     </main>
 
-    </body>
-<script src="../javascript/menu_burguer.js"></script>
+    <footer class="site-footer">
+        <div class="footer-bottom"><p>&copy; 2025 INFOTICS.</p></div>
+    </footer>
+    <script src="../javascript/menu_burguer.js"></script>
+</body>
 </html>

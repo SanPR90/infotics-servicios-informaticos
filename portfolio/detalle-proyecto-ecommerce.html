@@ -3,35 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto E-Commerce B2B - INFOTICS</title>
-    <link rel="stylesheet" href="../estilos.css">
+    
+    <!-- SEO Meta Tags -->
+    <title>Caso de Éxito: E-Commerce B2B Mayorista | INFOTICS</title>
+    <meta name="description" content="Descubre cómo desarrollamos una plataforma E-commerce B2B integrada con ERP para automatizar ventas mayoristas. Caso de éxito en desarrollo web con React y Node.js.">
+    
+    <!-- Fuentes e Iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" href="../imagenes/favicon.png">
+    
+    <!-- CSS Principal (ruta relativa corregida) -->
+    <link rel="stylesheet" href="../estilos.css">
+    <link rel="icon" href="../imagenes/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <main class="container main-content" style="margin-top: 100px;">
+    <!-- BARRA AVISO -->
+    <div class="site-disclaimer">Este es un sitio web de prácticas - No es un sitio web oficial</div>
+
+    <!-- HEADER (Copiado para consistencia) -->
+    <header class="pre-header">
+        <div class="container pre-header-content">
+            <div class="pre-header-contact">
+                <span><i class="fas fa-map-marker-alt"></i> C. de la Zarza, 4, 13003 Ciudad Real</span>
+                <span><i class="fas fa-envelope"></i> info@infotics.es</span>
+            </div>
+            <div class="pre-header-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="techo-menu">
+        <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:0;">
+            <a href="../area-clientes.html" class="logo"><img src="../imagenes/logotipo.png" height="150px" alt="INFOTICS"></a>
+            <button class="menu-toggle"><span class="burger"></span></button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="/infotics-servicios-informaticos/">Inicio</a></li>
+                <li><a href="../quienes_somos/objetivos-y-equipos-de-trabajo.html">Quiénes somos</a></li>
+                <li class="has-submenu active"><a href="#">Portfolio</a>
+                    <ul class="submenu">
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="../servicios/desarrollo_web.html">Desarrollo Web</a></li>
+                        <li><a href="../servicios/seguridad_informatic.html">Seguridad Informática</a></li>
+                        <li><a href="../servicios/servicio_tecnico.html">Soporte Técnico</a></li>
+                    </ul>
+                </li>
+                <li><a href="../blog/noticias-tics.html">Blog</a></li>
+                <li><a href="../contacto/consulta-personalizada.html">Contacto</a></li>
+                <li><a href="../area-clientes.html" class="btn-area-clientes">Área de Clientes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container main-content" style="margin-top: 40px;">
+        
         <a href="proyectos.html" class="back-link">Volver a Proyectos</a>
         
-        <article style="margin-top: 20px;">
-            <h1>Plataforma E-Commerce B2B Mayorista</h1>
-            <img src="../imagenes/proyecto-ecommerce.jpg" alt="Detalle E-commerce" style="width:100%; height:400px; object-fit:cover; border-radius:10px; margin: 20px 0;">
+        <!-- Artículo Accesible con clase nueva -->
+        <article class="detalle-proyecto">
+            <header>
+                <h1>Plataforma E-Commerce B2B Mayorista</h1>
+                <p style="font-size: 1.2rem; color: #44ffd1;">Sector: Distribución y Logística</p>
+            </header>
+
+            <img src="../imagenes/proyecto-ecommerce.jpg" alt="Interfaz de usuario de la plataforma B2B mostrando panel de pedidos" class="img-detalle-destacada">
             
-            <h2>El Desafío</h2>
-            <p>Nuestro cliente, una distribuidora nacional, necesitaba digitalizar su proceso de ventas mayorista. Los pedidos se realizaban por teléfono, lo que generaba errores de stock y retrasos.</p>
+            <section>
+                <h2>El Desafío</h2>
+                <p>Nuestro cliente, una de las mayores distribuidoras de la región, gestionaba sus pedidos mayoristas mediante llamadas telefónicas y hojas de cálculo. Esto provocaba:</p>
+                <ul>
+                    <li>Errores humanos en la toma de pedidos (15% de incidencia).</li>
+                    <li>Desconocimiento del stock real por parte de los clientes.</li>
+                    <li>Saturación del equipo comercial en tareas administrativas.</li>
+                </ul>
+            </section>
             
-            <h2>La Solución</h2>
-            <p>Desarrollamos una plataforma web progresiva (PWA) utilizando <strong>React</strong> para el frontend y <strong>Node.js</strong> para el backend. La clave fue la integración en tiempo real con su ERP antiguo mediante una API intermedia personalizada.</p>
+            <section>
+                <h2>La Solución Tecnológica</h2>
+                <p>Diseñamos y desarrollamos una <strong>Plataforma Web Progresiva (PWA)</strong> a medida que digitalizó el 100% del proceso comercial.</p>
+                <p>Utilizamos <strong>React</strong> para una interfaz de usuario ultrarrápida y <strong>Node.js</strong> en el backend para gestionar la lógica de negocio compleja (descuentos por volumen, tarifas personalizadas por cliente).</p>
+                <p>El punto crítico fue la integración con su ERP heredado. Creamos una API intermedia que sincroniza el stock y los precios en tiempo real (latencia < 200ms), garantizando que el cliente siempre vea datos actualizados.</p>
+            </section>
             
-            <h3>Resultados Clave</h3>
-            <ul>
-                <li>Reducción del 40% en llamadas de gestión de pedidos.</li>
-                <li>Sincronización de stock en tiempo real (< 200ms).</li>
-                <li>Aumento del 25% en ventas recurrentes el primer trimestre.</li>
-            </ul>
+            <section>
+                <h2>Resultados Obtenidos</h2>
+                <ul>
+                    <li><strong>Reducción del 40%</strong> en llamadas administrativas.</li>
+                    <li><strong>Aumento del 25%</strong> en el ticket medio de pedido gracias a sugerencias automáticas.</li>
+                    <li>Eliminación total de errores de stock en pedidos web.</li>
+                </ul>
+            </section>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="../contacto/consulta-personalizada.html" class="btn btn-primary">¿Necesitas un proyecto similar?</a>
+            </div>
         </article>
     </main>
 
-    </body>
-<script src="../javascript/menu_burguer.js"></script>
+    <!-- FOOTER (Copiado para consistencia) -->
+    <footer class="site-footer">
+        <div class="footer-bottom"><p>&copy; 2025 INFOTICS.</p></div>
+    </footer>
+    <script src="../javascript/menu_burguer.js"></script>
+</body>
 </html>
