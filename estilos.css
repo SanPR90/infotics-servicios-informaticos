@@ -833,7 +833,7 @@ img.img-detalle-destacada {
     color: var(--service-primary);
     margin-bottom: 20px;
     /* Le damos un brillo sutil */
-    filter: drop-shadow(0 0 5px rgba(var(--service-primary), 0.4)); 
+    filter: drop-shadow(0 0 5px rgba(93, 63, 211, 0.4)); 
     display: inline-block;
 }
 
