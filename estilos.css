@@ -507,7 +507,14 @@ input:focus, textarea:focus {
 .project-tags span {
     background-color: var(--color-bg-light); padding: 3px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 5px; border: 1px solid var(--color-border);
 }
-
+.detalle-proyecto h1 {
+    color: var(--color-accent);
+    margin-top: 1rem;
+}
+.detalle-proyecto h2 {
+    color: #d637fb;
+    padding: 1rem 0.4rem;
+}
 .detalle-proyecto p { color: aliceblue; font-size: large; line-height: 1.5;}
 
 /* --- GALERÍA (MASONRY SIMPLE) --- */
