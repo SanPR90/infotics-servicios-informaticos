@@ -1135,6 +1135,12 @@ img.img-detalle-destacada {
     .footer-legal-links li { margin: 0 10px; }
 }
 @media (max-width: 768px) {
+    body {
+        /* 1. Carga la imagen optimizada para móvil */
+        background-image: url(imagenes/backgrounds/fondo-movil.webp);
+        
+        /* 2. Cambia fixed a scroll. Esto elimina el "lag" visual al deslizar */
+        background-attachment: scroll; }
     .hero-content h1, .contenido-hero h1 { font-size: 2.2rem; }
     .seccion-introductoria { flex-direction: column; }
     .texto-intro, .imagen-intro { min-width: 100%; }
