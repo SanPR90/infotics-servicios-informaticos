@@ -66,7 +66,7 @@ body {
     margin: 0;
     font-family: var(--font-family-base);
     color: var(--color-text-dark);
-    background: url(imagenes/backgrounds/1.jpg) no-repeat center center fixed;
+    background: url(imagenes/fondo.webp) no-repeat center center fixed;
     background-size: cover;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
