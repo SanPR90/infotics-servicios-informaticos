@@ -348,7 +348,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
     cursor: pointer; text-decoration: none; font-size: 16px; margin-top: 10px;
     transition: background-color 0.3s; text-align: center; font-family: var(--font-family-base);
 }
-.btn-primary:hover, .boton-leer-mas:hover { background-color: #5f1ac9; }
+.btn-primary:hover, .boton-leer-mas:hover { background-color: #014e3cbf; }
 
 /* Botón Secundario (Recuperado para Home) */
 .btn-secondary {
@@ -492,7 +492,7 @@ input:focus, textarea:focus {
     border: 1px solid var(--color-border); transition: transform 0.3s ease; 
 }
 .project-card:hover { transform: translateY(-5px); }
-.project-image img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.project-image img { width: 100%; height: 220px; object-fit: contain; display: block; }
 .project-info { padding: 20px; }
 .project-tags { margin-top: 10px; }
 .project-tags span {
@@ -633,9 +633,9 @@ input:focus, textarea:focus {
     display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
     font-size: 1.1rem; color: var(--color-footer-text); max-width: 1200px; margin-left: auto; margin-right: auto;
 }
-.footer-bottom p { margin: 0 0 10px 0; }
+.footer-bottom p { margin: 0 0 10px 0; color: #09c7d8d6;}
 .footer-legal-links { display: flex; list-style: none; padding: 0; margin: 0; }
-.footer-legal-links li { margin-left: 20px; }
+.footer-legal-links li { margin-left: 20px; color: cadetblue;}
 /* En la Sección 8 del CSS (Footer Bottom) */
 
 .footer-legal-links a {
