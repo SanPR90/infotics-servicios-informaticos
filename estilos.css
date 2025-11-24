@@ -517,6 +517,13 @@ input:focus, textarea:focus {
 }
 .detalle-proyecto p { color: aliceblue; font-size: large; line-height: 1.5;}
 
+img.img-detalle-destacada
+Specificity: (0,1,1)
+ {
+    border: 1px solid darkturquoise;
+    border-radius: 45%;
+}
+
 /* --- GALERÍA (MASONRY SIMPLE) --- */
 .gallery-grid {
     display: grid;
