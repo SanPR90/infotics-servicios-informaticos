@@ -201,7 +201,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 .submenu li a:hover { background-color: #243b55; color: var(--color-accent); }
 
 /* Botón Hamburguesa */
-.menu-toggle { display: none; background: transparent; border: none; cursor: pointer; z-index: 20; }
+.menu-toggle { display: none; background: transparent; border: none; cursor: pointer; z-index: 20; margin: 0.4rem; }
 .menu-toggle .burger, .menu-toggle .burger::before, .menu-toggle .burger::after {
     width: 28px; height: 3px; background: var(--color-accent); display: block; margin: 6px 0; border-radius: 2px; transition: all 0.3s ease; position: relative; content: "";
 }
