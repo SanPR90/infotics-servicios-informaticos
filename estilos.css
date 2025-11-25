@@ -197,7 +197,7 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 .nav-links li.has-submenu:hover .submenu, .nav-links li.has-submenu:focus-within .submenu {
     opacity: 1; visibility: visible; transform: translateY(0);
 }
-.submenu li a { display: block; padding: 10px 20px; font-size: 0.95rem; color: #cbd5e1; }
+.submenu li a { display: block; padding: 0.6em 0.3em; font-size: 0.95rem; color: #cbd5e1; border-radius: 1.2rem;}
 .submenu li a:hover { background-color: #243b55; color: var(--color-accent); }
 
 /* Botón Hamburguesa */
