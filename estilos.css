@@ -413,6 +413,8 @@ article.detalle-proyecto ul li {
 .form-group { flex: 1; min-width: 48%; }
 .form-group.full-width { flex-basis: 100%; }
 
+.frase-inicio { font-family:var(--font-family-heading); font-size: 1.4rem; color: var(--color-accent-secondary); text-align: center; }
+
 /* Inputs */
 input[type="text"], input[type="email"], textarea, .quick-form input, .quick-form textarea {
     width: 100%; padding: 15px; border: 1px solid var(--color-border); border-radius: 5px;
