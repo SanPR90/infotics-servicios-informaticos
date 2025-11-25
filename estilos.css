@@ -822,11 +822,11 @@ img.img-detalle-destacada {
 
 /* 1. El Contenedor Principal */
 .caja-contacto {
-    /* Usamos tus variables de color oscuro */
+    /* Variables de color oscuro */
     background-color: var(--service-bg-dark);
     color: var(--color-text-light);
     
-    /* Eliminamos el dashed y ponemos un borde superior sólido (Acento) */
+    /* Borde superior sólido (Acento) */
     border: none;
     border-top: 4px solid var(--service-primary);
     
@@ -961,7 +961,7 @@ img.img-detalle-destacada {
 .barra-lateral {
     /* Fondo oscuro profundo con ligera transparencia */
     background-color: rgba(15, 23, 42, 0.95); 
-    border-right: 1px solid rgba(68, 255, 209, 0.1); /* Borde sutil turquesa */
+    border-right: 1px solid rgba(68, 255, 209, 0.1); 
     box-shadow: 4px 0 15px rgba(0,0,0,0.3);
 }
 
@@ -1006,7 +1006,7 @@ img.img-detalle-destacada {
 }
 
 .caja-dafo p {
-    color: #cbd5e1; /* Gris claro muy legible */
+    color: #cbd5e1; /* Gris claro legible */
     font-weight: 400;
 }
 
@@ -1032,7 +1032,7 @@ img.img-detalle-destacada {
 
 /* Amenazas: Amarillo Ámbar */
 .amenazas { 
-    border-left: 5px solid #fca5a5; /* O un amarillo #f1c40f */
+    border-left: 5px solid #fca5a5; 
     border-left: 5px solid #fbbf24;
 }
 .amenazas h3 { color: #fbbf24; }
@@ -1173,7 +1173,7 @@ img.img-detalle-destacada {
 }
 
 /* Estilos para FAQs interactivos (detalles abiertos/cerrados) */
-/* Si tu JS o el HTML nativo usa <details open>, esto recupera los iconos + / - */
+/* Recuperar los iconos + / - */
 .faq-item summary {
     list-style: none; /* Oculta el triángulo por defecto */
     display: flex;
