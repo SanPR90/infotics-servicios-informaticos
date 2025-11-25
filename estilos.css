@@ -769,7 +769,6 @@ img.img-detalle-destacada {
 /* Corrección específica solicitada: */
 .seccion-principal h1, .seccion-principal h2, .seccion-principal h3, .contenido-principal h1, .contenido-principal h2 {
     color: var(--color-text-light);
-    font-family: var(--font-family-heading); /* Concert One */
 }
 
 /* Menú Vertical Lateral */
@@ -946,9 +945,7 @@ img.img-detalle-destacada {
 }
 .caja-dafo:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 10px 30px rgba(93, 63, 211, 0.7); }
 .caja-dafo h3 { 
-    color: var(--color-text-light); border-bottom: 2px solid rgba(255, 255, 255, 0.2); padding-bottom: 5px; margin-bottom: 10px; 
-    font-family: var(--font-family-heading); /* Concert One también aquí */
-}
+    color: var(--color-text-light); border-bottom: 2px solid rgba(255, 255, 255, 0.2); padding-bottom: 5px; margin-bottom: 10px;} 
 /* Colores específicos DAFO */
 .fortalezas { background-color: #1A344F; border-left: 5px solid #00FF00; }
 .oportunidades { background-color: #2F2F4F; border-left: 5px solid #FFFF00; }
@@ -1074,8 +1071,7 @@ img.img-detalle-destacada {
 }
 
 #main-contenido h2 {
-    color: var(--color-accent); /* Título en Turquesa para resaltar */
-    font-family: var(--font-family-heading);
+    color: var(--color-accent);
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
