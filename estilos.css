@@ -799,9 +799,17 @@ img.img-detalle-destacada {
 .seccion-menu nav ul li:hover a::after { transform: scaleY(1); background-color: var(--color-text-light); }
 
 /* PDF y Contacto Sidebar */
+.seccion-pdf h3 {
+	color: var(--color-accent-secondary);
+	transition: transform 0.3s ease;
+	display: inline-block;
+}
+.seccion-pdf h3:hover {
+	transform: scale(1.1);
+}
 .enlaces-pdf { display: flex; justify-content: space-around; text-align: center; padding: 10px 0; gap:1rem; }
 .enlaces-pdf a { color: var(--color-text-light); transition: color 0.3s; }
-.enlaces-pdf a:hover { color: var(--service-primary); }
+.enlaces-pdf a:hover { color: var(--color-accent); transform: scale(1.1); }
 
 /* ==============================================
    DISEÑO CAJA LATERAL (HTML INTACTO)
