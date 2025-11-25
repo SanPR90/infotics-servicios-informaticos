@@ -811,6 +811,7 @@ img.img-detalle-destacada {
 .enlaces-pdf a { color: var(--color-text-light); transition: color 0.3s; }
 .enlaces-pdf a:hover { color: var(--color-accent); transform: scale(1.1); }
 
+
 /* ==============================================
    DISEÑO CAJA LATERAL (HTML INTACTO)
    ============================================== */
@@ -847,6 +848,7 @@ img.img-detalle-destacada {
 
 /* 3. El Título (H4) */
 .caja-contacto h4 {
+    color: var(--color-accent-secondary);
     margin: 0 0 25px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
