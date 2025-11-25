@@ -130,18 +130,25 @@ hr { border: 0; height: 1px; background: linear-gradient(to right, transparent, 
 }
 /* En la Sección 3 del CSS */
 
+.pre-header-contact a:hover { 
+    color: var(--color-accent); 
+}
+
 .pre-header-social a {
     margin-left: 15px;
     font-size: 1.1rem;
-    transition: color 0.3s ease; /* Transición suave */
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
-/* CAMBIO: Hover en "azul fosforito" (igual que el menú) */
 .pre-header-social a:hover {
-    color: var(--color-accent); 
+    color: var(--color-accent);
+    transform: scale(1.2);
 }
-.pre-header-contact a:hover, .pre-header-social a:hover { color: var(--color-accent); }
-.pre-header-social a { margin-left: 15px; font-size: 1.1rem; }
+
+.pre-header-social a:hover i {
+    color: var(--color-accent);
+}
 
 /* Menú Principal */
 .techo-menu {
