@@ -702,6 +702,7 @@ img.img-detalle-destacada {
     padding: 4rem 2rem; min-height: 400px;
 }
 .contenido-parallax h1 { color:var(--color-text-light); text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-size: 2.5rem; margin-bottom: 1rem; }
+.contenido-parallax h2 { color: #c9f9ffe8; }
 .contenido-parallax p { font-size: 1.1rem; max-width: 800px; color: #e2e8f0; }
 .contenido-parallax a { color: var(--color-accent); text-decoration: none; font-weight: bold; }
 .contenido-parallax a:hover { text-decoration: underline; }
@@ -1240,7 +1241,55 @@ img.img-detalle-destacada {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+/* =========================================
+   15. LAYOUT DETALLE PROYECTOS (IMAGEN A LA DERECHA)
+   ========================================= */
 
+/* Solo aplicamos este cambio en pantallas grandes (Escritorio) */
+@media (min-width: 992px) {
+    
+    article.detalle-proyecto {
+        display: grid;
+        /* Definimos 2 columnas: 
+           - 1.6fr para el texto (aprox 60%)
+           - 1fr para la imagen (aprox 40%) 
+        */
+        grid-template-columns: 1.6fr 1fr;
+        gap: 50px; /* Espacio entre texto e imagen */
+        align-items: start; /* Alineación superior */
+    }
+
+    /* 1. Forzamos que todo el texto vaya a la columna izquierda (1) */
+    .detalle-proyecto header, 
+    .detalle-proyecto section,
+    .detalle-proyecto > div { /* El div del botón final */
+        grid-column: 1 / 2;
+    }
+
+    /* 2. Colocamos la imagen en la columna derecha (2) */
+    img.img-detalle-destacada {
+        grid-column: 2 / 3;
+        /* Hacemos que la imagen ocupe desde la fila 1 hacia abajo */
+        grid-row: 1 / span 10; 
+        
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        
+        /* TRUCO PRO: Hacemos que la imagen te "acompañe" al hacer scroll */
+        position: sticky;
+        top: 120px; 
+        
+        /* Opcional: Reducir un poco la redondez para que encaje mejor en columna */
+        border-radius: 20px; 
+    }
+
+    /* Alineamos el botón final a la izquierda para que coincida con el texto */
+    .detalle-proyecto > div {
+        text-align: left !important;
+        margin-top: 30px !important;
+    }
+}
 /*
  * AJUSTE CRÍTICO:
  * Empujamos todo el cuerpo de la página hacia abajo
