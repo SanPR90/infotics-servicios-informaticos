@@ -1271,18 +1271,13 @@ img.img-detalle-destacada {
     img.img-detalle-destacada {
         grid-column: 2 / 3;
         /* Hacemos que la imagen ocupe desde la fila 1 hacia abajo */
-        grid-row: 1 / span 10; 
-        
-        width: 100%;
+        grid-row: 1 / span 10;       
+        width: 75%;
         height: auto;
-        margin-top: 0;
-        
+        margin-top: 0;      
         /* TRUCO PRO: Hacemos que la imagen te "acompañe" al hacer scroll */
         position: sticky;
         top: 120px; 
-        
-        /* Opcional: Reducir un poco la redondez para que encaje mejor en columna */
-        border-radius: 20px; 
     }
 
     /* Alineamos el botón final a la izquierda para que coincida con el texto */
