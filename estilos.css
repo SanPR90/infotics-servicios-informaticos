@@ -438,8 +438,16 @@ input:focus, textarea:focus {
 }
 .contenedor-auth::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to right, rgba(30, 41, 59, 0.9), rgba(122, 39, 255, 0.4)); z-index: 1;
-}
+    background: linear-gradient(to right, rgba(30, 41, 59, 0.9), rgba(122, 39, 255, 0.4)); z-index: 1;}
+.contenedor-auth h1, 
+.contenedor-auth h2 {
+    font-family: var(--font-family-heading); /* Concert One */
+    color: #ffffff; /* Blanco puro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra oscura para contraste */
+    letter-spacing: 1px;
+    font-weight: 500;
+}    
+
 .tarjeta-auth {
     position: relative; z-index: 2; background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px); border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); width: 100%; max-width: 450px;
