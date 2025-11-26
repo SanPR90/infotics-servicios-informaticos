@@ -1249,38 +1249,43 @@ img.img-detalle-destacada {
 /* Solo aplicamos este cambio en pantallas grandes (Escritorio) */
 @media (min-width: 992px) {
     
+    /* 1. El contenedor principal */
     article.detalle-proyecto {
         display: grid;
-        /* Definimos 2 columnas: 
-           - 1.6fr para el texto (aprox 60%)
-           - 1fr para la imagen (aprox 40%) 
-        */
         grid-template-columns: 1.6fr 1fr;
-        gap: 50px; /* Espacio entre texto e imagen */
-        align-items: start; /* Alineación superior */
+        gap: 50px;
+        
+        /* CAMBIO CLAVE: Centra verticalmente el contenido de ambas columnas */
+        align-items: center; 
     }
 
-    /* 1. Forzamos que todo el texto vaya a la columna izquierda (1) */
+    /* 2. Elementos de texto a la izquierda */
     .detalle-proyecto header, 
     .detalle-proyecto section,
-    .detalle-proyecto > div { /* El div del botón final */
+    .detalle-proyecto > div { 
         grid-column: 1 / 2;
     }
 
-    /* 2. Colocamos la imagen en la columna derecha (2) */
+    /* 3. La imagen a la derecha */
     img.img-detalle-destacada {
         grid-column: 2 / 3;
-        /* Hacemos que la imagen ocupe desde la fila 1 hacia abajo */
-        grid-row: 1 / span 10;       
-        width: 75%;
+        grid-row: 1 / span 10; /* Ocupa todo el alto para poder centrarse */
+        
+        /* CAMBIO CLAVE: Se auto-alinea al centro de su eje vertical */
+        align-self: center; 
+        
+        /* Reseteos para evitar que se mueva */
+        position: static; 
+        margin-top: 0;
+        width: 100%;
         height: auto;
-        margin-top: 0;      
-        /* TRUCO PRO: Hacemos que la imagen te "acompañe" al hacer scroll */
-        position: sticky;
-        top: 120px; 
+        
+        /* Estética */
+        border-radius: 20px; 
+        box-shadow: var(--shadow-card);
     }
 
-    /* Alineamos el botón final a la izquierda para que coincida con el texto */
+    /* Botón alineado a la izquierda */
     .detalle-proyecto > div {
         text-align: left !important;
         margin-top: 30px !important;
