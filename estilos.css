@@ -1253,9 +1253,8 @@ img.img-detalle-destacada {
     article.detalle-proyecto {
         display: grid;
         grid-template-columns: 1.6fr 1fr;
-        gap: 50px;
-        
-        /* CAMBIO CLAVE: Centra verticalmente el contenido de ambas columnas */
+        gap: 50px; 
+        /* Centra verticalmente el contenido de ambas columnas */
         align-items: center; 
     }
 
@@ -1278,10 +1277,9 @@ img.img-detalle-destacada {
         position: static; 
         margin-top: 0;
         width: 100%;
-        height: auto;
-        
+        height: auto;     
         /* Estética */
-        border-radius: 20px; 
+        border-radius: 50%;
         box-shadow: var(--shadow-card);
     }
 
