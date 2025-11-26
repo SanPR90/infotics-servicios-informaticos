@@ -1112,8 +1112,13 @@ img.img-detalle-destacada {
 }
 
 
-#main-contenido article {
-    /* Tus estilos visuales actuales se quedan aquí */
+/* =========================================
+   12. ESTILOS PÁGINA INICIO (HOME) - ACCESIBILIDAD
+   ========================================= */
+
+/* Estilos visuales del contenedor (Fondo oscuro, bordes...) */
+#main-contenido article, 
+.article-home {
     color: var(--color-text-light);
     background-color: rgba(23, 25, 48, 0.9);
     padding: 3rem;
@@ -1121,10 +1126,8 @@ img.img-detalle-destacada {
     box-shadow: var(--shadow-card);
     margin-bottom: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Has borrado position: relative de aquí porque está abajo */
-}
-
-.article-home {
+    
+    /* CONFIGURACIÓN FLEXBOX */
     display: flex;
     flex-direction: column; /* Móvil: Imagen debajo */
     gap: 30px;
@@ -1132,25 +1135,22 @@ img.img-detalle-destacada {
     z-index: 1;
 }
 
+/* Estilos de la imagen */
 .img-sello-home {
-    width: 200px; 
+    width: 150px; 
     height: auto;
     border: 1px solid #3c3c8d;
-    border-radius: 35%;
+    border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    align-self: center;
+    align-self: center; /* Centrada en móvil */
 }
 
-/* VERSIÓN ESCRITORIO (Pantallas grandes) */
+/* VERSIÓN ESCRITORIO */
 @media (min-width: 768px) {
     .article-home {
-        flex-direction: row; /* Texto izquierda, Imagen derecha */
-        
-        /* ESTO LA ALINEA A LA DERECHA: */
-        justify-content: space-between; 
-        
-        /* ESTO LA CENTRA VERTICALMENTE (Queda mejor que abajo): */
-        align-items: center; 
+        flex-direction: row; /* Lado a lado */
+        justify-content: space-between; /* Separados a los extremos */
+        align-items: center; /* Centrados verticalmente */
     }
 
     .contenido-texto {
@@ -1159,13 +1159,12 @@ img.img-detalle-destacada {
     }
 
     .img-sello-home {
-        /* Reseteamos la alineación del móvil */
         align-self: auto; 
         margin-bottom: 0;
     }
 }
 
-/*
+/* 
  * =========================================
  * 12. MEDIA QUERIES (Finales)
  * =========================================
