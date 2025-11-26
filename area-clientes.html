@@ -88,49 +88,51 @@
             </li>
         </ul>
     </nav>
-  <main>
-  <div class="contenedor-auth">
-        <div class="tarjeta-auth">
-            
-            <!-- CABECERA DEL FORMULARIO -->
-            <div class="cabecera-auth">
-                <h2 id="tituloFormulario">Bienvenido</h2>
-                <p id="subtituloFormulario">Accede a tu panel de control</p>
-            </div>
-
-            <!-- ALERTAS -->
-            <div style="padding: 0 30px; margin-top: 20px;">
-                <div id="cajaAlerta" class="alerta"></div>
-            </div>
-
-            <!-- FORMULARIO INICIO SESIÓN -->
-            <div id="seccionInicioSesion" class="caja-formulario">
-                <form id="formularioLogin" onsubmit="manejarInicioSesion(event)">
-                    <div class="grupo-input">
-                        <label for="correoAcceso">Correo Electrónico</label>
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="correoAcceso" placeholder="manolo_o_jj@weblindo.es" required>
-                    </div>
-                    <div class="grupo-input">
-                        <label for="claveAcceso">Contraseña</label>
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="claveAcceso" placeholder="ejemplo:Tod@SomosManolo" required>
-                    </div>
-                    <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:0.9rem;">
-                        <label style="display:flex; align-items:center; cursor:pointer;">
-                            <input type="checkbox" style="margin-right:8px;"> Recordarme
-                        </label>
-                        <a href="#" style="color:var(--color-primary); text-decoration:none;">¿Olvidaste la contraseña?</a>
-                    </div>
-                    <button type="submit" class="btn-enviar" id="btnInicioSesion">
-                        INICIAR SESIÓN
-                    </button>
-                </form>
-
-                <div class="cambiar-auth">
-                    ¿No tienes cuenta? <a onclick="alternarFormularios('registro')">Regístrate aquí</a>
+    <main>
+    <h1>Area de Clientes</h1>
+    <h2>INFOTICS - Servicios Informáticos</h2>
+    <div class="contenedor-auth">
+            <div class="tarjeta-auth">
+                
+                <!-- CABECERA DEL FORMULARIO -->
+                <div class="cabecera-auth">
+                    <h2 id="tituloFormulario">Bienvenido</h2>
+                    <p id="subtituloFormulario">Accede a tu panel de control</p>
                 </div>
-            </div>
+
+                <!-- ALERTAS -->
+                <div style="padding: 0 30px; margin-top: 20px;">
+                    <div id="cajaAlerta" class="alerta"></div>
+                </div>
+
+                <!-- FORMULARIO INICIO SESIÓN -->
+                <div id="seccionInicioSesion" class="caja-formulario">
+                    <form id="formularioLogin" onsubmit="manejarInicioSesion(event)">
+                        <div class="grupo-input">
+                            <label for="correoAcceso">Correo Electrónico</label>
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="correoAcceso" placeholder="manolo_o_jj@weblindo.es" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label for="claveAcceso">Contraseña</label>
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="claveAcceso" placeholder="ejemplo:Tod@SomosManolo" required>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; margin-bottom:20px; font-size:0.9rem;">
+                            <label style="display:flex; align-items:center; cursor:pointer;">
+                                <input type="checkbox" style="margin-right:8px;"> Recordarme
+                            </label>
+                            <a href="#" style="color:var(--color-primary); text-decoration:none;">¿Olvidaste la contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn-enviar" id="btnInicioSesion">
+                            INICIAR SESIÓN
+                        </button>
+                    </form>
+
+                    <div class="cambiar-auth">
+                        ¿No tienes cuenta? <a onclick="alternarFormularios('registro')">Regístrate aquí</a>        
+                    </div>
+                </div>
 
             <!-- FORMULARIO REGISTRO -->
             <div id="seccionRegistro" class="caja-formulario oculto">
