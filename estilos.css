@@ -1135,7 +1135,8 @@ img.img-detalle-destacada {
 .img-sello-home {
     width: 200px; 
     height: auto;
-    border-radius: 10px;
+    border: 1px solid #3c3c8d;
+    border-radius: 35%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     align-self: center;
 }
