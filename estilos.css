@@ -1126,41 +1126,41 @@ img.img-detalle-destacada {
 
 .article-home {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Móvil: Imagen debajo */
     gap: 30px;
-    position: relative; /* Aquí está la posición necesaria */
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
 
 .img-sello-home {
-    width: 150px; /* Tamaño controlado */
+    width: 200px; 
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para que destaque */
-    
-    /* En móvil, centramos la imagen para que quede bonita */
-    align-self: center; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    align-self: center;
 }
 
 /* VERSIÓN ESCRITORIO (Pantallas grandes) */
 @media (min-width: 768px) {
     .article-home {
         flex-direction: row; /* Texto izquierda, Imagen derecha */
-        justify-content: space-between; /* Separa los elementos */
         
-        /* AQUÍ ESTÁ TU PETICIÓN: Alinea la imagen ABAJO a la derecha */
-        align-items: flex-end; 
+        /* ESTO LA ALINEA A LA DERECHA: */
+        justify-content: space-between; 
+        
+        /* ESTO LA CENTRA VERTICALMENTE (Queda mejor que abajo): */
+        align-items: center; 
     }
 
     .contenido-texto {
-        padding-right: 2.4rem; /* Margen de seguridad para que el texto respire */
-        max-width: 90%; /* Evita que el texto se estire demasiado */
+        padding-right: 40px; /* Espacio para que el texto no toque la imagen */
+        max-width: 85%; 
     }
 
     .img-sello-home {
-        /* En escritorio, quitamos el centrado y dejamos que flex-end actúe */
-        align-self: flex-end; 
-        margin-bottom: 10px; /* Pequeño ajuste visual */
+        /* Reseteamos la alineación del móvil */
+        align-self: auto; 
+        margin-bottom: 0;
     }
 }
 
