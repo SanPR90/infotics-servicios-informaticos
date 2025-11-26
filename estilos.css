@@ -1085,18 +1085,8 @@ img.img-detalle-destacada {
  * 12. ESTILOS PÁGINA INICIO (HOME) - ACCESIBILIDAD
  * =========================================
  */
-#main-contenido article {
-    color: var(--color-text-light); /* Texto blanco */
-    background-color: rgba(23, 25, 48, 0.9); /* Fondo oscuro semitransparente */
-    padding: 3rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow-card);
-    margin-bottom: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-    position: relative;
-}
 
-#main-contenido h2 {
+ #main-contenido h2 {
     color: var(--color-accent);
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -1119,6 +1109,59 @@ img.img-detalle-destacada {
     color: var(--color-accent);
     font-style: normal;
     font-weight: 600;
+}
+
+
+#main-contenido article {
+    /* Tus estilos visuales actuales se quedan aquí */
+    color: var(--color-text-light);
+    background-color: rgba(23, 25, 48, 0.9);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Has borrado position: relative de aquí porque está abajo */
+}
+
+.article-home {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative; /* Aquí está la posición necesaria */
+    z-index: 1; 
+}
+
+.img-sello-home {
+    width: 150px; /* Tamaño controlado */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para que destaque */
+    
+    /* En móvil, centramos la imagen para que quede bonita */
+    align-self: center; 
+}
+
+/* VERSIÓN ESCRITORIO (Pantallas grandes) */
+@media (min-width: 768px) {
+    .article-home {
+        flex-direction: row; /* Texto izquierda, Imagen derecha */
+        justify-content: space-between; /* Separa los elementos */
+        
+        /* AQUÍ ESTÁ TU PETICIÓN: Alinea la imagen ABAJO a la derecha */
+        align-items: flex-end; 
+    }
+
+    .contenido-texto {
+        padding-right: 2.4rem; /* Margen de seguridad para que el texto respire */
+        max-width: 90%; /* Evita que el texto se estire demasiado */
+    }
+
+    .img-sello-home {
+        /* En escritorio, quitamos el centrado y dejamos que flex-end actúe */
+        align-self: flex-end; 
+        margin-bottom: 10px; /* Pequeño ajuste visual */
+    }
 }
 
 /*
@@ -1294,7 +1337,7 @@ img.img-detalle-destacada {
     /* Botón alineado a la izquierda */
     .detalle-proyecto > div {
         text-align: left !important;
-        margin-top: 30px !important;
+        margin-top: 1.4rem !important;
     }
 }
 /*
