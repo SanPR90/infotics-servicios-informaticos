@@ -1085,6 +1085,7 @@ img.img-detalle-destacada {
     box-shadow: var(--shadow-card);
     margin-bottom: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    position: relative;
 }
 
 #main-contenido h2 {
